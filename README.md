@@ -1,18 +1,20 @@
-# Nome do projeto
+# CarnaLivre
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O projeto CarnaLivre busca aumentar a proteção dos foliões durante o período do carnaval, já que esse é um período bastante movimentado, o que pode levar ao aumento de casos como furtos e brigas, e causar preocupação aos cidadãos que desejam se divertir.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Davi Martins de Almeida
+* Henrique Pereira Resende Rocha
+* João Prado Campos
+* Lucas Gabriel de Oliveira Franco
+* Luiz Fernando Cunha Maia
+* Pedro Henrique Nogueira Ferreira
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Diego Augusto de Faria Barros
+* Michelle Hanne Soares de Andrade
 
 
 
