@@ -10,14 +10,14 @@ authors:
     given-names: João
   - family-names: 
     given-names: 
-  - family-names: Nogueira Ferreira
-    given-names: Pedro Henrique
+  - family-names: 
+    given-names: 
   - family-names: 
     given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Nogueira Ferreira
+    given-names: Pedro Henrique
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: 
