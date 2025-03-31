@@ -2,13 +2,16 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** Carnalivre
+* **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010200-hermes_sentry.git
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+Davi Martins de Almeida https://github.com/davimartins27
+Henrique Pereira Resende Rocha https://github.com/Rickyzadas
+João Prado Campos https://github.com/Joao-Prado0
+Lucas Gabriel de Oliveira Franco https://github.com/lucasfrgabriel
+Luiz Fernando Cunha Maia https://github.com/LuizMaia-PUC
+Pedro Henrique Nogueira Ferreira https://github.com/PedroHNFerreira
 
 A documentação do projeto é estruturada da seguinte forma:
 
