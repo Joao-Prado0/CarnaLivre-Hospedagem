@@ -2,10 +2,10 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - family-names: de Almeida
-    given-names: Davi Martins
-  - family-names: 
-    given-names: 
+  - family-names: Martins de Almeida
+    given-names: Davi 
+  - family-names: Prado Campos
+    given-names: João
   - family-names: 
     given-names: 
   - family-names: 
