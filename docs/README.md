@@ -136,18 +136,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 ### Requisitos Funcionais
 
 
- | ID     | Descrição do Requisito                                   | Prioridade |
- | ------ | ---------------------------------------------------------- | ---------- |
+| ID     | Descrição do Requisito                                   | Prioridade |
+| ------ | ---------------------------------------------------------- | ---------- |
 | RF-001 | O sistema deve ter integração com a API do Google Maps, assim proporcionando mapas interativos e informativos. | ALTA |
-| RF-002 | Os mapas devem ser utilizados tanto para indicar a localização dos blocos, quanto indicar locais onde os usuários denunciaram crimes. | ALTA |
-| RF-003 | O site deve conter sistema de cadastramento de blocos. Os campos de informação devem incluir: nome, localização, público esperado, faixa etária média, estilo musical, anexo de imagens. | MÉDIA |
-| RF-004 |O site deve conter cadastro diferente para organizadores de bloco, deve exigir email, senha, CNPJ da organização (para verificação),captcha. | MÉDIA |
+| RF-003 | O sistema deve permitir que organizadores cadastrem blocos, informando nome, localização, público esperado, faixa etária média, estilo musical e anexando imagens. | MÉDIA |
+| RF-002 | O sistema deve armazenar as infromações cadastradas pelos organizadores do bloco e organizar elas nos mapas. | ALTA |
+| RF-004 | O site deve conter cadastro diferente para organizadores de bloco, deve exigir email, senha, CNPJ da organização (para verificação),captcha. | MÉDIA |
 | RF-005 | O sistema deve conter cadastramento dos demais usuários, solicitando email, nome completo, senha e nome de usuário. | ALTA |
-| RF-006 | O site deve conter espaço para login daqueles que já possuem conta (Email e senha). | BAIXA |
-| RF-007 | O sistema deve conter uma página para cada bloco, que apresente as informações cadastradas pelos organizadores. Nessas páginas deve haver campos em que os usuários avaliam os blocos (de uma a cinco estrelas), campo de comentários e botão de compartilhamento. | MÉDIA |
-| RF-008 | O site deve incluir sistema de denúncia integrado com API do Google Maps. Deve conter campos, para o usuário informar o local, o crime ocorrido, a hora e em qual bloco estava. | ALTA |
-| RF-009 | O site deve incluir sistema de pesquisa por nome dos blocos. Esse sistema deve incluir filtros de pesquisa, sendo eles: tamanho do bloco, região, horário, estilo musical, faixa etária, avaliação e se acontece no dia da pesquisa. | MÉDIA |
-| RF-010 | O sistema deve conter criação de grupo entre usuários, possibilitando compartilhamento de blocos de interesse entre os usuários. | BAIXA |
+| RF-006 | O sistema deve conter espaço para login daqueles que já possuem conta (Email e senha). | BAIXA |
+| RF-007 | O sistema deve permitir que usuários avaliem os blocos com notas de uma a cinco estrelas, façam comentários sobre os blocos e compartilhem as páginas de eventos. | MÉDIA |
+| RF-008 | O sistema deve permitir que usuários registrem denúncias informando local, crime ocorrido, horário e bloco associado. | ALTA |
+| RF-009 | O sistema deve permitir que usuários pesquisem os blocos por nome. A pesquisa deve também incluir filtros de pesquisa, sendo eles: tamanho do bloco, região, horário, estilo musical, faixa etária, avaliação e se acontece no dia da pesquisa. | MÉDIA |
+| RF-010 | O sistema deve ser capaz de validar o CNPJ informado no cadastro dos organizadores, verificando se é válido segundo as regras da Receita Federal | BAIXA |
 
 ### Requisitos não Funcionais
 | ID      | Descrição do Requisito                                                             | Prioridade |
@@ -156,9 +156,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RNF-002 |Páginas devem abrir em menos de 5 segundos. | BAIXA |
 | RNF-003 | Alta usabilidade, tendo em vista o diverso público alvo que o sistema vai atender. | BAIXA |
 | RNF-004 | O site deve ser responsivo para as diferentes telas. | BAIXA |
-| RNF-005 | Disponibilidade 24 horas. | BAIXA |
-| RNF-006 | Verificação do CNPJ. | BAIXA |
-| RNF-007 | O site deve estar disponível para o público. | BAIXA |
+| RNF-005 | O sistema deve garantir 99,5% de uptime mensal, monitorado por ferramentas de observabilidade. | ALTA |
 ## Projeto de Interface
 
 Artefatos relacionados com a interface e a interacão do usuário na proposta de solução.
