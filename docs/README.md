@@ -6,12 +6,12 @@ Informações básicas do projeto.
 * **Repositório GitHub:** https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010200-hermes_sentry.git
 * **Membros da equipe:**
 
-Davi Martins de Almeida https://github.com/davimartins27
-Henrique Pereira Resende Rocha https://github.com/Rickyzadas
-João Prado Campos https://github.com/Joao-Prado0
-Lucas Gabriel de Oliveira Franco https://github.com/lucasfrgabriel
-Luiz Fernando Cunha Maia https://github.com/LuizMaia-PUC
-Pedro Henrique Nogueira Ferreira https://github.com/PedroHNFerreira
+1. [Davi Martins de Almeida ](https://github.com/davimartins27)
+2. [Henrique Pereira Resende Rocha](https://github.com/Rickyzadas)
+3. [João Prado Campos](https://github.com/Joao-Prado0)
+4. [Lucas Gabriel de Oliveira Franco](https://github.com/lucasfrgabriel)
+5. [Luiz Fernando Cunha Maia](https://github.com/LuizMaia-PUC)
+6. [Pedro Henrique Nogueira Ferreira](https://github.com/PedroHNFerreira)
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -27,33 +27,15 @@ A documentação do projeto é estruturada da seguinte forma:
 
 # Contexto
 
-Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
+O carnaval é um dos eventos mais populares do ano. Com escolas de samba, blocos de rua espalhados por diversos bairros e festas privadas, o período atrai uma grande movimentação de pessoas de diferentes cidades, e para que seja possível aproveitar ao máximo esse período festivo, torna-se essencial garantir a proteção do público.
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
->
-> **Orientações**:
->
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Os principais problemas apontados envolvem a falta de segurança no carnaval, como furtos, brigas e assédios, mas há também diversas dúvidas sobre a organização dos blocos de carnaval, das forças de segurança e de saúde, e da infaestrutura da cidade para eventos grandes.
 
 ## Objetivos
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
->
-> **Orientações**:
->
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+A finalidade do CarnavLivre é desenvolver um software para solucionar o problema de falta de informações e segurança sobre o carnaval de Belo Horizonte. Com base nisso, o sistema recebe informações sobre os blocos de carnaval, cadastradas pelos próprios organizadores, analisa e classifica essas informações em categorias, e permite que os usuários acessem essas informações. Além disso, o sistema contém uma seção de comentários para que os foliões compartilhem suas experiências e uma aba dedicada a denúncias, para casos mais graves, promovendo um ambiente mais seguro para todos.
 
 ## Justificativa
 
@@ -88,22 +70,19 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Etapa de Entendimento
 
-**✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
+* **Matriz CSD**: ![image](https://github.com/user-attachments/assets/4bf94b56-3c18-4a16-a158-27151bca36a9)
+* **Mapa de stakeholders**: ![image](https://github.com/user-attachments/assets/6c6e216a-08ed-40f0-ad9d-577b5977674c)
+* **Entrevistas qualitativas**: ![Entendimento - Empatia 2](https://github.com/user-attachments/assets/2d661889-0d63-4fbb-8d73-370dc443b54d)
+![Entendimento - Empatia 3](https://github.com/user-attachments/assets/7127e2ff-7eb7-4060-a6cc-665d6db38b94)
+* **Highlights de pesquisa**: ![Entendimento - Empatia 4](https://github.com/user-attachments/assets/e6d957b1-2656-41b8-a807-7084f5e28abb)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nessa etapa, vamos trabalhar com a metdologia de Design Thinking para compreender com maior profundidade o problema a ser tratado. Nesse processo, vamos elaborar:
->
-> * **Matriz CSD**: também conhecida por Matriz de Alinhamento, é uma ferramenta utilizada no Design Thinking para organizar informações e facilitar o processo de tomada de decisão e solução de problemas;
-> * **Mapa de stakeholders**: ferramenta que nos permite compreender o grupo de pessoas e entidades que devemos estudar e conversar para entender mais sobre o problema
-> * **Entrevistas qualitativas**: série de entrevistas qualitativas para validar suposições e solucionar as dúvidas com as principais pessoas envolvidas;
-> * **Highlights de pesquisa**: um compilado do levantamento realizado por meio das entrevistas.
 
 ## Etapa de Definição
 
 ### Personas
 
 **✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
+
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
