@@ -27,7 +27,7 @@ A documentação do projeto é estruturada da seguinte forma:
 
 # Contexto
 
-O carnaval é um dos eventos mais populares do ano. Com escolas de samba, blocos de rua espalhados por diversos bairros e festas privadas, o período atrai uma grande movimentação de pessoas de diferentes cidades, e para que seja possível aproveitar ao máximo esse período festivo, torna-se essencial garantir a proteção do público.
+O carnaval é um dos símbolos do nosso país, são cinco dias em que o povo brasileiro se extravaza e faz uma das festas mais bonitas e democráticas do mundo. Marcado pelos blocos de carnaval, música boa e clima quente, a festa atrai milhões de brasileiros para as ruas, além de se tornar uma atração para turistas que pretendem conhecer mais da cultura brasileira. Porém, com o enorme número de pessoas que participam da festa, se torna muito difícil para gestão pública gerenciar a folia, e é nessa dificuldade que nasce a maioria dos problemas relacionados ao feriado.
 
 ## Problema
 
