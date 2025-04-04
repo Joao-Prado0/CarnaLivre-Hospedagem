@@ -228,12 +228,10 @@ Descrição para a tela XPTO
 
 # Metodologia
 
-Detalhes sobre a organização do grupo e o ferramental empregado.
-
-## Ferramentas
-
 API do Google Maps
 API de clima
+
+## Ferramentas
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
