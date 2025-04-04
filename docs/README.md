@@ -81,19 +81,17 @@ A finalidade do CarnavLivre é desenvolver um software para solucionar o problem
 
 ### Personas
 
-**✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
+| Persona 1 | Persona 2 |
+| ------- | ------- |
+| ![Persona1](https://github.com/user-attachments/assets/608eb868-6b0b-4805-951a-859e422dfe1c) | ![Persona2](https://github.com/user-attachments/assets/0acf91b6-3b52-4b7e-848f-bcedc5c1e41d) |
 
+| Persona 3 | Persona 4 |
+| --------- | --------- |
+| ![Persona3](https://github.com/user-attachments/assets/89c63d6c-fb77-4865-b414-d6265b5aed04) | ![Persona4](https://github.com/user-attachments/assets/518aa30d-f215-48a9-8383-62bc0e84bded) |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
->
-> **Orientações**:
->
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+| Persona 5 | Persona 6 |
+| --------- | --------- |
+| ![Persona5](https://github.com/user-attachments/assets/713ba46f-a926-47dc-b601-a6eae51b5c85) | ![Persona6](https://github.com/user-attachments/assets/92ade2f5-c3c8-4f1e-a17f-f4f8768f3d78) |
 
 # Product Design
 
@@ -105,29 +103,46 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 | EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
 | --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+| Usuário: Folião   | Preciso do sistema de denuncias do site | Me sentir mais amparada e protegida em caso de qualquer problemas |
+| Usuário: Folião   | Um mapa interativo (API Google Maps) | Não me perder pela cidade enquanto procuro os blocos |
+| Usuário: Folião   | Um sistema de pesquisa de blocos | Encontrar informações sobre blocos |
+| Usuário: Folião   | Filtros de pesquisa | Para selecionar blocos que atendem aos meus interesses e gostos |
+| Usuário: Folião   | Ver o feedback dos blocos  | Para saber qual é o mais animado |
+| Usuário: Representante de bloco   | Cadastro dos blocos | Divulgar informações sobre o bloco que organiza, e aumentar seu alcance |
+| Usuário: Folião   | Categoria e Feedback dos blocos | Para conseguir curtir em segurança com a minha família |
+| Usuário: Folião   | Preciso saber quais lugares/ruas estarao fechados e abertos durante o carnaval | Me organizar durante o periodo da folia|
+| Usuário: Folião   | Criar grupos de usuários com meus amigos | Conseguirmos nos encontrar com maior facilidade nos blocos |
 
 ## Proposta de Valor
 
-**✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
+##### Proposta para Persona 1: Vitoria
 
-##### Proposta para Persona XPTO ⚠️ EXEMPLO ⚠️
+![Proposta1](https://github.com/user-attachments/assets/0e1cee70-13ff-4e2f-b2da-3a54c4142478)
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O mapa da proposta de valor é uma ferramenta que nos ajuda a definir qual tipo de produto ou serviço melhor atende às personas definidas anteriormente.
+##### Proposta para Persona 2: Juliana
+
+![Proposta2](https://github.com/user-attachments/assets/82bc1070-53f0-4aff-b255-16e1f9d8b38e)
+
+
+##### Proposta para Persona 3: Guilherme
+
+![Proposta3](https://github.com/user-attachments/assets/3e65bca7-9c17-42fa-a5bf-705a4e5a0d1c)
+
+
+##### Proposta para Persona 4: Marcelo
+
+![Proposta4](https://github.com/user-attachments/assets/8ae59a5d-7187-4739-a337-0e24c492c852)
+
+
+##### Proposta para Persona 5: Maria Jeronima
+
+![Proposta5](https://github.com/user-attachments/assets/175589d5-0a7d-463a-bee3-75182abdac15)
+
+
+##### Proposta para Persona 6: Pedro
+
+![Proposta6](https://github.com/user-attachments/assets/3a58f43a-0980-42ff-ba4c-ff1e6e7d6a58)
 
 ## Requisitos
 
@@ -147,16 +162,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-007 | O sistema deve permitir que usuários avaliem os blocos com notas de uma a cinco estrelas, façam comentários sobre os blocos e compartilhem as páginas de eventos. | MÉDIA |
 | RF-008 | O sistema deve permitir que usuários registrem denúncias informando local, crime ocorrido, horário e bloco associado. | ALTA |
 | RF-009 | O sistema deve permitir que usuários pesquisem os blocos por nome. A pesquisa deve também incluir filtros de pesquisa, sendo eles: tamanho do bloco, região, horário, estilo musical, faixa etária, avaliação e se acontece no dia da pesquisa. | MÉDIA |
-| RF-010 | O sistema deve ser capaz de validar o CNPJ informado no cadastro dos organizadores, verificando se é válido segundo as regras da Receita Federal | BAIXA |
+| RF-010 | O sistema deve ser capaz de validar o CNPJ informado no cadastro dos organizadores, verificando se é válido segundo as regras da Receita Federal. | BAIXA |
 
 ### Requisitos não Funcionais
 | ID      | Descrição do Requisito                                                             | Prioridade |
 | ------- | ---------------------------------------------------------------------------------- | ---------- |
-| RNF-001 |Desenvolvimento em HTML, CSS e JavaScript.(código organizado e eficiente). | MÉDIA |
-| RNF-002 |Páginas devem abrir em menos de 5 segundos. | BAIXA |
+| RNF-001 | Desenvolvimento em HTML, CSS e JavaScript.(código organizado e eficiente). | MÉDIA |
+| RNF-002 | Páginas devem abrir em menos de 5 segundos. | BAIXA |
 | RNF-003 | Alta usabilidade, tendo em vista o diverso público alvo que o sistema vai atender. | BAIXA |
 | RNF-004 | O site deve ser responsivo para as diferentes telas. | BAIXA |
 | RNF-005 | O sistema deve garantir 99,5% de uptime mensal, monitorado por ferramentas de observabilidade. | ALTA |
+
 ## Projeto de Interface
 
 Artefatos relacionados com a interface e a interacão do usuário na proposta de solução.
@@ -216,19 +232,16 @@ Detalhes sobre a organização do grupo e o ferramental empregado.
 
 ## Ferramentas
 
-Relação de ferramentas empregadas pelo grupo durante o projeto.
+API do Google Maps
+API de clima
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
 | Processo de Design Thinking | Miro       |  https://miro.com/app/board/uXjVIZ5HaSk=/?share_link_id=934339239127 |
-| Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010200-hermes_sentry.git |
+| Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010200-hermes_sentry |
 | Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
 | Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
 |                             |            |                                                    |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
 
 ## Gerenciamento do Projeto
 
