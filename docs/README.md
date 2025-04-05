@@ -35,36 +35,15 @@ Os principais problemas apontados envolvem a falta de segurança no carnaval, co
 
 ## Objetivos
 
-A finalidade do CarnavLivre é desenvolver um software para solucionar o problema de falta de informações e segurança sobre o carnaval de Belo Horizonte. Com base nisso, o sistema recebe informações sobre os blocos de carnaval, cadastradas pelos próprios organizadores, analisa e classifica essas informações em categorias, e permite que os usuários acessem essas informações. Além disso, o sistema contém uma seção de comentários para que os foliões compartilhem suas experiências e uma aba dedicada a denúncias, para casos mais graves, promovendo um ambiente mais seguro para todos.
+A finalidade do CarnaLivre é desenvolver um software para solucionar o problema de falta de informações e segurança sobre o carnaval de Belo Horizonte. Com base nisso, o sistema recebe informações sobre os blocos de carnaval, cadastradas pelos próprios organizadores, analisa e classifica essas informações em categorias, e permite que os usuários acessem essas informações. Além disso, o sistema contém uma seção de comentários para que os foliões compartilhem suas experiências e uma aba dedicada a denúncias, para casos mais graves, promovendo um ambiente mais seguro para todos.
 
 ## Justificativa
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Orientações**:
->
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A escolha do tema segurança no carnaval surgiu devido todos os participantes do grupo conhecerem alguém que já passou por experiencias ruins no carnaval. O carnaval de Belo Horizonte cada vez mais vem crescendo, recebendo uma grande quantidade de pessoas de várias cidades vizinhas, mas junto a esse grande número de foliões, também temos problemas como furtos, assédios, brigas e muita desinformação. Muita gente não sabe onde estão os blocos, quais são mais tranquilos ou como pedir ajuda em caso de problemas. Pensando nisso, pensamos em um sistema simples e acessível que reúne informações dos blocos, permite comentários dos foliões, e ainda oferece uma aba para denúncias, ajudando a criar um carnaval mais seguro, participativo e consciente para todo mundo.
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva quais são as pessoas que usarão a sua aplicação indicando os diferentes perfis. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
->
-> **Orientações**:
->
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O CarnaLivre é voltado principalmente para dois públicos: os foliões, que buscam informações seguras e atualizadas sobre os blocos de carnaval, além de um canal para compartilhar experiências e fazer denúncias; e os organizadores de blocos, que precisam de uma plataforma prática para divulgar seus eventos, atrair mais público e colaborar com a organização e segurança da festa. Ambos se beneficiam da proposta do sistema, já que ele promove uma comunicação mais clara, fortalece a confiança entre participantes e ajuda a tornar o carnaval mais seguro e bem estruturado para todos.
 
 # Product Discovery
 
