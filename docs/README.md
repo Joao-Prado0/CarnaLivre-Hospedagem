@@ -272,9 +272,7 @@ Tela de consulta de blocos, permite que o folião veja todos os blocos cadastrad
 
 ### User Flow
 
-**✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
-
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
+![fluxo de telas](https://github.com/user-attachments/assets/0b7dbdcb-2fb5-4cf6-9572-a56b3f13fe8a)
 
 ### Protótipo Interativo
 
