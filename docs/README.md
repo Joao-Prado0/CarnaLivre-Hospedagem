@@ -160,6 +160,43 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
+Login
+![Tela-Login](https://github.com/user-attachments/assets/8aa11ebf-b199-401d-a9de-3542abedea91)
+
+Cadastro
+![Cadastro](https://github.com/user-attachments/assets/270c238f-d574-4a9d-8451-98a1990018c3)
+
+Cadastro do Bloco
+![Cadastro-Bloco](https://github.com/user-attachments/assets/60f91d99-9e83-4c27-a8c5-9e6d391e564e)
+
+Home
+![Home](https://github.com/user-attachments/assets/a1b41eaa-57f5-4b94-a14c-63c888d57b51)
+
+Blocos
+![Blocos](https://github.com/user-attachments/assets/a567e4de-da93-4d65-9c95-fe2d399c6f51)
+
+Descrição dos Blocos
+![Descricao-Blocos](https://github.com/user-attachments/assets/2cb67940-55da-4164-ace2-36803c617bc5)
+
+Profile
+![Profile](https://github.com/user-attachments/assets/8a33e2b0-2d36-4710-a2a4-05e4461bd3a9)
+
+Login Bloco
+![Login Bloco](https://github.com/user-attachments/assets/8066a682-6276-4da2-8871-8918b6829c0e)
+
+Selecionar
+![Selecionar](https://github.com/user-attachments/assets/573d1ed3-9860-4a49-8baf-b041d7f3a87c)
+
+Home Bloco
+![Home-Bloco](https://github.com/user-attachments/assets/e2f50e16-690d-4764-84c1-0edbf909bf4f)
+
+Denúncia
+![Denuncia](https://github.com/user-attachments/assets/d50aa16f-dbb7-459c-a433-3af261d49d0f)
+
+Profile-Bloco
+![Profile-Bloco](https://github.com/user-attachments/assets/58d67806-554b-4474-972e-c043a9317559)
+
+
 ### Protótipos de Tela
 
 ##### TELA INICIAL
