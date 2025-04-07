@@ -160,40 +160,84 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
+### Protótipos de Tela
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
+##### TELA INICIAL
 
-Descrição para a tela XPTO
+Tela inicial do sistema para login e/ou cadastro de usuário.
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+![Inicial](https://github.com/user-attachments/assets/09498386-fdab-4db5-8aba-75cff748e9ac)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
->
-> **Orientações**:
->
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+##### TELA DE CADASTRO: Seleção
+
+Tela para realizar cadastro, solicita ao usuário que informe o tipo de cadastro: bloco ou folião.
+
+![image](https://github.com/user-attachments/assets/c9f8c9bd-2c19-4924-bde2-50625306d5cf)
+
+##### TELA DE CADASTRO: Cadastro
+
+Tela para realizar cadastro de folião ou bloco, solicita ao usuário as informações necessárias para o cadastro.
+
+| Folião | Bloco |
+| ----- | ------ |
+| ![image](https://github.com/user-attachments/assets/d25e3f6a-5534-4a77-be16-8ab1268ed102) | ![image](https://github.com/user-attachments/assets/644cdab6-abf3-4e7d-b76b-d26e17c256f8) |
+
+##### TELA INICIAL
+
+Tela inicial do sistema, mostra ao usuário informações principais:
+- Imangens do bloco, para representantes de bloco
+- Mapa para foliões
+
+| Folião | Bloco |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/e1cb34e0-3aac-46a4-965c-6ea18106c84b) | ![image](https://github.com/user-attachments/assets/f7e8b545-e487-4000-bcd8-ae66bc86d02c) |
+
+##### TELA DE CONFIGURAÇÕES
+
+Tela de configurações, permite que o usuário altere sua senha de acesso.
+
+| Folião | Bloco |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/de7d0a6d-cb40-4795-928b-3a653d117468) | ![image](https://github.com/user-attachments/assets/bf7619db-73a3-46df-92ec-484a4bc38a0e) |
+
+##### TELA DE DENÚNCIAS
+
+Tela de denúncias, permite que o usuário realize uma denúncia.
+
+| Folião | Bloco |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/60116bcc-dd33-4374-a21e-5b477b636db0) | ![image](https://github.com/user-attachments/assets/05d3bf2d-93df-4e1b-a89e-4f235cbf7c5f) |
+
+##### TELA DE CONVERSAS
+
+Tela de conversas, permite que o usuário se conecte e converse com outros usuários.
+
+| Folião | Bloco |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/872821b9-e350-4bef-8646-6c0e7dc65cc7) | ![image](https://github.com/user-attachments/assets/ee916703-60d8-4b0d-9f45-257ccae53348) |
+
+##### TELA DE PERFIL
+
+Tela de perfil, permite que o usuário acesse e altere suas configurações do perfil, como foto, nome de usuário, email.
+
+| Folião | Bloco |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/3be8c906-f592-41e6-becd-23eb98397926) | ![image](https://github.com/user-attachments/assets/34bf911c-6b80-4d15-bb32-386762601b86) |
+
+##### TELA DE CONSULTA DE BLOCOS: Folião
+
+Tela de consulta de blocos, permite que o folião veja todos os blocos cadastrados e, ao selecionar um bloco, veja informações detalhadas sobre ele.
+
+| Consulta de blocos | Bloco selecionado |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/7752ed48-3840-4302-8dc5-789ccc73d237) | ![image](https://github.com/user-attachments/assets/ef3e2e94-d846-43ae-a449-4d1000bfea06) |
+
 
 ### User Flow
 
 **✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
 
 ![Exemplo de fluxo de telas](images/exemplo-userflow.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
->
-> **Orientações**:
->
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
 
 ### Protótipo Interativo
 
