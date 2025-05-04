@@ -1,0 +1,46 @@
+.barra-lateral{
+    background-color: #0A8B9A;
+    width: 80px;
+    height: 100vh;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+}
+.bl-icones{
+    height: 60%;
+}
+.barra-lateral a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+.bl-icones ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+.bl-icones ul li:not(.active):hover{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px !important;
+    margin-right: auto;
+    margin-bottom: 30px;
+    transition: background-color 0.5s ease;
+}
+li.active {
+    background-color: black;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px !important;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
