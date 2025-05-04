@@ -2,9 +2,9 @@
     background-color: #0A8B9A;
     width: 80px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 80px;
-    left: 0px;
+    left: 0;
 }
 .bl-icones{
     height: 60%;
