@@ -1,69 +1,46 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Cards - Inicio */
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px 10px;
+    row-gap: 20px;
 }
-nav {
-    background-color: #6B0CB0;
-    padding: 0;
+.card-blocos{
+    background-color: rgb(222, 222, 222);
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(0,0,0,0.5);
+    width: 80%;
+    margin: 0 auto;
+    padding: 4px;
 }
-.navbar {
-    padding-top: 0.25rem !important;
-    padding-bottom: 0.25rem !important;
-    height: 80px;
+.card-blocos:nth-child(n+7) {
+    display: none; 
 }
-.navbar-brand img {
-    height: 76px;
-    width: auto;
+.card-blocos img{
+    width: 100%;
+    border-radius: 8px;
 }
-.nav-link.dropdown-toggle::after {
-    display: none !important;
+.card-blocos p{
+    text-align: justify;
 }
-.container-fluid {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    align-items: center;
-}
-#brpesquisa {
-    width: 480px;
-    margin-left: 80px;
-}
-.btn {
-    padding: 0 12px;
-}
-.fa-list {
-    font-size: 150%;
+.card-blocos button{
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color:  #0A8B9A;
     color: white;
-    margin-left: 10px;
+    transition: filter 0.2s ease;
 }
-#itens-lateral {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+.card-blocos button:hover{
+    filter: brightness(0.9);
 }
-#itens-lateral a {
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px;
-    color: white;
+.botoes{
+    grid-column: 1 / -1; 
+    text-align: center;
+    margin-top: 10px;
 }
-.fa-sun {
-    font-size: 190%;
+#btn-ver-mais {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 20px; 
 }
-#circulo-profile {
-    justify-self: end;
-    border: 2px solid white;
-    border-radius: 60%;
-    width: 38px;
-    height: 38px;
-    align-content: center;
-    margin-right: 4px;
-}
-#circulo-profile i {
-    margin: 8px;
-    font-size: 130%;
-    color: white;
-}
+/* Cards - Inicio */

@@ -1,0 +1,90 @@
+
+{
+    "blocos": [
+      {
+        "id": 1,
+        "nome": "Bloco Filhos da PUC",
+        "descricao_card": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi e atrai um público jovem e animado.",
+        "avaliacao": 4.5,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 2,
+        "nome": "Unidos da Savassi",
+        "descricao_card": "Tradicional no carnaval de BH, o Unidos da Savassi traz muito samba no pé e uma bateria afinada. O bloco é conhecido por seu desfile alegre e por manter viva a cultura das marchinhas.",
+        "avaliacao": 4.2,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 3,
+        "nome": "Funk BH",
+        "descricao_card": "Trazendo o ritmo das favelas cariocas para as ruas de BH, o Funk BH embala os foliões com muito batidão, coreografias e energia contagiante. Ideal para quem gosta de dançar sem parar.",
+        "avaliacao": 3.8,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 4,
+        "nome": "Axé das Gerais",
+        "descricao_card": "Com grandes sucessos do axé music, o Axé das Gerais reúne foliões que gostam de cantar, dançar e curtir uma energia baiana com um toque mineiro. Um dos blocos mais esperados do domingo.",
+        "avaliacao": 4.9,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 5,
+        "nome": "Rock na Rua",
+        "descricao_card": "Para os fãs do rock and roll, o Rock na Rua traz versões carnavalescas de clássicos do rock nacional e internacional. Guitarras, fantasias e muita atitude fazem parte do desfile.",
+        "avaliacao": 4.0,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 6,
+        "nome": "Batuque Feminino",
+        "descricao_card": "Formado exclusivamente por mulheres percussionistas, o Batuque Feminino exalta a força feminina com ritmos afro-brasileiros e letras engajadas. Um desfile cheio de representatividade.",
+        "avaliacao": 4.6,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 7,
+        "nome": "Samba do Mercado",
+        "descricao_card": "Saindo do tradicional Mercado Central, o bloco leva o samba de raiz para os foliões que buscam tradição e autenticidade. Ideal para quem quer curtir um carnaval com charme mineiro.",
+        "avaliacao": 4.3,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 8,
+        "nome": "Pagode no Asfalto",
+        "descricao_card": "Com repertório recheado de sucessos do pagode dos anos 90 até os atuais, o bloco é uma festa do começo ao fim. Perfeito para sorrisos, cantoria e clima de verão.",
+        "avaliacao": 3.9,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 9,
+        "nome": "Cortejo do Amor",
+        "descricao_card": "Colorido, inclusivo e vibrante, o Cortejo do Amor é um dos blocos mais diversos de BH. Com muita música pop, performances e liberdade, ele celebra o amor em todas as suas formas.",
+        "avaliacao": 5.0,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 10,
+        "nome": "Coração de Tambor",
+        "descricao_card": "O Coração de Tambor une ritmos afro, percussão pesada e dança em um cortejo que valoriza a ancestralidade e o poder da música como forma de resistência e celebração.",
+        "avaliacao": 4.7,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 11,
+        "nome": "Bloco Infantil Folia Kids",
+        "descricao_card": "Voltado para o público infantil, o Folia Kids tem atividades lúdicas, músicas infantis e segurança reforçada para famílias curtirem o carnaval com tranquilidade e alegria.",
+        "avaliacao": 4.8,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 12,
+        "nome": "Reggae na Rua",
+        "descricao_card": "Com mensagens de paz, união e positividade, o Reggae na Rua transforma as avenidas em verdadeiros encontros de boas vibrações ao som de clássicos jamaicanos e nacionais.",
+        "avaliacao": 4.1,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      }
+    ]
+  }
+  
