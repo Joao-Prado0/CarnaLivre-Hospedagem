@@ -109,3 +109,20 @@ body {
 .forgot:hover{
  color: #653c81;
 }
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert {
+  animation: fadeInSlide 0.5s ease forwards;
+  opacity: 0; 
+  margin-top: 10px;
+}
