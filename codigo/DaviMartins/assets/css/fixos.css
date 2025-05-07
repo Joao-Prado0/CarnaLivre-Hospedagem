@@ -12,7 +12,6 @@ main{
     height: fit-content;
     margin-top: 10px;
     margin-left: 90px;
-    margin-bottom: 0px;
     padding: 10px;
     border-radius: 5px 5px 0px 0px;
 }
@@ -132,12 +131,13 @@ nav {
 }
 /* Barra Lateral - Fim */
 
-/* Footer */
+/* Rodapé - Inicio */
 footer {
     background-color: #6B0CB0;
     color: white;
     padding: 15px 0 15px;
-    margin-top: 50px;
+    position: relative;
+    bottom: 0;
 }
 
 .footer-content {
@@ -195,3 +195,4 @@ footer {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.7);
 }
+/* Rodapé - Fim */

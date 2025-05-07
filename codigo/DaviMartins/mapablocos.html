@@ -124,41 +124,57 @@
     let marker;
 
     function initMap() {
-      const blocoPUC = { lat: -19.9350, lng: -43.9995 };
+  const blocoPUC = { lat: -19.93516, lng: -43.93105 };
 
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: blocoPUC,
-        zoom: 15,
-      });
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: blocoPUC,
+    zoom: 15,
+  });
 
-      marker = new google.maps.Marker({
-        map: map,
-        position: blocoPUC,
-        title: "Bloco Filhos da PUC-MG",
-      });
+  const marker = new google.maps.Marker({
+    map: map,
+    position: blocoPUC,
+    title: "Bloco Filhos da PUC-MG",
+    label: {
+      text: "Bloco Filhos da PUC-MG",
+      color: "#FF3333",
+      fontWeight: "bold",
+      fontSize: "14px",
+    },
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png", 
+      labelOrigin: new google.maps.Point(20, -10), 
+    },
+  });
 
-      const input = document.getElementById("brpesquisa");
+  const input = document.getElementById("brpesquisa");
 
-      autocomplete = new google.maps.places.Autocomplete(input, {
-        types: ["geocode"],
-        componentRestrictions: { country: "br" },
-        fields: ["geometry", "name"],
-      });
+  const autocomplete = new google.maps.places.Autocomplete(input, {
+    types: ["geocode"],
+    componentRestrictions: { country: "br" },
+    fields: ["geometry", "name"],
+  });
 
-      autocomplete.addListener("place_changed", () => {
-        const place = autocomplete.getPlace();
-        if (!place.geometry || !place.geometry.location) {
-          alert("Local não encontrado!");
-          return;
-        }
-
-        map.setCenter(place.geometry.location);
-        map.setZoom(17);
-
-        marker.setPosition(place.geometry.location);
-        marker.setTitle(place.name);
-      });
+  autocomplete.addListener("place_changed", () => {
+    const place = autocomplete.getPlace();
+    if (!place.geometry || !place.geometry.location) {
+      alert("Local não encontrado!");
+      return;
     }
+
+    map.setCenter(place.geometry.location);
+    map.setZoom(17);
+
+    marker.setPosition(place.geometry.location);
+    marker.setTitle(place.name);
+    marker.setLabel({
+      text: place.name,
+      color: "#c0392b",
+      fontWeight: "bold",
+      fontSize: "14px",
+    });
+  });
+}
   </script>
 
   <script async defer
