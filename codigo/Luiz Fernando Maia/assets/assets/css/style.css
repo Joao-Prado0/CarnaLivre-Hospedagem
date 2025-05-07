@@ -66,7 +66,7 @@ body {
   display: block;
   text-align: left;
   font-size: 12px;
-  color: #3f0071;
+  color: #6B0CB0;
   margin: 5px 0 15px;
   font-weight: 600
 }
@@ -78,11 +78,34 @@ body {
   margin: 10px 0;
   border: none;
   color: white;
-  background-color: #00cba9;
+  background-color:#00cba9;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .signup-btn {
   background-color: #6B0CB0;
+}
+#alert-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: #00a88a; 
+  transform: scale(1.05);    
+  transition: all 0.3s ease; 
+}
+
+.signup-btn:hover {
+  background-color: #550091;
+}
+.eye-button:hover{
+ color: darkgray;
+}
+.forgot:hover{
+ color: #653c81;
 }
