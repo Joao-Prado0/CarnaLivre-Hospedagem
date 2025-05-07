@@ -1,0 +1,212 @@
+/* Estilos gerais responsivos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header compacto */
+.header-logo {
+    text-align: center;
+    padding: 0.8rem 0; /* Altura reduzida */
+    background-color: #6a0dad;
+}
+
+.logo-main {
+    width: 100px; /* Tamanho reduzido */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Container do formulário compacto */
+.container {
+    width: 88%;
+    max-width: 360px; /* Largura reduzida */
+    margin: 1rem auto;
+    background: #DDDDDD;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* Títulos compactos */
+h1 {
+    color: #6a0dad;
+    text-align: center;
+    margin: 0 0 1.2rem 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* Formulário compacto */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #6a0dad;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.7rem;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #6a0dad;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.2);
+}
+
+input::placeholder {
+    color: #999999;
+    font-size: 0.85rem;
+}
+
+.divider {
+    border-top: 1px solid #CCCCCC;
+    margin: 1.2rem 0;
+}
+
+.btn-submit {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #5a0b9d;
+}
+
+/* Footer compacto */
+footer {
+    background-color: #6a0dad;
+    color: white;
+    padding: 0.8rem 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.logo-footer {
+    width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.footer-section h3 {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.footer-section ul li a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 92%;
+        padding: 1.2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 0.8rem;
+    }
+    
+    .logo-footer {
+        margin: 0 auto 0.5rem;
+    }
+    
+    .footer-section h3 {
+        margin-top: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        padding: 0.6rem 0;
+    }
+    
+    .logo-main {
+        width: 90px;
+    }
+    
+    .container {
+        width: 94%;
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .logo-footer {
+        width: 70px;
+    }
+}
