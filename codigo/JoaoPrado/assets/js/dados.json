@@ -84,6 +84,27 @@
         "descricao_card": "Com mensagens de paz, união e positividade, o Reggae na Rua transforma as avenidas em verdadeiros encontros de boas vibrações ao som de clássicos jamaicanos e nacionais.",
         "avaliacao": 4.1,
         "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 13,
+        "nome": "Coração de Tambor",
+        "descricao_card": "O Coração de Tambor une ritmos afro, percussão pesada e dança em um cortejo que valoriza a ancestralidade e o poder da música como forma de resistência e celebração.",
+        "avaliacao": 4.7,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 14,
+        "nome": "Bloco Infantil Folia Kids",
+        "descricao_card": "Voltado para o público infantil, o Folia Kids tem atividades lúdicas, músicas infantis e segurança reforçada para famílias curtirem o carnaval com tranquilidade e alegria.",
+        "avaliacao": 4.8,
+        "imagem": "assets/img/blocoexemplo.jpg"
+      },
+      {
+        "id": 15,
+        "nome": "Reggae na Rua",
+        "descricao_card": "Com mensagens de paz, união e positividade, o Reggae na Rua transforma as avenidas em verdadeiros encontros de boas vibrações ao som de clássicos jamaicanos e nacionais.",
+        "avaliacao": 4.1,
+        "imagem": "assets/img/blocoexemplo.jpg"
       }
     ]
   }

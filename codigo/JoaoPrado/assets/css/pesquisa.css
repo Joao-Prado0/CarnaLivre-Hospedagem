@@ -1,5 +1,5 @@
 /* Cards - Inicio */
-section{
+#container-cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 5px 10px;
@@ -13,18 +13,21 @@ section{
     margin: 0 auto;
     padding: 4px;
 }
-.card-blocos:nth-child(n+7) {
-    display: none; 
-}
 .card-blocos img{
     width: 100%;
     border-radius: 8px;
 }
 .card-blocos p{
     text-align: justify;
+    margin-bottom: 10px;
+}
+.card-blocos i{
+    color: goldenrod;
 }
 .card-blocos button{
+    display: block;
     padding: 6px 12px;
+    margin: 0px auto;
     border-radius: 6px;
     background-color:  #0A8B9A;
     color: white;
