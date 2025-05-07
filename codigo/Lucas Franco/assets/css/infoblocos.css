@@ -1,6 +1,33 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
+.conteudo{
+    color: #D92667;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.conteudo h2{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.btn-verde {
+    background-color: #0A8B9A;
+    border-color: #0A8B9A;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  
+.btn-verde:hover {
+    background-color: #087580;
+    border-color: #076670;
+}
+input{
+    height: 44px;
+}
+main{
+    height: calc(100vh - 220px);
+}
+.rodape{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }

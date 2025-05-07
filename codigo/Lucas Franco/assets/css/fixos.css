@@ -1,10 +1,23 @@
-/* Cabeçalho - Inicio */
-
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #0A8B9A !important;
+}
+main{
+    background-color: white;
+    height: fit-content;
+    margin-top: 10px;
+    margin-left: 90px;
+    margin-bottom: 0px;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* Cabeçalho - Inicio */
 nav {
     background-color: #6B0CB0;
     padding: 0;
@@ -69,18 +82,16 @@ nav {
     font-size: 130%;
     color: white;
 }
-
 /* Cabeçalho - Fim */
 
 /* Barra Lateral - Inicio */
-
 .barra-lateral{
     background-color: #0A8B9A;
-    width: 80px;
-    height: 100vh;
-    position: fixed;
+    width: 90px;
+    position: absolute;
     top: 80px;
     left: 0;
+    bottom: 200px;
 }
 .bl-icones{
     height: 60%;
@@ -92,8 +103,8 @@ nav {
 }
 .bl-icones ul li{
     list-style: none;
-    margin-bottom: 30px;
-    margin-left: 20px;
+    margin-bottom: 40px;
+    margin-left: 28px;
 }
 .bl-icones ul li:not(.active):hover{
     background-color: rgba(0, 0, 0, 0.7);
@@ -103,9 +114,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 12px !important;
+    margin-left: 20px !important;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     transition: background-color 0.5s ease;
 }
 .bl-icones ul li.active {
@@ -116,13 +127,75 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 12px !important;
+    margin-left: 20px !important;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
-
 /* Barra Lateral - Fim */
 
 /* Rodapé - Inicio */
+footer{
+    position: relative;
+    bottom: 0;
+}
+.footer-container {
+    width: 100%;
+    height: 200px;
+    background-color: #6B0CB0; /* Fundo escuro como na imagem */
+    color: #a0a0a0; /* Cor do texto cinza */
+    padding: 15px 0;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+}
 
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.version {
+    color: #e4e4e4;
+    margin-bottom: 15px;
+    font-size: 11px;
+}
+
+.app-name {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.app-code {
+    color: #a0a0a0;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.support-text {
+    color: #f5f5f5;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.link {
+    color: #ebebeb;
+    cursor: pointer;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: 11px;
+    line-height:1.4;
+}
 /* Rodapé - Fim */
