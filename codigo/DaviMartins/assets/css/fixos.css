@@ -16,7 +16,6 @@ main{
     padding: 10px;
     border-radius: 5px 5px 0px 0px;
 }
-
 /* Cabeçalho - Inicio */
 nav {
     background-color: #6B0CB0;
@@ -133,69 +132,66 @@ nav {
 }
 /* Barra Lateral - Fim */
 
-/* Rodapé - Inicio */
-footer{
-    position: relative;
-    bottom: 0;
-}
-.footer-container {
-    width: 100%;
-    height: 200px;
-    background-color: #6B0CB0; /* Fundo escuro como na imagem */
-    color: #a0a0a0; /* Cor do texto cinza */
-    padding: 15px 0;
-    font-size: 12px;
-    text-align: center;
-    box-sizing: border-box;
+/* Footer */
+footer {
+    background-color: #6B0CB0;
+    color: white;
+    padding: 15px 0 15px;
+    margin-top: 50px;
 }
 
 .footer-content {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 0 25px;
 }
 
-.version {
-    color: #e4e4e4;
+.logo-footer {
+    max-width: 100px;
+    height: auto;
     margin-bottom: 15px;
-    font-size: 11px;
 }
 
-.app-name {
-    color: #fff;
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 5px;
+.footer-section{
+    height: 100px;
 }
 
-.app-code {
-    color: #a0a0a0;
+.footer-section h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li:first-of-type {
     margin-bottom: 10px;
-    letter-spacing: 0.5px;
 }
 
-.support-text {
-    color: #f5f5f5;
-    margin-bottom: 20px;
-    font-size: 11px;
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 14px;
 }
 
-.links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.link {
-    color: #ebebeb;
-    cursor: pointer;
+.footer-section ul li a:hover {
+    color: white;
 }
 
 .copyright {
-    color: #ffffff;
-    font-size: 11px;
-    line-height:1.4;
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
 }
-/* Rodapé - Fim */

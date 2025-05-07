@@ -14,24 +14,56 @@
 <body>
   <header class="cabecalho">
     <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="assets/img/Logo.png" alt="Logo" width="80" height="80" />
-        </a>
-        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-          <form class="d-flex" role="search">
-            <input id="brpesquisa" class="form-control ms-2 me-2" type="search" placeholder="Buscar lugar no mapa"
-              aria-label="Search" />
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/Logo.png" alt="Bootstrap" width="80" height="80">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                <form class="d-flex" role="search">
+                    <input id="brpesquisa" class="form-control ms-2 me-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-list"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <ul id="itens-lateral">
+                <li class="">
+                    <a class="" aria-current="" href="#">
+                        <i class="fa-solid fa-sun"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="" aria-current="" href="#">
+                        <div id="circulo-profile">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <ul id="itens-lateral">
-          <li><a href="#"><i class="fa-solid fa-sun"></i></a></li>
-          <li><a href="#"><div id="circulo-profile"><i class="fa-solid fa-user"></i></div></a></li>
-        </ul>
-      </div>
+        </div>
     </nav>
-  </header>
+</header>
 
   <main>
     <aside class="barra-lateral">
@@ -47,32 +79,38 @@
     </aside>
 
     <div class="container my-4">
-      <h1 class="mb-4">Localização dos Blocos</h1>
-      <div id="map" style="width: 100%; height: 500px; border-radius: 10px; box-shadow: 0 0 10px #aaa;"></div>
+      <div id="map" style="width: 100%; height: 650px; border-radius: 10px; box-shadow: 0 0 10px #aaa;"></div>
     </div>
   </main>
 
-  <footer class="rodape">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="app-name">CARNALIVRE</div>
-        <div class="app-code">(31) xxxxx-xxxx</div>
-        <div class="support-text">SUPPORTED CARNA LIVRE APP</div>
-
-        <div class="links">
-          <span class="link">Produto</span>
-          <span class="link">Informação</span>
-          <span class="link">Companhia</span>
-          <span class="link">Saiba Mais</span>
+  <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <img src="assets/img/Logo.png" alt="Logo" class="logo-footer">     
         </div>
-
-        <div class="copyright">
-          A product of<br />
-          2025 Canal Livre All rights reserved
+        
+        <div class="footer-section">
+            <h3>Produto</h3>
+            <ul>
+                <li><a href="#">Informação</a></li>
+                <li><a href="#">Recursos</a></li>
+            </ul>
         </div>
-      </div>
+        
+        <div class="footer-section">
+            <h3>Companhia</h3>
+            <ul>
+                <li><a href="#">Saiba Mais</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
     </div>
-  </footer>
+    
+    <div class="copyright">
+        <p>A product of HermesSentry</p>
+        <p>© 2025 Carna Livre. All rights reserved</p>
+    </div>
+</footer>
 
   <!-- Font Awesome & Bootstrap -->
   <script src="https://kit.fontawesome.com/3fdf209596.js" crossorigin="anonymous"></script>
