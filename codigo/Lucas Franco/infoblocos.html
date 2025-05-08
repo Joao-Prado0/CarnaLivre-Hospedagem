@@ -7,6 +7,8 @@
     <title>Informações do bloco</title>
     <link rel="stylesheet" href="assets/css/fixos.css">
     <link rel="stylesheet" href="assets/css/infoblocos.css">
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/infoblocos.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
@@ -79,18 +81,17 @@
         </aside>
         <div class="conteudo">
             <h2>Adicione as informações do bloco</h1>
-                <form class="container">
+                <form class="container" id="formInfo">
                     <div class="row g-2 mb-3">
                         <div class="col-md-6">
                             <div class="input-group">
-                                <select class="form-select" id="inputGroupSelect04"
+                                <select class="nomeBloco form-select" id="inputGroupSelect04"
                                     aria-label="Example select with button addon">
                                     <option selected>Nome do bloco</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="1">Bloco 1</option>
+                                    <option value="2">Bloco 2</option>
+                                    <option value="3">Bloco 3</option>
                                 </select>
-                                <button class="btn-verde" type="submit"><i class="fa-solid fa-check"></i></button>
                             </div>
                         </div>
 
@@ -104,7 +105,8 @@
                     </div>
                     <div class="row g-2 mb-3">
                         <div class="col-md-3">
-                            <input class="form-control" type="text" name="cep" placeholder="CEP (00000-00)" pattern="\d{5}-?\d{3}">
+                            <input class="form-control" type="text" name="cep" placeholder="CEP (00000-000)"
+                                pattern="\d{5}-?\d{3}">
                         </div>
                         <div class="col-md-3">
                             <input class="form-control" type="text" name="endereco" placeholder="Endereço">
@@ -119,7 +121,7 @@
                     </div>
                     <div class="row g-2">
                         <div class="col-md-6">
-                            <textarea class="form-control" rows="6" placeholder="Descrição"></textarea>
+                            <textarea class="form-control" name="descricao" rows="6" placeholder="Descrição"></textarea>
                         </div>
                         <div class="col-md-6 d-flex flex-column">
                             <div class="mb-auto"></div>
@@ -130,27 +132,34 @@
     </main>
 
     <footer class="rodape">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="app-name">CARNALIVRE</div>
-                <div class="app-code">(31) xxxxx-xxxx</div>
-                <div class="support-text">SUPPORTED CARNA LIVRE APP</div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/img/Logo.png" alt="Logo" class="logo-footer">
+            </div>
 
-                <div class="links">
-                    <span class="link">Produto</span>
-                    <span class="link">Informação</span>
-                    <span class="link">Companhia</span>
-                    <span class="link">Saiba Mais</span>
-                </div>
+            <div class="footer-section">
+                <h3>Produto</h3>
+                <ul>
+                    <li><a href="#">Informação</a></li>
+                    <li><a href="#">Recursos</a></li>
+                </ul>
+            </div>
 
-                <div class="copyright">
-                    A product of<br>
-                    2025 Canal Livre All rights reserved
-                </div>
+            <div class="footer-section">
+                <h3>Companhia</h3>
+                <ul>
+                    <li><a href="#">Saiba Mais</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
 
+        <div class="copyright">
+            <p>A product of HermesSentry</p>
+            <p>© 2025 Carna Livre. All rights reserved</p>
+        </div>
+    </footer>
+    
     <script src="https://kit.fontawesome.com/3fdf209596.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
