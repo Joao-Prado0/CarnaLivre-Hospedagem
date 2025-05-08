@@ -135,37 +135,37 @@ nav {
 /* Barra Lateral - Fim */
 
 /* Rodapé - Inicio */
-footer {
-    background-color: #6B0CB0;
+.rodape {
+    background-color: #6a0dad;
     color: white;
-    padding: 15px 0 15px;
+    padding: 0.8rem 0;
+    margin-top: auto;
+    width: 100%;
     position: relative;
     bottom: 0;
 }
 
 .footer-content {
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 0 25px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .logo-footer {
-    max-width: 100px;
+    width: 80px;
     height: auto;
-    margin-bottom: 15px;
-}
-
-.footer-section{
-    height: 100px;
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
 .footer-section h3 {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 18px;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
     color: white;
 }
 
@@ -175,27 +175,27 @@ footer {
     margin: 0;
 }
 
-.footer-section ul li:first-of-type {
-    margin-bottom: 10px;
+.footer-section ul li {
+    margin-bottom: 0.5rem;
 }
 
 .footer-section ul li a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    transition: color 0.3s;
-    font-size: 14px;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
 }
 
 .footer-section ul li a:hover {
-    color: white;
+    opacity: 0.8;
 }
 
 .copyright {
     text-align: center;
-    margin-top: 15px;
-    padding-top: 15px;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 /* Rodapé - Fim */

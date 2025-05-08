@@ -9,6 +9,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+*{
+    font-family: "Inter", sans-serif;
+}
 
 /* Header compacto */
 .header-logo {
@@ -103,7 +106,7 @@ input::placeholder {
 }
 
 /* Footer compacto */
-footer {
+.rodape {
     background-color: #6a0dad;
     color: white;
     padding: 0.8rem 0;
