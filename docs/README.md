@@ -94,34 +94,17 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ## Proposta de Valor
 
-##### Proposta para Persona 1: Vitoria
+| 1: Vitoria | 2: Juliana |
+| ----- | ------ |
+| ![Proposta1](https://github.com/user-attachments/assets/0e1cee70-13ff-4e2f-b2da-3a54c4142478) | ![Proposta2](https://github.com/user-attachments/assets/82bc1070-53f0-4aff-b255-16e1f9d8b38e) |
 
-![Proposta1](https://github.com/user-attachments/assets/0e1cee70-13ff-4e2f-b2da-3a54c4142478)
+| 3: Guilherme | 4: Marcelo |
+| ----- | ------ |
+| ![Proposta3](https://github.com/user-attachments/assets/3e65bca7-9c17-42fa-a5bf-705a4e5a0d1c) | ![Proposta4](https://github.com/user-attachments/assets/8ae59a5d-7187-4739-a337-0e24c492c852) |
 
-
-##### Proposta para Persona 2: Juliana
-
-![Proposta2](https://github.com/user-attachments/assets/82bc1070-53f0-4aff-b255-16e1f9d8b38e)
-
-
-##### Proposta para Persona 3: Guilherme
-
-![Proposta3](https://github.com/user-attachments/assets/3e65bca7-9c17-42fa-a5bf-705a4e5a0d1c)
-
-
-##### Proposta para Persona 4: Marcelo
-
-![Proposta4](https://github.com/user-attachments/assets/8ae59a5d-7187-4739-a337-0e24c492c852)
-
-
-##### Proposta para Persona 5: Maria Jeronima
-
-![Proposta5](https://github.com/user-attachments/assets/175589d5-0a7d-463a-bee3-75182abdac15)
-
-
-##### Proposta para Persona 6: Pedro
-
-![Proposta6](https://github.com/user-attachments/assets/3a58f43a-0980-42ff-ba4c-ff1e6e7d6a58)
+| 5: Maria Jeronima | 6: Pedro |
+| ----- | ------ |
+| ![Proposta5](https://github.com/user-attachments/assets/175589d5-0a7d-463a-bee3-75182abdac15) | ![Proposta6](https://github.com/user-attachments/assets/3a58f43a-0980-42ff-ba4c-ff1e6e7d6a58) |
 
 ## Requisitos
 
@@ -160,56 +143,51 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-Login
-![Tela-Login](https://github.com/user-attachments/assets/8aa11ebf-b199-401d-a9de-3542abedea91)
+| Login | Login Bloco |
+| ----- | ------ |
+| ![Tela-Login](https://github.com/user-attachments/assets/8aa11ebf-b199-401d-a9de-3542abedea91) | ![Login Bloco](https://github.com/user-attachments/assets/8066a682-6276-4da2-8871-8918b6829c0e) |
 
-Cadastro
-![Cadastro](https://github.com/user-attachments/assets/270c238f-d574-4a9d-8451-98a1990018c3)
+| Cadastro Usuario | Cadastro Bloco |
+| ----- | ------ |
+| ![Cadastro](https://github.com/user-attachments/assets/270c238f-d574-4a9d-8451-98a1990018c3) | ![Cadastro-Bloco](https://github.com/user-attachments/assets/60f91d99-9e83-4c27-a8c5-9e6d391e564e) |
 
-Cadastro do Bloco
-![Cadastro-Bloco](https://github.com/user-attachments/assets/60f91d99-9e83-4c27-a8c5-9e6d391e564e)
+| Home | Blocos |
+| ----- | ------ |
+| ![Home](https://github.com/user-attachments/assets/a1b41eaa-57f5-4b94-a14c-63c888d57b51) | ![Blocos](https://github.com/user-attachments/assets/a567e4de-da93-4d65-9c95-fe2d399c6f51) |
 
-Home
-![Home](https://github.com/user-attachments/assets/a1b41eaa-57f5-4b94-a14c-63c888d57b51)
+| Descrição dos blocos | Perfil |
+| ----- | ------ |
+| ![Descricao-Blocos](https://github.com/user-attachments/assets/2cb67940-55da-4164-ace2-36803c617bc5) | ![Profile](https://github.com/user-attachments/assets/8a33e2b0-2d36-4710-a2a4-05e4461bd3a9) |
 
-Blocos
-![Blocos](https://github.com/user-attachments/assets/a567e4de-da93-4d65-9c95-fe2d399c6f51)
+| Selecionar | Home Bloco |
+| ----- | ------ |
+| ![Selecionar](https://github.com/user-attachments/assets/573d1ed3-9860-4a49-8baf-b041d7f3a87c) | ![Home-Bloco](https://github.com/user-attachments/assets/e2f50e16-690d-4764-84c1-0edbf909bf4f) |
 
-Descrição dos Blocos
-![Descricao-Blocos](https://github.com/user-attachments/assets/2cb67940-55da-4164-ace2-36803c617bc5)
-
-Profile
-![Profile](https://github.com/user-attachments/assets/8a33e2b0-2d36-4710-a2a4-05e4461bd3a9)
-
-Login Bloco
-![Login Bloco](https://github.com/user-attachments/assets/8066a682-6276-4da2-8871-8918b6829c0e)
-
-Selecionar
-![Selecionar](https://github.com/user-attachments/assets/573d1ed3-9860-4a49-8baf-b041d7f3a87c)
-
-Home Bloco
-![Home-Bloco](https://github.com/user-attachments/assets/e2f50e16-690d-4764-84c1-0edbf909bf4f)
-
-Denúncia
-![Denuncia](https://github.com/user-attachments/assets/d50aa16f-dbb7-459c-a433-3af261d49d0f)
-
-Profile-Bloco
-![Profile-Bloco](https://github.com/user-attachments/assets/58d67806-554b-4474-972e-c043a9317559)
+| Denuncia | Perfil Bloco |
+| ----- | ------ |
+| ![Denuncia](https://github.com/user-attachments/assets/d50aa16f-dbb7-459c-a433-3af261d49d0f) | ![Profile-Bloco](https://github.com/user-attachments/assets/58d67806-554b-4474-972e-c043a9317559) |
 
 
 ### Protótipos de Tela
 
-##### TELA INICIAL
+#### HOME-PAGE
 
-Tela inicial do sistema para login e/ou cadastro de usuário.
+Tela inicial do sistema
 
-![Inicial](https://github.com/user-attachments/assets/09498386-fdab-4db5-8aba-75cff748e9ac)
+![HomePage](https://github.com/user-attachments/assets/4ce37207-2919-45c7-865f-d776f55334c3)
+
+##### TELA DE LOGIN
+
+Tela para login e/ou cadastro de usuário.
+
+![Login](https://github.com/user-attachments/assets/de26bc62-f8c0-4f5f-8802-b280596cfe06)
+
 
 ##### TELA DE CADASTRO: Seleção
 
 Tela para realizar cadastro, solicita ao usuário que informe o tipo de cadastro: bloco ou folião.
 
-![image](https://github.com/user-attachments/assets/c9f8c9bd-2c19-4924-bde2-50625306d5cf)
+![CadSelecao](https://github.com/user-attachments/assets/d9560e76-aec0-4b06-b256-221994a0813c)
 
 ##### TELA DE CADASTRO: Cadastro
 
@@ -217,7 +195,7 @@ Tela para realizar cadastro de folião ou bloco, solicita ao usuário as informa
 
 | Folião | Bloco |
 | ----- | ------ |
-| ![image](https://github.com/user-attachments/assets/d25e3f6a-5534-4a77-be16-8ab1268ed102) | ![image](https://github.com/user-attachments/assets/644cdab6-abf3-4e7d-b76b-d26e17c256f8) |
+| ![CadFoliao](https://github.com/user-attachments/assets/0ae71356-dd2e-4112-b3c6-b6b3cbd690ca) | ![CadBloco](https://github.com/user-attachments/assets/2256407f-4b6b-4bea-a3fb-c86325e6b010) |
 
 ##### TELA INICIAL
 
@@ -227,39 +205,7 @@ Tela inicial do sistema, mostra ao usuário informações principais:
 
 | Folião | Bloco |
 | ------ | ----- |
-| ![image](https://github.com/user-attachments/assets/e1cb34e0-3aac-46a4-965c-6ea18106c84b) | ![image](https://github.com/user-attachments/assets/f7e8b545-e487-4000-bcd8-ae66bc86d02c) |
-
-##### TELA DE CONFIGURAÇÕES
-
-Tela de configurações, permite que o usuário altere sua senha de acesso.
-
-| Folião | Bloco |
-| ------ | ----- |
-| ![image](https://github.com/user-attachments/assets/de7d0a6d-cb40-4795-928b-3a653d117468) | ![image](https://github.com/user-attachments/assets/bf7619db-73a3-46df-92ec-484a4bc38a0e) |
-
-##### TELA DE DENÚNCIAS
-
-Tela de denúncias, permite que o usuário realize uma denúncia.
-
-| Folião | Bloco |
-| ------ | ----- |
-| ![image](https://github.com/user-attachments/assets/60116bcc-dd33-4374-a21e-5b477b636db0) | ![image](https://github.com/user-attachments/assets/05d3bf2d-93df-4e1b-a89e-4f235cbf7c5f) |
-
-##### TELA DE CONVERSAS
-
-Tela de conversas, permite que o usuário se conecte e converse com outros usuários.
-
-| Folião | Bloco |
-| ------ | ----- |
-| ![image](https://github.com/user-attachments/assets/872821b9-e350-4bef-8646-6c0e7dc65cc7) | ![image](https://github.com/user-attachments/assets/ee916703-60d8-4b0d-9f45-257ccae53348) |
-
-##### TELA DE PERFIL
-
-Tela de perfil, permite que o usuário acesse e altere suas configurações do perfil, como foto, nome de usuário, email.
-
-| Folião | Bloco |
-| ------ | ----- |
-| ![image](https://github.com/user-attachments/assets/3be8c906-f592-41e6-becd-23eb98397926) | ![image](https://github.com/user-attachments/assets/34bf911c-6b80-4d15-bb32-386762601b86) |
+| ![InicialFoliao](https://github.com/user-attachments/assets/29cb9cbf-5e06-4e39-b907-9ea20783ff1f) | ![InicialFoliao](https://github.com/user-attachments/assets/5095427d-1ff9-4c4a-9e5b-1e3837f3c316) |
 
 ##### TELA DE CONSULTA DE BLOCOS: Folião
 
@@ -267,12 +213,51 @@ Tela de consulta de blocos, permite que o folião veja todos os blocos cadastrad
 
 | Consulta de blocos | Bloco selecionado |
 | ------ | ----- |
-| ![image](https://github.com/user-attachments/assets/7752ed48-3840-4302-8dc5-789ccc73d237) | ![image](https://github.com/user-attachments/assets/ef3e2e94-d846-43ae-a449-4d1000bfea06) |
+| ![image](https://github.com/user-attachments/assets/1e803cfa-deae-4404-a1fe-5167c56ab17c) | ![image](https://github.com/user-attachments/assets/f4118453-a50a-44ff-bc72-79c36f3b36f8) |
 
+##### TELA DE CONSULTA DE BLOCOS: Organizador
+
+Tela de consulta de blocos, permite que o organizador veja as informações cadastradas de seu bloco e altere essas informações.
+
+|  |
+| ------ |
+| ![image](https://github.com/user-attachments/assets/8e530844-0cda-482c-80f9-e58f8190a03d) |
+
+##### TELA DE DENÚNCIAS
+
+Tela de denúncias, permite que o usuário realize uma denúncia.
+
+|  |  |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/19d44d7d-717a-4173-bb24-29b702eed542) | ![image](https://github.com/user-attachments/assets/8713d3d3-ef8b-444c-aa89-1732c8ed2995) |
+
+##### TELA DE CONVERSAS
+
+Tela de conversas, permite que o usuário se conecte e converse com outros usuários.
+
+| Folião | Bloco |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/f2778639-4a06-4652-8ac9-3c2b5f089299) | ![image](https://github.com/user-attachments/assets/cd19c9b3-e4ed-4ea3-ad06-d2070d3e83cf) |
+
+##### TELA DE PERFIL
+
+Tela de perfil, permite que o usuário acesse e altere suas configurações do perfil, como foto, nome de usuário, email.
+
+| Folião | Bloco |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/c0aeb6df-dc99-4c4f-82e2-e08ff97dc2b9) | ![image](https://github.com/user-attachments/assets/eee63dbd-af42-4ffa-8de6-bf74d6caf733) |
+
+##### TELA DE INFORMAÇÕES DO BLOCO
+
+Tela de informações do bloco, permite que o organizador acesse e altere as configurações do bloco, como fotos, descrição, estilo musical, etc.
+
+| Informações | Imagens |
+| ------ | ----- |
+| ![image](https://github.com/user-attachments/assets/92a8bf41-096c-4bf4-9233-c3c11b8581df) | ![image](https://github.com/user-attachments/assets/4fde05ef-ee13-4de5-9b6b-1db7a209c4d8) |
 
 ### User Flow
 
-![fluxo de telas](https://github.com/user-attachments/assets/0b7dbdcb-2fb5-4cf6-9572-a56b3f13fe8a)
+**✳️✳️✳️ adicionar user flow atualizado ✳️✳️✳️**
 
 ### Protótipo Interativo
 
@@ -295,6 +280,7 @@ API de clima
 | --------------------------- | ---------- | -------------------------------------------------- |
 | Processo de Design Thinking | Miro       |  https://miro.com/app/board/uXjVIZ5HaSk=/?share_link_id=934339239127 |
 | Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010200-hermes_sentry |
+| Protótipo do site         | Figma      | https://www.figma.com/design/lIcNjqnRvlVUjhwUDng2L3/fluxo-de-telas?node-id=0-1&p=f&t=jGkhIGoeICWzf4sn-0 |
 | Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
 | Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
 |                             |            |                                                    |
