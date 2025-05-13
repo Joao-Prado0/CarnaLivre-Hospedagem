@@ -4,6 +4,7 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 5px 10px;
     row-gap: 20px;
+    width: 100%;
 }
 .card-blocos{
     background-color: rgb(222, 222, 222);
@@ -12,6 +13,7 @@
     width: 80%;
     margin: 0 auto;
     padding: 4px;
+    max-height: 537px;
 }
 .card-blocos img{
     width: 100%;
@@ -20,6 +22,7 @@
 .card-blocos p{
     text-align: justify;
     margin-bottom: 10px;
+    font-size: 110%;
 }
 .card-blocos i{
     color: goldenrod;

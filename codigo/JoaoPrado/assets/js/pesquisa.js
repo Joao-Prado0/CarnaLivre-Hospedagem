@@ -2,13 +2,10 @@ $(document).ready(function(){
     let blocosCarregados = 0;
     const blocosPagina = 6;
     let blocos = [];
-    $.getJSON('assets/js/dados.json', function(data){
+    $.getJSON('assets/js/db.json', function(data){
         blocos = data.blocos;
-
-        // Carrega os primeiros blocos
         carregarMaisBlocos();
     });
-    // Ao clicar no botão "Ver mais"
     $('#btn-ver-mais').click(function() {
         carregarMaisBlocos();
     });
@@ -23,7 +20,7 @@ $(document).ready(function(){
         blocosCarregados += blocosPagina;
 
         if (blocosCarregados >= blocos.length) {
-            $('#btn-ver-mais').hide(); // Esconde o botão se não houver mais blocos
+            $('#btn-ver-mais').hide(); 
         }
     }
 })
@@ -31,7 +28,7 @@ $(document).ready(function(){
 function criarCard(cardbloco){;
     let div = $('<div>').attr('class', 'card-blocos')
     let img = $('<img>').attr('src', cardbloco.imagem).attr('alt', 'Descrição');
-    let h3 = $('<h3>').text(cardbloco.nome);
+    let h3 = $('<h3>').text(cardbloco.nome-bloco);
     let p = $('<p>').text(cardbloco.descricao_card); 
     let i = $('<i>').html(`<i class="fa-solid fa-star"></i> ${cardbloco.avaliacao}`);
     let link = $('<a>').attr('href','bloco.html?id=' + cardbloco.id).attr('id', 'linkBloco');

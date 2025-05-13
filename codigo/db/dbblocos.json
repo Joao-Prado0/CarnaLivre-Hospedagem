@@ -1,0 +1,649 @@
+{
+  "blocos": [
+    {
+      "id": 1,
+      "nome-bloco": "Bloco Filhos da PUC",
+      "descricao_geral": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi.",
+      "avaliacao": 4.5,
+      "data": "2026-02-13",
+      "publico": 20000,
+      "cep": "30140-130",
+      "endereco": "Rua Pernambuco, Savassi, BH",
+      "faixa_etaria": "18+",
+      "estilo_musical": "Axé, Pop",
+      "organizador": [
+        {
+          "nome_org": "João P. Andrade",
+          "email_org": "joao@filhosdapuc.com",
+          "cnpj": "12.345.678/0001-00",
+          "senha": "senha123"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "Universitários e bateria animada, com muito axé e pop nas ruas da Savassi.",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome-bloco": "Unidos da Savassi",
+      "descricao_geral": "Tradicional no carnaval de BH, o Unidos da Savassi traz samba no pé e muita alegria no coração. Ideal para quem busca um desfile raiz.",
+      "avaliacao": 4.2,
+      "data": "2026-02-13",
+      "publico": 18000,
+      "cep": "30112-010",
+      "endereco": "Av. Cristóvão Colombo, BH",
+      "faixa_etaria": "Livre",
+      "estilo_musical": "Samba",
+      "organizador": [
+        {
+          "nome_org": "Maria S. Lima",
+          "email_org": "maria@unidossavassi.com",
+          "cnpj": "98.765.432/0001-10",
+          "senha": "unidos456"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "Samba no pé, tradição e muita energia no coração da Savassi.",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome-bloco": "Funk BH",
+      "descricao_geral": "Batidas marcantes e coreografias envolventes fazem do Funk BH uma das atrações mais animadas do carnaval belo-horizontino.",
+      "avaliacao": 3.8,
+      "data": "2026-02-14",
+      "publico": 22000,
+      "cep": "30220-260",
+      "endereco": "Rua Contorno, Floresta, BH",
+      "faixa_etaria": "16+",
+      "estilo_musical": "Funk",
+      "organizador": [
+        {
+          "nome_org": "Carlos M. Silva",
+          "email_org": "carlos@funkbh.com",
+          "cnpj": "23.456.789/0001-99",
+          "senha": "funktop"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "Batidão 150 BPM, energia contagiante e coreografias incríveis.",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome-bloco": "Axé das Gerais",
+      "descricao_geral": "Com sucessos do axé music, o bloco transforma as ruas em uma grande micareta à mineira, com muita dança e alto astral.",
+      "avaliacao": 4.9,
+      "data": "2026-02-14",
+      "publico": 25000,
+      "cep": "30110-011",
+      "endereco": "Praça da Liberdade, BH",
+      "faixa_etaria": "Livre",
+      "estilo_musical": "Axé",
+      "organizador": [
+        {
+          "nome_org": "Fernanda Lopes",
+          "email_org": "fernanda@axedagerais.com",
+          "cnpj": "34.567.890/0001-55",
+          "senha": "axe4ever"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "Clima de Salvador com axé contagiante no coração de BH.",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nome-bloco": "Rock na Rua",
+      "descricao_geral": "Releituras de clássicos do rock em ritmo de carnaval, com guitarras e fantasia.",
+      "avaliacao": 4.0,
+      "data": "2026-02-15",
+      "publico": 12000,
+      "cep": "30170-120",
+      "endereco": "Av. Afonso Pena, BH",
+      "faixa_etaria": "16+",
+      "estilo_musical": "Rock",
+      "organizador": [
+        {
+          "nome_org": "Rafael Mendes",
+          "email_org": "rafael@rocknarua.com",
+          "cnpj": "56.789.123/0001-66",
+          "senha": "guitarra22"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "Rock and roll com marchinha e muito glitter.",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nome-bloco": "Batuque Feminino",
+      "descricao_geral": "Formado por mulheres percussionistas, o bloco celebra a força feminina com ritmos afro-brasileiros.",
+      "avaliacao": 4.6,
+      "data": "2026-02-15",
+      "publico": 10000,
+      "cep": "30150-370",
+      "endereco": "Rua Rio de Janeiro, BH",
+      "faixa_etaria": "Livre",
+      "estilo_musical": "Afro-brasileiro",
+      "organizador": [
+        {
+          "nome_org": "Débora T. Cruz",
+          "email_org": "debora@batuquefeminino.com",
+          "cnpj": "67.890.123/0001-88",
+          "senha": "batucada"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "Batuque, resistência e alegria conduzida por mulheres.",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nome-bloco": "Samba do Mercado",
+      "descricao_geral": "Saindo do coração do Mercado Central, o Samba do Mercado traz um repertório clássico do samba de raiz, animando os foliões com muito ritmo e tradição.",
+      "avaliacao": 4.3,
+      "data": "2026-02-13",
+      "publico": 9000,
+      "cep": "30110-000",
+      "endereco": "Av. Augusto de Lima, Centro, BH",
+      "faixa_etaria": "Livre",
+      "estilo_musical": "Samba",
+      "organizador": [
+        {
+          "nome_org": "Tânia Moreira",
+          "email_org": "tania@sambadomercado.com",
+          "cnpj": "12.321.456/0001-01",
+          "senha": "mercado123"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nome-bloco": "Pagode no Asfalto",
+      "descricao_geral": "Um verdadeiro baile a céu aberto, o Pagode no Asfalto conquista os foliões com clássicos do pagode dos anos 90 e hits atuais, sempre com muita animação.",
+      "avaliacao": 3.9,
+      "data": "2026-02-14",
+      "publico": 14000,
+      "cep": "30130-110",
+      "endereco": "Rua da Bahia, BH",
+      "faixa_etaria": "16+",
+      "estilo_musical": "Pagode",
+      "organizador": [
+        {
+          "nome_org": "Bruno Cardoso",
+          "email_org": "bruno@pagodenoasfalto.com",
+          "cnpj": "32.123.654/0001-12",
+          "senha": "asfaltopagode"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nome-bloco": "Cortejo do Amor",
+      "descricao_geral": "Celebrando a diversidade e a liberdade, o Cortejo do Amor é repleto de cores, glitter e mensagens de aceitação. Um dos blocos mais inclusivos de BH.",
+      "avaliacao": 5.0,
+      "data": "2026-02-14",
+      "publico": 22000,
+      "cep": "30150-010",
+      "endereco": "Av. Álvares Cabral, BH",
+      "faixa_etaria": "18+",
+      "estilo_musical": "Pop, Eletrônico",
+      "organizador": [
+        {
+          "nome_org": "Luciana Dias",
+          "email_org": "luciana@cortejodoamor.com",
+          "cnpj": "43.210.987/0001-76",
+          "senha": "amor2026"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "nome-bloco": "Coração de Tambor",
+      "descricao_geral": "Inspirado nas tradições afro-brasileiras, o Coração de Tambor mistura música, dança e espiritualidade em uma celebração poderosa e ancestral.",
+      "avaliacao": 4.7,
+      "data": "2026-02-15",
+      "publico": 16000,
+      "cep": "30160-020",
+      "endereco": "Av. do Contorno, BH",
+      "faixa_etaria": "Livre",
+      "estilo_musical": "Afro, Percussivo",
+      "organizador": [
+        {
+          "nome_org": "João Lucas Ribeiro",
+          "email_org": "joao@coracaodetambor.com",
+          "cnpj": "21.432.654/0001-09",
+          "senha": "tamborforte"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "nome-bloco": "Brega BH",
+      "descricao_geral": "Com muito romantismo e exagero, o Brega BH leva os clássicos do brega e do popular brasileiro para o meio da folia. Glitter, perucas e declarações de amor não faltam!",
+      "avaliacao": 4.1,
+      "data": "2026-02-15",
+      "publico": 11000,
+      "cep": "30120-060",
+      "endereco": "Rua Curitiba, Centro, BH",
+      "faixa_etaria": "16+",
+      "estilo_musical": "Brega",
+      "organizador": [
+        {
+          "nome_org": "Cláudia R. Souza",
+          "email_org": "claudia@bregabh.com",
+          "cnpj": "87.654.321/0001-22",
+          "senha": "bregaamor"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "nome-bloco": "Bloco do Vinil",
+      "descricao_geral": "Voltado aos amantes dos clássicos, o Bloco do Vinil traz um repertório recheado de hits dos anos 70, 80 e 90, com DJs e foliões caracterizados de época.",
+      "avaliacao": 4.4,
+      "data": "2026-02-16",
+      "publico": 13000,
+      "cep": "30190-001",
+      "endereco": "Av. Amazonas, BH",
+      "faixa_etaria": "Livre",
+      "estilo_musical": "Disco, Flashback",
+      "organizador": [
+        {
+          "nome_org": "Marcelo V. Torres",
+          "email_org": "marcelo@blocodovinil.com",
+          "cnpj": "54.321.987/0001-55",
+          "senha": "vinil2026"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "nome-bloco": "Bloco do Jazz",
+      "descricao_geral": "Com arranjos elaborados e instrumentos de sopro, o Bloco do Jazz apresenta uma experiência sonora refinada e contagiante, misturando improviso e marchinha.",
+      "avaliacao": 4.8,
+      "data": "2026-02-17",
+      "publico": 8000,
+      "cep": "30130-000",
+      "endereco": "Praça Sete, BH",
+      "faixa_etaria": "Livre",
+      "estilo_musical": "Jazz, Instrumental",
+      "organizador": [
+        {
+          "nome_org": "Eduardo L. Reis",
+          "email_org": "eduardo@blocodojazz.com",
+          "cnpj": "23.987.654/0001-33",
+          "senha": "jazzliberdade"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "nome-bloco": "Bloco dos Mixturados",
+      "descricao_geral": "Misturando diversos estilos musicais e influências culturais, o Bloco dos Mixturados atrai um público diverso em busca de um carnaval plural e democrático.",
+      "avaliacao": 4.2,
+      "data": "2026-02-18",
+      "publico": 15000,
+      "cep": "30180-010",
+      "endereco": "Rua Guajajaras, BH",
+      "faixa_etaria": "Livre",
+      "estilo_musical": "Diversos",
+      "organizador": [
+        {
+          "nome_org": "Renata B. Silva",
+          "email_org": "renata@mixturados.com",
+          "cnpj": "45.678.123/0001-09",
+          "senha": "mistura2026"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "nome-bloco": "Techno no Asfalto",
+      "descricao_geral": "O carnaval eletrônico de BH! O Techno no Asfalto transforma avenidas em pistas de dança com DJs e efeitos visuais impressionantes.",
+      "avaliacao": 4.6,
+      "data": "2026-02-18",
+      "publico": 19000,
+      "cep": "30111-000",
+      "endereco": "Av. Getúlio Vargas, BH",
+      "faixa_etaria": "18+",
+      "estilo_musical": "Techno, Eletrônico",
+      "organizador": [
+        {
+          "nome_org": "Igor M. Duarte",
+          "email_org": "igor@technonoasfalto.com",
+          "cnpj": "34.876.543/0001-21",
+          "senha": "techcarnaval"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
