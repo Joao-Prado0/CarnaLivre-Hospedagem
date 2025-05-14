@@ -2,7 +2,7 @@
   "blocos": [
     {
       "id": 1,
-      "nome-bloco": "Bloco Filhos da PUC",
+      "nome_bloco": "Bloco Filhos da PUC",
       "descricao_geral": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi.",
       "avaliacao": 4.5,
       "data": "2026-02-13",
@@ -45,7 +45,7 @@
     },
     {
       "id": 2,
-      "nome-bloco": "Unidos da Savassi",
+      "nome_bloco": "Unidos da Savassi",
       "descricao_geral": "Tradicional no carnaval de BH, o Unidos da Savassi traz samba no pé e muita alegria no coração. Ideal para quem busca um desfile raiz.",
       "avaliacao": 4.2,
       "data": "2026-02-13",
@@ -88,7 +88,7 @@
     },
     {
       "id": 3,
-      "nome-bloco": "Funk BH",
+      "nome_bloco": "Funk BH",
       "descricao_geral": "Batidas marcantes e coreografias envolventes fazem do Funk BH uma das atrações mais animadas do carnaval belo-horizontino.",
       "avaliacao": 3.8,
       "data": "2026-02-14",
@@ -131,7 +131,7 @@
     },
     {
       "id": 4,
-      "nome-bloco": "Axé das Gerais",
+      "nome_bloco": "Axé das Gerais",
       "descricao_geral": "Com sucessos do axé music, o bloco transforma as ruas em uma grande micareta à mineira, com muita dança e alto astral.",
       "avaliacao": 4.9,
       "data": "2026-02-14",
@@ -174,7 +174,7 @@
     },
     {
       "id": 5,
-      "nome-bloco": "Rock na Rua",
+      "nome_bloco": "Rock na Rua",
       "descricao_geral": "Releituras de clássicos do rock em ritmo de carnaval, com guitarras e fantasia.",
       "avaliacao": 4.0,
       "data": "2026-02-15",
@@ -217,7 +217,7 @@
     },
     {
       "id": 6,
-      "nome-bloco": "Batuque Feminino",
+      "nome_bloco": "Batuque Feminino",
       "descricao_geral": "Formado por mulheres percussionistas, o bloco celebra a força feminina com ritmos afro-brasileiros.",
       "avaliacao": 4.6,
       "data": "2026-02-15",
@@ -225,7 +225,7 @@
       "cep": "30150-370",
       "endereco": "Rua Rio de Janeiro, BH",
       "faixa_etaria": "Livre",
-      "estilo_musical": "Afro-brasileiro",
+      "estilo_musical": "MPB",
       "organizador": [
         {
           "nome_org": "Débora T. Cruz",
@@ -260,7 +260,7 @@
     },
     {
       "id": 7,
-      "nome-bloco": "Samba do Mercado",
+      "nome_bloco": "Samba do Mercado",
       "descricao_geral": "Saindo do coração do Mercado Central, o Samba do Mercado traz um repertório clássico do samba de raiz, animando os foliões com muito ritmo e tradição.",
       "avaliacao": 4.3,
       "data": "2026-02-13",
@@ -279,7 +279,7 @@
       ],
       "postagem": [
         {
-          "descricao_card": "",
+          "descricao_card": "O melhor do samba raiz saindo direto do Mercado Central, tradição e alegria garantidas.",
           "imagens": [
             {
               "id": 1,
@@ -303,7 +303,7 @@
     },
     {
       "id": 8,
-      "nome-bloco": "Pagode no Asfalto",
+      "nome_bloco": "Pagode no Asfalto",
       "descricao_geral": "Um verdadeiro baile a céu aberto, o Pagode no Asfalto conquista os foliões com clássicos do pagode dos anos 90 e hits atuais, sempre com muita animação.",
       "avaliacao": 3.9,
       "data": "2026-02-14",
@@ -311,7 +311,7 @@
       "cep": "30130-110",
       "endereco": "Rua da Bahia, BH",
       "faixa_etaria": "16+",
-      "estilo_musical": "Pagode",
+      "estilo_musical": "MPB",
       "organizador": [
         {
           "nome_org": "Bruno Cardoso",
@@ -322,7 +322,7 @@
       ],
       "postagem": [
         {
-          "descricao_card": "",
+          "descricao_card": "Hits do pagode anos 90 e atuais para um baile a céu aberto no asfalto de BH.",
           "imagens": [
             {
               "id": 1,
@@ -346,7 +346,7 @@
     },
     {
       "id": 9,
-      "nome-bloco": "Cortejo do Amor",
+      "nome_bloco": "Cortejo do Amor",
       "descricao_geral": "Celebrando a diversidade e a liberdade, o Cortejo do Amor é repleto de cores, glitter e mensagens de aceitação. Um dos blocos mais inclusivos de BH.",
       "avaliacao": 5.0,
       "data": "2026-02-14",
@@ -365,7 +365,7 @@
       ],
       "postagem": [
         {
-          "descricao_card": "",
+          "descricao_card": "Glitter, cores e inclusão! O bloco mais diverso e vibrante do carnaval belo-horizontino.",
           "imagens": [
             {
               "id": 1,
@@ -389,7 +389,7 @@
     },
     {
       "id": 10,
-      "nome-bloco": "Coração de Tambor",
+      "nome_bloco": "Coração de Tambor",
       "descricao_geral": "Inspirado nas tradições afro-brasileiras, o Coração de Tambor mistura música, dança e espiritualidade em uma celebração poderosa e ancestral.",
       "avaliacao": 4.7,
       "data": "2026-02-15",
@@ -397,7 +397,7 @@
       "cep": "30160-020",
       "endereco": "Av. do Contorno, BH",
       "faixa_etaria": "Livre",
-      "estilo_musical": "Afro, Percussivo",
+      "estilo_musical": "Samba, Axé",
       "organizador": [
         {
           "nome_org": "João Lucas Ribeiro",
@@ -408,7 +408,7 @@
       ],
       "postagem": [
         {
-          "descricao_card": "",
+          "descricao_card": "Celebração afro-brasileira com muita percussão e espiritualidade nas ruas de BH.",
           "imagens": [
             {
               "id": 1,
@@ -432,7 +432,7 @@
     },
     {
       "id": 11,
-      "nome-bloco": "Brega BH",
+      "nome_bloco": "Brega BH",
       "descricao_geral": "Com muito romantismo e exagero, o Brega BH leva os clássicos do brega e do popular brasileiro para o meio da folia. Glitter, perucas e declarações de amor não faltam!",
       "avaliacao": 4.1,
       "data": "2026-02-15",
@@ -440,7 +440,7 @@
       "cep": "30120-060",
       "endereco": "Rua Curitiba, Centro, BH",
       "faixa_etaria": "16+",
-      "estilo_musical": "Brega",
+      "estilo_musical": "Sertanejo",
       "organizador": [
         {
           "nome_org": "Cláudia R. Souza",
@@ -451,7 +451,7 @@
       ],
       "postagem": [
         {
-          "descricao_card": "",
+          "descricao_card": "Romantismo exagerado e músicas bregas inesquecíveis para quem ama se jogar na sofrência.",
           "imagens": [
             {
               "id": 1,
@@ -475,7 +475,7 @@
     },
     {
       "id": 12,
-      "nome-bloco": "Bloco do Vinil",
+      "nome_bloco": "Bloco do Vinil",
       "descricao_geral": "Voltado aos amantes dos clássicos, o Bloco do Vinil traz um repertório recheado de hits dos anos 70, 80 e 90, com DJs e foliões caracterizados de época.",
       "avaliacao": 4.4,
       "data": "2026-02-16",
@@ -483,7 +483,7 @@
       "cep": "30190-001",
       "endereco": "Av. Amazonas, BH",
       "faixa_etaria": "Livre",
-      "estilo_musical": "Disco, Flashback",
+      "estilo_musical": "Pop",
       "organizador": [
         {
           "nome_org": "Marcelo V. Torres",
@@ -494,7 +494,7 @@
       ],
       "postagem": [
         {
-          "descricao_card": "",
+          "descricao_card": "Clássicos dos anos 70, 80 e 90 com foliões fantasiados e muito flashback no carnaval.",
           "imagens": [
             {
               "id": 1,
@@ -518,7 +518,7 @@
     },
     {
       "id": 13,
-      "nome-bloco": "Bloco do Jazz",
+      "nome_bloco": "Bloco do Jazz",
       "descricao_geral": "Com arranjos elaborados e instrumentos de sopro, o Bloco do Jazz apresenta uma experiência sonora refinada e contagiante, misturando improviso e marchinha.",
       "avaliacao": 4.8,
       "data": "2026-02-17",
@@ -526,7 +526,7 @@
       "cep": "30130-000",
       "endereco": "Praça Sete, BH",
       "faixa_etaria": "Livre",
-      "estilo_musical": "Jazz, Instrumental",
+      "estilo_musical": "Pop",
       "organizador": [
         {
           "nome_org": "Eduardo L. Reis",
@@ -537,7 +537,7 @@
       ],
       "postagem": [
         {
-          "descricao_card": "",
+          "descricao_card": "Improviso, instrumentos de sopro e marchinhas com uma pegada jazz sofisticada.",
           "imagens": [
             {
               "id": 1,
@@ -561,7 +561,7 @@
     },
     {
       "id": 14,
-      "nome-bloco": "Bloco dos Mixturados",
+      "nome_bloco": "Bloco dos Mixturados",
       "descricao_geral": "Misturando diversos estilos musicais e influências culturais, o Bloco dos Mixturados atrai um público diverso em busca de um carnaval plural e democrático.",
       "avaliacao": 4.2,
       "data": "2026-02-18",
@@ -569,7 +569,7 @@
       "cep": "30180-010",
       "endereco": "Rua Guajajaras, BH",
       "faixa_etaria": "Livre",
-      "estilo_musical": "Diversos",
+      "estilo_musical": "MPB, Axé, Samba",
       "organizador": [
         {
           "nome_org": "Renata B. Silva",
@@ -580,7 +580,7 @@
       ],
       "postagem": [
         {
-          "descricao_card": "",
+          "descricao_card": "Um caldeirão de estilos e ritmos para quem gosta de um carnaval democrático e diverso.",
           "imagens": [
             {
               "id": 1,
@@ -604,7 +604,7 @@
     },
     {
       "id": 15,
-      "nome-bloco": "Techno no Asfalto",
+      "nome_bloco": "Techno no Asfalto",
       "descricao_geral": "O carnaval eletrônico de BH! O Techno no Asfalto transforma avenidas em pistas de dança com DJs e efeitos visuais impressionantes.",
       "avaliacao": 4.6,
       "data": "2026-02-18",
@@ -612,7 +612,7 @@
       "cep": "30111-000",
       "endereco": "Av. Getúlio Vargas, BH",
       "faixa_etaria": "18+",
-      "estilo_musical": "Techno, Eletrônico",
+      "estilo_musical": "Eletrônica",
       "organizador": [
         {
           "nome_org": "Igor M. Duarte",
@@ -623,7 +623,7 @@
       ],
       "postagem": [
         {
-          "descricao_card": "",
+          "descricao_card": "DJs e batidas eletrônicas transformando BH numa pista de dança futurista no carnaval.",
           "imagens": [
             {
               "id": 1,

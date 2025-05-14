@@ -2,7 +2,7 @@ $(document).ready(function(){
     let blocosCarregados = 0;
     const blocosPagina = 6;
     let blocos = [];
-    $.getJSON('assets/js/db.json', function(data){
+    $.getJSON('../db/dbblocos.json', function(data){
         blocos = data.blocos;
         carregarMaisBlocos();
     });
@@ -25,11 +25,14 @@ $(document).ready(function(){
     }
 })
 
-function criarCard(cardbloco){;
+function criarCard(cardbloco){
+    const postagem = cardbloco.postagem[0];
+    const imagemSrc = postagem.imagens[0].src;
+
     let div = $('<div>').attr('class', 'card-blocos')
-    let img = $('<img>').attr('src', cardbloco.imagem).attr('alt', 'Descrição');
-    let h3 = $('<h3>').text(cardbloco.nome-bloco);
-    let p = $('<p>').text(cardbloco.descricao_card); 
+    let img = $('<img>').attr('src',imagemSrc).attr('alt', 'Descrição');
+    let h3 = $('<h3>').text(cardbloco.nome_bloco);
+    let p = $('<p>').text(postagem.descricao_card); 
     let i = $('<i>').html(`<i class="fa-solid fa-star"></i> ${cardbloco.avaliacao}`);
     let link = $('<a>').attr('href','bloco.html?id=' + cardbloco.id).attr('id', 'linkBloco');
     let button = $('<button>').text('Ver mais');
