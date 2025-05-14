@@ -9,7 +9,7 @@ const gallery = document.getElementById('gallery');
 const pictureBox = document.querySelector('.picture');
 let selectedFile = null;
 
-// Quando o usuário seleciona uma imagem
+// Pré-visualização da imagem
 input.addEventListener('change', () => {
   const file = input.files[0];
   if (!file) return;
@@ -23,14 +23,14 @@ input.addEventListener('change', () => {
   reader.readAsDataURL(file);
 });
 
-// Quando o botão de upload é clicado
+// Upload da imagem com legenda
 uploadBtn.addEventListener('click', () => {
   if (!selectedFile) {
     alert("Selecione uma imagem primeiro.");
     return;
   }
 
-  const captionText = captionInput.value;
+  const captionText = captionInput.value.trim();
 
   const formData = new FormData();
   formData.append('file', selectedFile);
@@ -42,34 +42,31 @@ uploadBtn.addEventListener('click', () => {
   })
     .then(res => res.json())
     .then(data => {
-      // Criar container para imagem + legenda
-      const container = document.createElement('div');
-      container.style.display = 'flex';
-      container.style.flexDirection = 'column';
-      container.style.alignItems = 'center';
+      // Criar o card Bootstrap
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.style.width = '18rem'; // Largura fixa do card Bootstrap
 
-      // Criar imagem
+      // Imagem do card
       const img = document.createElement('img');
       img.src = data.secure_url;
-      img.style.width = '150px';
-      img.style.height = '100px';
-      img.style.objectFit = 'cover';
-      img.style.borderRadius = '8px';
-      img.style.boxShadow = '0 0 5px rgba(0,0,0,0.2)';
+      img.classList.add('card-img-top');
+      img.alt = "Imagem enviada";
 
-      // Criar legenda
+      // Corpo do card
+      const cardBody = document.createElement('div');
+      cardBody.classList.add('card-body');
+
+      // Legenda do card
       const caption = document.createElement('p');
+      caption.classList.add('card-text');
       caption.textContent = captionText;
-      caption.style.marginTop = '5px';
-      caption.style.fontSize = '14px';
-      caption.style.color = '#333';
-      caption.style.maxWidth = '150px';
-      caption.style.textAlign = 'center';
 
-      // Montar e adicionar à galeria
-      container.appendChild(img);
-      container.appendChild(caption);
-      gallery.appendChild(container);
+      // Montar a estrutura do card
+      cardBody.appendChild(caption);
+      card.appendChild(img);
+      card.appendChild(cardBody);
+      gallery.appendChild(card);
 
       // Limpar inputs
       pictureBox.innerHTML = 'Clique ou arraste a imagem aqui';
@@ -81,6 +78,7 @@ uploadBtn.addEventListener('click', () => {
       alert('Erro ao enviar: ' + err.message);
     });
 });
+
 
 
 
