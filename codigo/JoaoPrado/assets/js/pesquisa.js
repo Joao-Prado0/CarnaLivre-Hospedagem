@@ -10,6 +10,8 @@ $(document).ready(function(){
         carregarMaisBlocos();
     });
 
+    $('input[type="checkbox"]').on('change', aplicarFiltros);
+
     function carregarMaisBlocos() {
         const proximoLote = blocos.slice(blocosCarregados, blocosCarregados + blocosPagina);
         proximoLote.forEach(function(bloco){
@@ -22,6 +24,65 @@ $(document).ready(function(){
         if (blocosCarregados >= blocos.length) {
             $('#btn-ver-mais').hide(); 
         }
+    }
+    
+    function aplicarFiltros(){
+        const datasSelecionadas = $('input[name="dia"]:checked').map(function(){
+            return $(this).val();
+        }).get();
+
+        const estilosSelecionados = $('input[name="estilo"]:checked').map(function(){
+            return $(this).val();
+        }).get();
+
+        const publicosSelecionados = $('input[name="publico"]:checked').map(function(){
+            return $(this).val();
+        }).get();
+
+        const faixasSelecionadas = $('input[name="faixa"]:checked').map(function(){
+            return $(this).val();
+        }).get();
+
+        const nenhumFiltroAtivo =
+        datasSelecionadas.length === 0 &&
+        estilosSelecionados.length === 0 &&
+        publicosSelecionados.length === 0 &&
+        faixasSelecionadas.length === 0;
+
+        if (nenhumFiltroAtivo) {
+            $('#container-cards').empty();
+            blocosCarregados = 0;
+            carregarMaisBlocos();
+            $('#btn-ver-mais').show();
+            return;
+        }
+
+        const blocosFiltrados = blocos.filter(function(bloco){
+            const datasOk = datasSelecionadas.length === 0 ||
+            datasSelecionadas.includes(bloco.data);
+            
+            const estilosOk = estilosSelecionados.length === 0 ||
+            estilosSelecionados.some(estilo => bloco.estilo_musical.includes(estilo));
+
+            const publicosOk = publicosSelecionados.length === 0 ||
+            publicosSelecionados.some(intervalo => {
+                const [min, max] = intervalo.split('-').map(Number);
+                return bloco.publico >= min && bloco.publico <= max;
+            })
+
+            const faixaOk = faixasSelecionadas.length === 0 ||
+            faixasSelecionadas.includes(bloco.faixa_etaria);
+
+            return datasOk && estilosOk && publicosOk && faixaOk;
+        })
+
+        $('#container-cards').empty();
+        blocosFiltrados.forEach(bloco =>{
+            const card = criarCard(bloco);
+            $('#container-cards').append((card).hide().fadeIn(300));
+        });
+
+        $('#btn-ver-mais').hide();
     }
 })
 

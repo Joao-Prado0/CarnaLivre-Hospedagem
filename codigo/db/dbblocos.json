@@ -52,7 +52,7 @@
       "publico": 18000,
       "cep": "30112-010",
       "endereco": "Av. Cristóvão Colombo, BH",
-      "faixa_etaria": "Livre",
+      "faixa_etaria": "12+",
       "estilo_musical": "Samba",
       "organizador": [
         {
@@ -307,7 +307,7 @@
       "descricao_geral": "Um verdadeiro baile a céu aberto, o Pagode no Asfalto conquista os foliões com clássicos do pagode dos anos 90 e hits atuais, sempre com muita animação.",
       "avaliacao": 3.9,
       "data": "2026-02-14",
-      "publico": 14000,
+      "publico": 1400,
       "cep": "30130-110",
       "endereco": "Rua da Bahia, BH",
       "faixa_etaria": "16+",
@@ -397,7 +397,7 @@
       "cep": "30160-020",
       "endereco": "Av. do Contorno, BH",
       "faixa_etaria": "Livre",
-      "estilo_musical": "Samba, Axé",
+      "estilo_musical": "Samba, Axé, Afro-beat",
       "organizador": [
         {
           "nome_org": "João Lucas Ribeiro",
@@ -436,7 +436,7 @@
       "descricao_geral": "Com muito romantismo e exagero, o Brega BH leva os clássicos do brega e do popular brasileiro para o meio da folia. Glitter, perucas e declarações de amor não faltam!",
       "avaliacao": 4.1,
       "data": "2026-02-15",
-      "publico": 11000,
+      "publico": 1000,
       "cep": "30120-060",
       "endereco": "Rua Curitiba, Centro, BH",
       "faixa_etaria": "16+",
@@ -608,7 +608,7 @@
       "descricao_geral": "O carnaval eletrônico de BH! O Techno no Asfalto transforma avenidas em pistas de dança com DJs e efeitos visuais impressionantes.",
       "avaliacao": 4.6,
       "data": "2026-02-18",
-      "publico": 19000,
+      "publico": 900,
       "cep": "30111-000",
       "endereco": "Av. Getúlio Vargas, BH",
       "faixa_etaria": "18+",
