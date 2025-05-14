@@ -210,3 +210,7 @@ footer {
         width: 70px;
     }
 }
+.pasasword:focus {
+  border-color: #6a0dad;
+  box-shadow: 0 0 5px rgba(106, 13, 173, 0.4);
+}
