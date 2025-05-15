@@ -1,83 +1,98 @@
 const cloudName = 'dkltrfebl'; 
 const uploadPreset = 'carnaLivre'; 
 
-
-const input = document.getElementById('picture__input');
-const uploadBtn = document.getElementById('upload-btn');
+const fileInput = document.getElementById('picture__input');
 const captionInput = document.getElementById('caption-input');
 const gallery = document.getElementById('gallery');
-const pictureBox = document.querySelector('.picture');
-let selectedFile = null;
+const captionGallery = document.getElementById('caption-gallery'); 
+const pictureLabel = document.querySelector('.picture');
+const uploadBtn = document.getElementById('upload-btn');
 
-// Pré-visualização da imagem
-input.addEventListener('change', () => {
-  const file = input.files[0];
-  if (!file) return;
-
-  selectedFile = file;
-
-  const reader = new FileReader();
-  reader.onload = function (e) {
-    pictureBox.innerHTML = `<img src="${e.target.result}" class="picture__img" alt="Pré-visualização">`;
-  };
-  reader.readAsDataURL(file);
-});
-
-// Upload da imagem com legenda
-uploadBtn.addEventListener('click', () => {
-  if (!selectedFile) {
-    alert("Selecione uma imagem primeiro.");
-    return;
-  }
-
-  const captionText = captionInput.value.trim();
-
+const uploadImage = async (file) => {
+  const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
   const formData = new FormData();
-  formData.append('file', selectedFile);
-  formData.append('upload_preset', uploadPreset);
 
-  fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+  formData.append('file', file);
+  formData.append('upload_preset', uploadPreset);  
+
+  const response = await fetch(url, {
     method: 'POST',
     body: formData
-  })
-    .then(res => res.json())
-    .then(data => {
-      // Criar o card Bootstrap
-      const card = document.createElement('div');
-      card.classList.add('card');
-      card.style.width = '18rem'; // Largura fixa do card Bootstrap
+  });
 
-      // Imagem do card
-      const img = document.createElement('img');
-      img.src = data.secure_url;
-      img.classList.add('card-img-top');
-      img.alt = "Imagem enviada";
+  if (!response.ok) throw new Error('Upload falhou');
 
-      // Corpo do card
-      const cardBody = document.createElement('div');
-      cardBody.classList.add('card-body');
+  const data = await response.json();
+  return data.secure_url;
+};
 
-      // Legenda do card
-      const caption = document.createElement('p');
-      caption.classList.add('card-text');
-      caption.textContent = captionText;
+const addImage = (url) => {
+  // Cria card de imagem
+  const card = document.createElement('div');
+  card.classList.add('card');
 
-      // Montar a estrutura do card
-      cardBody.appendChild(caption);
-      card.appendChild(img);
-      card.appendChild(cardBody);
-      gallery.appendChild(card);
+  const img = document.createElement('img');
+  img.src = url;
+  img.alt = 'Imagem enviada';
 
-      // Limpar inputs
-      pictureBox.innerHTML = 'Clique ou arraste a imagem aqui';
-      selectedFile = null;
-      input.value = '';
-      captionInput.value = '';
-    })
-    .catch(err => {
-      alert('Erro ao enviar: ' + err.message);
-    });
+  card.appendChild(img);
+  gallery.appendChild(card);
+};
+
+const addCaption = (text) => {
+  if (text.trim() === '') return;  
+
+  const captionCard = document.createElement('div');
+  captionCard.classList.add('caption-card');
+  captionCard.textContent = text;
+
+  captionGallery.appendChild(captionCard);
+};
+
+
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    const imgUrl = URL.createObjectURL(file);
+
+    
+    pictureLabel.innerHTML = '';
+
+    const imgPreview = document.createElement('img');
+    imgPreview.src = imgUrl;
+    imgPreview.classList.add('picture__img');
+    imgPreview.alt = 'Prévia da imagem';
+
+    pictureLabel.appendChild(imgPreview);
+  } else {
+    pictureLabel.textContent = 'Clique ou arraste a imagem aqui';
+  }
 });
+
+uploadBtn.addEventListener('click', async () => {
+  const file = fileInput.files[0];
+  const caption = captionInput.value.trim();
+
+
+  try {
+    const imageUrl = await uploadImage(file);
+
+    addImage(imageUrl);
+    addCaption(caption);
+
+   
+    captionInput.value = '';
+    captionInput.disabled = true;
+    fileInput.value = '';
+
+   
+    pictureLabel.textContent = 'Clique ou arraste a imagem aqui';
+  } catch (error) {
+    alert('Erro no upload: ' + error.message);
+  }
+});
+
+
 
 
 

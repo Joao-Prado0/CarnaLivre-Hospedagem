@@ -2,7 +2,7 @@
   "blocos": [
     {
       "id": 1,
-      "nome_bloco": "Bloco Filhos da PUC",
+      "nome_bloco": "Filhos da PUC",
       "descricao_geral": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi.",
       "avaliacao": 4.5,
       "data": "2026-02-13",
@@ -10,6 +10,8 @@
       "cep": "30140-130",
       "endereco": "Rua Pernambuco, Savassi, BH",
       "faixa_etaria": "18+",
+      "lat": -19.93758,
+      "lng": -43.93191,
       "estilo_musical": "Axé, Pop",
       "organizador": [
         {
@@ -51,6 +53,8 @@
       "data": "2026-02-13",
       "publico": 18000,
       "cep": "30112-010",
+      "lat": -19.93803,
+      "lng": -43.93558,
       "endereco": "Av. Cristóvão Colombo, BH",
       "faixa_etaria": "12+",
       "estilo_musical": "Samba",
@@ -94,6 +98,8 @@
       "data": "2026-02-14",
       "publico": 22000,
       "cep": "30220-260",
+      "lat": -19.94245,
+      "lng": -43.91711,
       "endereco": "Rua Contorno, Floresta, BH",
       "faixa_etaria": "16+",
       "estilo_musical": "Funk",
