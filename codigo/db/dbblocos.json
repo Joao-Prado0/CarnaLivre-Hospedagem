@@ -144,6 +144,8 @@
       "publico": 25000,
       "cep": "30110-011",
       "endereco": "Praça da Liberdade, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "Livre",
       "estilo_musical": "Axé",
       "organizador": [
@@ -187,6 +189,8 @@
       "publico": 12000,
       "cep": "30170-120",
       "endereco": "Av. Afonso Pena, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "16+",
       "estilo_musical": "Rock",
       "organizador": [
@@ -230,6 +234,8 @@
       "publico": 10000,
       "cep": "30150-370",
       "endereco": "Rua Rio de Janeiro, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "Livre",
       "estilo_musical": "MPB",
       "organizador": [
@@ -273,6 +279,8 @@
       "publico": 9000,
       "cep": "30110-000",
       "endereco": "Av. Augusto de Lima, Centro, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "Livre",
       "estilo_musical": "Samba",
       "organizador": [
@@ -316,6 +324,8 @@
       "publico": 1400,
       "cep": "30130-110",
       "endereco": "Rua da Bahia, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "16+",
       "estilo_musical": "MPB",
       "organizador": [
@@ -359,6 +369,8 @@
       "publico": 22000,
       "cep": "30150-010",
       "endereco": "Av. Álvares Cabral, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "18+",
       "estilo_musical": "Pop, Eletrônico",
       "organizador": [
@@ -402,6 +414,8 @@
       "publico": 16000,
       "cep": "30160-020",
       "endereco": "Av. do Contorno, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "Livre",
       "estilo_musical": "Samba, Axé, Afro-beat",
       "organizador": [
@@ -445,6 +459,8 @@
       "publico": 1000,
       "cep": "30120-060",
       "endereco": "Rua Curitiba, Centro, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "16+",
       "estilo_musical": "Sertanejo",
       "organizador": [
@@ -488,6 +504,8 @@
       "publico": 13000,
       "cep": "30190-001",
       "endereco": "Av. Amazonas, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "Livre",
       "estilo_musical": "Pop",
       "organizador": [
@@ -531,6 +549,8 @@
       "publico": 8000,
       "cep": "30130-000",
       "endereco": "Praça Sete, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "Livre",
       "estilo_musical": "Pop",
       "organizador": [
@@ -574,6 +594,8 @@
       "publico": 15000,
       "cep": "30180-010",
       "endereco": "Rua Guajajaras, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "Livre",
       "estilo_musical": "MPB, Axé, Samba",
       "organizador": [
@@ -617,6 +639,8 @@
       "publico": 900,
       "cep": "30111-000",
       "endereco": "Av. Getúlio Vargas, BH",
+      "lat": 868,
+      "lng": 6785,
       "faixa_etaria": "18+",
       "estilo_musical": "Eletrônica",
       "organizador": [
