@@ -9,92 +9,95 @@ body {
     display: flex;
     flex-direction: column;
 }
-*{
+* {
     font-family: "Inter", sans-serif;
 }
 
 /* Header compacto */
 .header-logo {
     text-align: center;
-    padding: 0.8rem 0; /* Altura reduzida */
+    padding: 0.8rem 0;
     background-color: #6a0dad;
 }
 
 .logo-main {
-    width: 100px; /* Tamanho reduzido */
+    width: 90px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* Container do formulário compacto */
+/* Container do formulário - TAMANHO MÉDIO */
 .container {
-    width: 88%;
-    max-width: 360px; /* Largura reduzida */
-    margin: 1rem auto;
-    background: #DDDDDD;
-    padding: 1.5rem;
-    border-radius: 6px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    box-sizing: border-box;
+    width: 85% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    background: #DDDDDD !important;
+    padding: 1.2rem !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    flex: 1 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
 }
 
-/* Títulos compactos */
+/* Títulos médios */
 h1 {
     color: #6a0dad;
     text-align: center;
-    margin: 0 0 1.2rem 0;
-    font-size: 1.4rem;
+    margin: 0 0 1.2rem 0; /* Espaçamento aumentado */
+    font-size: 1.4rem; /* Fonte maior */
     font-weight: 600;
 }
 
-/* Formulário compacto */
+/* Formulário médio */
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Espaçamento aumentado */
 }
 
 label {
     display: block;
     font-weight: bold;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.4rem; /* Espaçamento aumentado */
     color: #6a0dad;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Fonte maior */
 }
 
 input {
     width: 100%;
-    padding: 0.7rem;
+    padding: 0.7rem; /* Padding aumentado */
     background: #FFFFFF;
     border: 1px solid #CCCCCC;
-    border-radius: 4px;
-    font-size: 0.9rem;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Fonte maior */
     box-sizing: border-box;
 }
 
 input:focus {
     border-color: #6a0dad;
     outline: none;
-    box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.2);
+    box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.2);
 }
 
 input::placeholder {
     color: #999999;
-    font-size: 0.85rem;
+    font-size: 0.85rem; /* Fonte maior */
 }
 
 .divider {
     border-top: 1px solid #CCCCCC;
-    margin: 1.2rem 0;
+    margin: 1.2rem 0; /* Espaçamento aumentado */
 }
 
 .btn-submit {
     background-color: #6a0dad;
     color: white;
     border: none;
-    padding: 0.8rem;
-    font-size: 0.95rem;
-    border-radius: 4px;
+    padding: 0.8rem; /* Padding aumentado */
+    font-size: 0.95rem; /* Fonte maior */
+    border-radius: 5px;
     cursor: pointer;
     width: 100%;
     font-weight: bold;
@@ -109,7 +112,7 @@ input::placeholder {
 .rodape {
     background-color: #6a0dad;
     color: white;
-    padding: 0.8rem 0;
+    padding: 0.7rem 0;
     margin-top: auto;
     width: 100%;
 }
@@ -119,22 +122,22 @@ input::placeholder {
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem;
-    padding: 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 0.8rem;
+    padding: 0 0.8rem;
     box-sizing: border-box;
 }
 
 .logo-footer {
-    width: 80px;
+    width: 70px;
     height: auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     display: block;
 }
 
 .footer-section h3 {
-    margin: 0.5rem 0;
-    font-size: 0.95rem;
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
     color: white;
 }
 
@@ -145,13 +148,13 @@ input::placeholder {
 }
 
 .footer-section ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .footer-section ul li a {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     transition: opacity 0.2s;
 }
 
@@ -161,55 +164,68 @@ input::placeholder {
 
 .copyright {
     text-align: center;
-    margin-top: 0.8rem;
-    padding-top: 0.8rem;
+    margin-top: 0.7rem;
+    padding-top: 0.7rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Responsividade */
+/* Responsividade ajustada */
 @media (max-width: 768px) {
     .container {
         width: 92%;
-        padding: 1.2rem;
+        padding: 1.2rem; /* Padding aumentado */
     }
     
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 0.8rem;
+        gap: 0.7rem;
     }
     
     .logo-footer {
-        margin: 0 auto 0.5rem;
+        margin: 0 auto 0.4rem;
     }
     
     .footer-section h3 {
-        margin-top: 0.8rem;
+        margin-top: 0.7rem;
     }
 }
 
 @media (max-width: 480px) {
     .header-logo {
-        padding: 0.6rem 0;
+        padding: 0.5rem 0;
     }
     
     .logo-main {
-        width: 90px;
+        width: 80px;
     }
     
     .container {
         width: 94%;
-        padding: 1rem;
+        padding: 1rem; /* Padding aumentado */
+        max-width: 350px; /* Largura maior no mobile */
     }
     
     h1 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
+        font-size: 1.3rem; /* Fonte maior */
+        margin-bottom: 1rem; /* Espaçamento aumentado */
     }
     
     .logo-footer {
-        width: 70px;
+        width: 60px;
+    }
+    
+    .form-group {
+        margin-bottom: 0.8rem; /* Espaçamento aumentado */
+    }
+    
+    input {
+        padding: 0.6rem; /* Padding aumentado */
+    }
+    
+    .btn-submit {
+        padding: 0.7rem; /* Padding aumentado */
     }
 }

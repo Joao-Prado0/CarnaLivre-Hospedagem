@@ -1,15 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const formCadastro = document.querySelector('form');
+    const API_URL = 'http://localhost:3000/usuarios'; // URL do JSON Server
     
-    formCadastro.addEventListener('submit', function(e) {
+    formCadastro.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Captura dos dados do formulário
+        // Captura dos dados do formulário e conversão para o formato desejado
         const usuario = {
-            nomeCompleto: document.getElementById('fullname').value,
-            nomeUsuario: document.getElementById('username').value,
+            nome_completo: document.getElementById('fullname').value,
+            login: document.getElementById('username').value,
             email: document.getElementById('email').value,
-            dataNascimento: document.getElementById('birthdate').value,
+            data_nasc: document.getElementById('birthdate').value,
             senha: document.getElementById('password').value
         };
         
@@ -18,15 +19,39 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Armazenar no localStorage (alternativa temporária)
-        armazenarLocalmente(usuario);
-        
-        // Simular envio para JSON
-        enviarParaJSON(usuario);
+        try {
+            // Verifica se o usuário já existe
+            const response = await fetch(`${API_URL}?email=${usuario.email}`);
+            const usuarios = await response.json();
+            
+            if (usuarios.length > 0) {
+                alert('Este e-mail já está cadastrado!');
+                return;
+            }
+            
+            // Cadastra o novo usuário
+            const cadastroResponse = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(usuario)
+            });
+            
+            if (cadastroResponse.ok) {
+                alert('Cadastro realizado com sucesso!');
+                formCadastro.reset();
+            } else {
+                throw new Error('Erro ao cadastrar usuário');
+            }
+        } catch (error) {
+            console.error('Erro:', error);
+            alert('Ocorreu um erro ao cadastrar. Tente novamente mais tarde.');
+        }
     });
     
     function validarCampos(usuario) {
-        if (!usuario.nomeCompleto || !usuario.nomeUsuario || !usuario.email || !usuario.dataNascimento || !usuario.senha) {
+        if (!usuario.nome_completo || !usuario.login || !usuario.email || !usuario.data_nasc || !usuario.senha) {
             alert('Por favor, preencha todos os campos!');
             return false;
         }
@@ -47,41 +72,5 @@ document.addEventListener('DOMContentLoaded', function() {
     function validarEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
-    }
-    
-    function armazenarLocalmente(usuario) {
-        // Recupera usuários existentes ou cria array vazio
-        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-        
-        // Verifica se usuário já existe
-        const usuarioExistente = usuarios.find(u => u.email === usuario.email || u.nomeUsuario === usuario.nomeUsuario);
-        
-        if (usuarioExistente) {
-            alert('Este e-mail ou nome de usuário já está cadastrado!');
-            return;
-        }
-        
-        // Adiciona novo usuário
-        usuarios.push(usuario);
-        
-        // Armazena no localStorage
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        
-        alert('Cadastro realizado com sucesso!');
-        formCadastro.reset();
-    }
-    
-    function enviarParaJSON(usuario) {
-        // Em um ambiente real, aqui seria uma chamada AJAX/Fetch para o servidor
-        console.log('Dados para enviar ao JSON:', usuario);
-        
-        // Simulação: adiciona ao array em memória
-        if (!window.usuariosJSON) {
-            window.usuariosJSON = [];
-        }
-        window.usuariosJSON.push(usuario);
-        
-        // Em um ambiente real, você poderia usar:
-        // fetch('dados.json', { método POST, body: JSON.stringify(usuario) })
     }
 });
