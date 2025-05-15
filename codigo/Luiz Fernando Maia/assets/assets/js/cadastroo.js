@@ -71,18 +71,26 @@ document.addEventListener('DOMContentLoaded', function() {
         formCadastro.reset();
     }
     
-    function enviarParaJSON(usuario) {
-        
-        console.log('Dados para enviar ao JSON:', usuario);
-        
-        
-        if (!window.usuariosJSON) {
-            window.usuariosJSON = [];
+    function enviarParaJSON(bloco) {
+    fetch('/cadastrar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(bloco)
+    })
+    .then(res => {
+        if (!res.ok) {
+            return res.json().then(data => { throw new Error(data.mensagem); });
         }
-        window.usuariosJSON.push(usuario);
-        
+        return res.json();
+    })
+    .then(data => {
+        alert(data.mensagem); // Só mostra se quiser
+    })
+    .catch(err => {
+        alert('Erro: ' + err.message);
+    });
+}
 
-    }
 });
 
 function validarCNPJ(cnpj) {
@@ -133,4 +141,26 @@ document.querySelector("form").addEventListener("submit", function (e) {
     } else {
         cnpjInput.setCustomValidity(""); 
     }
+});
+const dados = {
+  nomeDoBloco: "Bloco da Alegria",
+  nomeDoResponsavel: "Maria Silva",
+  email: "maria@email.com",
+  cnpj: "12345678000100",
+  senha: "123456"
+};
+
+fetch('http://localhost:3000/blocos', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(dados)
+})
+.then(res => {
+  if (res.ok) {
+    alert("Bloco cadastrado com sucesso!");
+  } else {
+    alert("Erro ao cadastrar.");
+  }
 });
