@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header class="cabecalho">
+      <header class="cabecalho">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -74,8 +74,8 @@
         <aside class="barra-lateral">
             <div class="bl-icones ">
                 <ul class="p-1 mt-2 d-flex flex-column">
-                    <li class="active"><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                    <li><a href="infoblocos.html"><i class="fa-solid fa-masks-theater"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                <li class="active"><a href="infoblocos.html"><i class="fa-solid fa-masks-theater"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-message"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-flag"></i></a></li>
@@ -86,18 +86,19 @@
         <div id="adicao-imagem">
             <h1>Enviar Imagem</h1>
           
-            <label class="picture" for="picture__input">Clique ou arraste a imagem aqui</label>
-            <input type="file" id="picture__input" accept="image/*" />
-          
-            <button id="upload-btn">Upload</button>
-          
-            <div id="gallery"></div>
-          </div>
+           <label class="picture" for="picture__input">Clique ou arraste a imagem aqui</label>
+<input type="file" id="picture__input" accept="image/*" />
+<input type="text" id="caption-input" maxlength="50" placeholder="Digite uma legenda...(50 caracteres max)" />
+<button id="upload-btn">Upload</button>
+<div id="gallery"></div>
+<div id="caption-gallery"></div>
+            </div>
+
         
           
     </main>
 
-    <footer class="rodape">
+     <footer class="rodape">
         <div class="footer-content">
             <div class="footer-section">
                 <img src="assets/img/Logo.png" alt="Logo" class="logo-footer">     
