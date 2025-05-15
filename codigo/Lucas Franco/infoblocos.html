@@ -7,6 +7,7 @@
     <title>Informações do bloco</title>
     <link rel="stylesheet" href="assets/css/fixos.css">
     <link rel="stylesheet" href="assets/css/infoblocos.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVHh_LqyOkwnbqaUx4RtWipJkddswsiAQ&libraries=places&callback=initAutocomplete" async defer></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="assets/js/infoblocos.js"></script>
@@ -77,10 +78,6 @@
                                 <select class="nomeBloco form-select" id="inputGroupSelect04"
                                     aria-label="Example select with button addon">
                                     <option selected>Nome do bloco</option>
-                                    <!--fazer isso aq com js depois pra selecionar todos os blocos existentes no json-->
-                                    <option value="1">Bloco 1</option>
-                                    <option value="2">Bloco 2</option>
-                                    <option value="3">Bloco 3</option>
                                 </select>
                             </div>
                         </div>
@@ -99,7 +96,7 @@
                                 pattern="\d{5}-?\d{3}" onkeypress="$(this).mask('00000-000')">
                         </div>
                         <div class="col-md-3">
-                            <input class="form-control" type="text" name="endereco" placeholder="Endereço">
+                            <input class="form-control" id="campo-endereco" type="text" name="endereco" placeholder="Endereço">
                         </div>
                         <div class="col-md-3">
                             <input class="form-control" type="number" name="faixaetaria"
