@@ -67,16 +67,31 @@
             </div>
         </aside>
 
-        <div id="adicao-imagem">
-            <h1>Enviar Imagem</h1>
-          
-           <label class="picture" for="picture__input">Clique ou arraste a imagem aqui</label>
-<input type="file" id="picture__input" accept="image/*" />
-<input type="text" id="caption-input" maxlength="50" placeholder="Digite uma legenda...(50 caracteres max)" />
-<button id="upload-btn">Upload</button>
-<div id="gallery"></div>
-<div id="caption-gallery"></div>
-            </div>
+     <main>
+  <h1>Envio de Texto e Imagem</h1>
+
+  <div id="adicao-imagem">
+    <!-- Seção do Texto -->
+    <div id="text-section">
+      <input type="text" id="caption-input" placeholder="Digite o texto aqui" />
+      <button id="text-upload-btn">Enviar Texto</button>
+    </div>
+
+    <!-- Seção da Imagem -->
+    <div id="image-section">
+      <label class="picture" for="picture__input" id="picture-label">
+        <span>Escolher imagem</span>
+        <img id="preview-image" style="display: none;" />
+      </label>
+      <input type="file" accept="image/*" id="picture__input">
+      <button id="upload-btn">Enviar Imagem</button>
+    </div>
+  </div>
+
+  <div id="caption-gallery"></div>
+  <div id="gallery"></div>
+</main>
+
 
         
           

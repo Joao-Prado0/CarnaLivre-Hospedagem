@@ -1,33 +1,81 @@
-const cloudName = 'dkltrfebl'; 
-const uploadPreset = 'carnaLivre'; 
+const cloudName = 'dkltrfebl';
+const uploadPreset = 'carnaLivre';
 
 const fileInput = document.getElementById('picture__input');
-const captionInput = document.getElementById('caption-input');
-const gallery = document.getElementById('gallery');
-const captionGallery = document.getElementById('caption-gallery'); 
-const pictureLabel = document.querySelector('.picture');
+const previewImage = document.getElementById('preview-image');
+const pictureLabel = document.getElementById('picture-label');
 const uploadBtn = document.getElementById('upload-btn');
+const gallery = document.getElementById('gallery');
 
-const uploadImage = async (file) => {
-  const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
-  const formData = new FormData();
+const captionInput = document.getElementById('caption-input');
+const textUploadBtn = document.getElementById('text-upload-btn');
+const captionGallery = document.getElementById('caption-gallery');
 
-  formData.append('file', file);
-  formData.append('upload_preset', uploadPreset);  
 
-  const response = await fetch(url, {
-    method: 'POST',
-    body: formData
-  });
+fileInput.addEventListener('change', () => {
+  const file = fileInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      previewImage.src = reader.result;
+      previewImage.style.display = 'block';
+      pictureLabel.querySelector('span').style.display = 'none';
+    };
+    reader.readAsDataURL(file);
+  }
+});
 
-  if (!response.ok) throw new Error('Upload falhou');
 
-  const data = await response.json();
-  return data.secure_url;
-};
+uploadBtn.addEventListener('click', async () => {
+  const file = fileInput.files[0];
+  if (!file) {
+    alert('Selecione uma imagem!');
+    return;
+  }
 
-const addImage = (url) => {
-  // Cria card de imagem
+  try {
+    const url = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', uploadPreset);
+
+    const response = await fetch(url, {
+      method: 'POST',
+      body: formData
+    });
+
+    if (!response.ok) throw new Error('Falha no upload da imagem');
+
+    const data = await response.json();
+    addImage(data.secure_url);
+
+    
+    previewImage.src = '';
+    previewImage.style.display = 'none';
+    pictureLabel.querySelector('span').style.display = 'block';
+    fileInput.value = '';
+  } catch (error) {
+    alert('Erro no upload da imagem: ' + error.message);
+  }
+});
+
+
+textUploadBtn.addEventListener('click', () => {
+  const caption = captionInput.value.trim();
+  if (!caption) {
+    alert('Digite um texto antes de enviar!');
+    return;
+  }
+
+  addCaption(caption);
+  captionInput.disabled = true;
+  textUploadBtn.disabled = true;
+  captionInput.value = null;
+  
+});
+
+
+function addImage(url) {
   const card = document.createElement('div');
   card.classList.add('card');
 
@@ -37,61 +85,15 @@ const addImage = (url) => {
 
   card.appendChild(img);
   gallery.appendChild(card);
-};
+}
 
-const addCaption = (text) => {
-  if (text.trim() === '') return;  
 
+function addCaption(text) {
   const captionCard = document.createElement('div');
   captionCard.classList.add('caption-card');
   captionCard.textContent = text;
-
   captionGallery.appendChild(captionCard);
-};
-
-
-fileInput.addEventListener('change', () => {
-  if (fileInput.files.length > 0) {
-    const file = fileInput.files[0];
-    const imgUrl = URL.createObjectURL(file);
-
-    
-    pictureLabel.innerHTML = '';
-
-    const imgPreview = document.createElement('img');
-    imgPreview.src = imgUrl;
-    imgPreview.classList.add('picture__img');
-    imgPreview.alt = 'Prévia da imagem';
-
-    pictureLabel.appendChild(imgPreview);
-  } else {
-    pictureLabel.textContent = 'Clique ou arraste a imagem aqui';
-  }
-});
-
-uploadBtn.addEventListener('click', async () => {
-  const file = fileInput.files[0];
-  const caption = captionInput.value.trim();
-
-
-  try {
-    const imageUrl = await uploadImage(file);
-
-    addImage(imageUrl);
-    addCaption(caption);
-
-   
-    captionInput.value = '';
-    captionInput.disabled = true;
-    fileInput.value = '';
-
-   
-    pictureLabel.textContent = 'Clique ou arraste a imagem aqui';
-  } catch (error) {
-    alert('Erro no upload: ' + error.message);
-  }
-});
-
+}
 
 
 
