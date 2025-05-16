@@ -1,3 +1,4 @@
+// Mapa dos blocos com geolocalização, zoom automático e pesquisa
 let map;
 let blocosMarkers = {};
 let infoWindow;
@@ -11,25 +12,55 @@ function initMap() {
       {
         featureType: "poi",
         elementType: "labels",
-        stylers: [{ visibility: "off" }]
-      }
-    ]
+        stylers: [{ visibility: "off" }],
+      },
+    ],
   });
 
   infoWindow = new google.maps.InfoWindow();
-  
+
+  // geolocalização
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const userPos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+        map.setCenter(userPos);
+        new google.maps.Marker({
+          position: userPos,
+          map,
+          title: "Você está aqui",
+          icon: {
+            url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            scaledSize: new google.maps.Size(40, 40),
+          },
+        });
+        destacarBlocosProximos(userPos);
+      },
+      (err) => {
+        console.warn("Erro de geolocalização:", err);
+        alert("Não foi possível obter sua localização. Mostrando blocos em Belo Horizonte.");
+      },
+      { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+    );
+  } else {
+    alert("Geolocalização não suportada pelo navegador.");
+  }
+
   carregarBlocos().then(() => {
     const input = document.getElementById("brpesquisa");
-    
-    input.addEventListener('input', (e) => {
+
+    input.addEventListener("input", (e) => {
       clearTimeout(timeoutPesquisa);
       timeoutPesquisa = setTimeout(() => {
         pesquisarBloco(e.target.value);
       }, 500);
     });
-    
-    input.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
+
+    input.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
         clearTimeout(timeoutPesquisa);
         pesquisarBloco(e.target.value);
       }
@@ -41,7 +72,7 @@ async function carregarBlocos() {
   try {
     const response = await fetch("../db/dbblocos.json");
     const dados = await response.json();
-    
+
     for (const bloco of dados.blocos) {
       if (bloco.lat && bloco.lng) {
         const marker = new google.maps.Marker({
@@ -53,25 +84,24 @@ async function carregarBlocos() {
             color: "#ffffff",
             fontWeight: "bold",
             fontSize: "12px",
-            className: "map-marker-label" 
+            className: "map-marker-label",
           },
           icon: {
             url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
-            scaledSize: new google.maps.Size(40, 40)
-          }
+            scaledSize: new google.maps.Size(40, 40),
+          },
         });
 
         blocosMarkers[bloco.id] = marker;
-        
-        // InfoWindow com informações detalhadas (aparece ao clicar)
-        marker.addListener('click', () => {
+
+        marker.addListener("click", () => {
           infoWindow.setContent(`
             <div style="max-width:300px">
               <h3 style="margin-top:0;color:#d32f2f">${bloco.nome_bloco}</h3>
               <p><strong>📍 Endereço:</strong> ${bloco.endereco}</p>
-              <p><strong>📅 Data:</strong> ${new Date(bloco.data).toLocaleDateString('pt-BR')}</p>
+              <p><strong>📅 Data:</strong> ${new Date(bloco.data).toLocaleDateString("pt-BR")}</p>
               <p><strong>🎵 Estilo:</strong> ${bloco.estilo_musical}</p>
-              <p><strong>👥 Público:</strong> ${bloco.publico.toLocaleString('pt-BR')} pessoas</p>
+              <p><strong>👥 Público:</strong> ${bloco.publico.toLocaleString("pt-BR")} pessoas</p>
             </div>
           `);
           infoWindow.open(map, marker);
@@ -89,9 +119,8 @@ function pesquisarBloco(nomePesquisado) {
     infoWindow.close();
     return;
   }
-  
+
   infoWindow.close();
-  
   const pesquisa = nomePesquisado.toLowerCase().trim();
   let melhorMatch = null;
 
@@ -106,7 +135,7 @@ function pesquisarBloco(nomePesquisado) {
     map.panTo(melhorMatch.getPosition());
     map.setZoom(17);
     setTimeout(() => {
-      google.maps.event.trigger(melhorMatch, 'click');
+      google.maps.event.trigger(melhorMatch, "click");
     }, 300);
   } else {
     infoWindow.setContent(`
@@ -121,8 +150,23 @@ function pesquisarBloco(nomePesquisado) {
   }
 }
 
-// CSS adicional para melhorar a legibilidade dos labels
-const style = document.createElement('style');
+function destacarBlocosProximos(userPos) {
+  const raioMetros = 5000; 
+
+  for (const marker of Object.values(blocosMarkers)) {
+    const pos = marker.getPosition();
+    const distancia = google.maps.geometry.spherical.computeDistanceBetween(
+      new google.maps.LatLng(userPos.lat, userPos.lng),
+      pos
+    );
+    if (distancia <= raioMetros) {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+      setTimeout(() => marker.setAnimation(null), 3000);
+    }
+  }
+}
+
+const style = document.createElement("style");
 style.textContent = `
   .map-marker-label {
     background-color: rgba(211, 47, 47, 0.8);
