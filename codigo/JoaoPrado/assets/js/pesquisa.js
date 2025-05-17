@@ -58,6 +58,7 @@ $(document).ready(function () {
             $('#container-cards').empty();
             blocosCarregados = 0;
             carregarMaisBlocos();
+            $('#mensagem-nenhum').hide();
             $('#btn-ver-mais').show();
             return;
         }
