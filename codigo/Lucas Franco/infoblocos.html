@@ -103,7 +103,20 @@
                                 placeholder="Faixa Etária"></input>
                         </div>
                         <div class="col-md-3">
-                            <input class="form-control" type="text" name="estilo" placeholder="Estilo Musical"></input>
+                            <div class="estilomusical dropdown">
+                                <button class="form-control dropdown-toggle text-start" type="button" id="dropdownEstilos" data-bs-toggle="dropdown" aria-expanded="false"> Estilo Musical</button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownEstilos" id="estilosDropdown">
+                                    <li><label class="dropdown-item"><input type="checkbox" class="estilo-checkbox" value="Axé"> Axé</label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" class="estilo-checkbox" value="Samba"> Samba</label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" class="estilo-checkbox" value="Funk"> Funk</label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" class="estilo-checkbox" value="MPB"> MPB</label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" class="estilo-checkbox" value="Eletrônica"> Eletrônica</label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" class="estilo-checkbox" value="Sertanejo"> Sertanejo</label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" class="estilo-checkbox" value="Pop"> Pop</label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" class="estilo-checkbox" value="Afro-Beat"> Afro-Beat</label></li>
+                                    <li><label class="dropdown-item"><input type="checkbox" class="estilo-checkbox" value="Jazz"> Jazz</label></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="row g-2">
