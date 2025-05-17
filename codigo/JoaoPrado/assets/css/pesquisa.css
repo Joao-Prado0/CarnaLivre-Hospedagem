@@ -13,7 +13,7 @@
     width: 80%;
     margin: 0 auto;
     padding: 4px;
-    height: 450px;
+    height: 470px;
     display: flex;
     flex-direction: column;
 }
@@ -28,7 +28,7 @@
 }
 .card-conteudo p {
     text-align: start;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     font-size: 120%;
 }
 .card-conteudo i {
@@ -64,6 +64,9 @@
     display: inline-block;
     margin: 0 auto;
     padding: 10px 20px; 
+}
+#mensagem-nenhum {
+    font-size: 200%;
 }
 /* Cards - Fim */
 
