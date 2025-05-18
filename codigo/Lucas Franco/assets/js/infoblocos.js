@@ -27,7 +27,6 @@ function initAutocomplete() {
     }
 }
 
-
 $(document).ready(async function () {
 
     $('input[name="cep"]').mask('00000-000');
