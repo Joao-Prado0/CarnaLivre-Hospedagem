@@ -184,7 +184,7 @@
       "id": 5,
       "nome_bloco": "Rock na Rua",
       "descricao_geral": "Releituras de clássicos do rock em ritmo de carnaval, com guitarras e fantasia.",
-      "avaliacao": 4.0,
+      "avaliacao": 4,
       "data": "2026-02-15",
       "publico": 12000,
       "cep": "30170-120",
@@ -364,7 +364,7 @@
       "id": 9,
       "nome_bloco": "Cortejo do Amor",
       "descricao_geral": "Celebrando a diversidade e a liberdade, o Cortejo do Amor é repleto de cores, glitter e mensagens de aceitação. Um dos blocos mais inclusivos de BH.",
-      "avaliacao": 5.0,
+      "avaliacao": 5,
       "data": "2026-02-14",
       "publico": 22000,
       "cep": "30150-010",
@@ -674,6 +674,22 @@
           ]
         }
       ]
+    },
+    {
+      "id": "3ca7",
+      "nomeBloco": "Blococamila",
+      "responsavel": "Camila Maia",
+      "email": "lf.cunhamaia@gmail.com",
+      "cnpj": "17.985.099/0001-20",
+      "senha": "camilinha1201"
+    },
+    {
+      "id": "791d",
+      "nomeBloco": "LuizinPitbull",
+      "responsavel": "Jppeladinho",
+      "email": "lui.br1010@gmail.com",
+      "cnpj": "17.985.099/0001-20",
+      "senha": "3232323232"
     }
   ]
 }
