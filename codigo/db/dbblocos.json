@@ -7,11 +7,11 @@
       "avaliacao": 4.5,
       "data": "2026-02-13",
       "publico": 20000,
-      "cep": "30140-130",
-      "endereco": "Rua Pernambuco, Savassi, BH",
+      "cep": "39442-218",
+      "endereco": "R. Pernambuco - Savassi, Belo Horizonte - MG, 39442-218, Brasil",
       "faixa_etaria": "18+",
-      "lat": -19.93758,
-      "lng": -43.93191,
+      "lat": -19.9350252,
+      "lng": -43.9346582,
       "estilo_musical": "Axé, Pop",
       "organizador": [
         {
@@ -53,9 +53,9 @@
       "data": "2026-02-13",
       "publico": 18000,
       "cep": "30112-010",
-      "lat": -19.93803,
-      "lng": -43.93558,
-      "endereco": "Av. Cristóvão Colombo, BH",
+      "lat": -19.9386627,
+      "lng": -43.9349017,
+      "endereco": "Av. Cristóvão Colombo - Funcionários, Belo Horizonte - MG, Brasil",
       "faixa_etaria": "12+",
       "estilo_musical": "Samba",
       "organizador": [
@@ -97,10 +97,10 @@
       "avaliacao": 3.8,
       "data": "2026-02-14",
       "publico": 22000,
-      "cep": "30220-260",
-      "lat": -19.94245,
-      "lng": -43.91711,
-      "endereco": "Rua Contorno, Floresta, BH",
+      "cep": "30110-042",
+      "lat": -19.9160247,
+      "lng": -43.9274703,
+      "endereco": "Av. do Contorno - Floresta, Belo Horizonte - MG, 30110-042, Brasil",
       "faixa_etaria": "16+",
       "estilo_musical": "Funk",
       "organizador": [
@@ -142,11 +142,11 @@
       "avaliacao": 4.9,
       "data": "2026-02-14",
       "publico": 25000,
-      "cep": "30110-011",
-      "endereco": "Praça da Liberdade, BH",
-      "lat": 868,
-      "lng": 6785,
-      "faixa_etaria": "Livre",
+      "cep": "30140-010",
+      "endereco": "Praça da Liberdade - Savassi, Belo Horizonte - MG, 30140-010, Brasil",
+      "lat": -19.9329185,
+      "lng": -43.938381,
+      "faixa_etaria": "+",
       "estilo_musical": "Axé",
       "organizador": [
         {
@@ -188,9 +188,9 @@
       "data": "2026-02-15",
       "publico": 12000,
       "cep": "30170-120",
-      "endereco": "Av. Afonso Pena, BH",
-      "lat": 868,
-      "lng": 6785,
+      "endereco": "Av. Afonso Pena - Belo Horizonte, MG, Brasil",
+      "lat": -19.9327534,
+      "lng": -43.9300262,
       "faixa_etaria": "16+",
       "estilo_musical": "Rock",
       "organizador": [
@@ -232,11 +232,11 @@
       "avaliacao": 4.6,
       "data": "2026-02-15",
       "publico": 10000,
-      "cep": "30150-370",
-      "endereco": "Rua Rio de Janeiro, BH",
-      "lat": 868,
-      "lng": 6785,
-      "faixa_etaria": "Livre",
+      "cep": "34585-310",
+      "endereco": "R. Rio de Janeiro - Belo Horizonte, MG, 34585-310, Brasil",
+      "lat": -19.9264479,
+      "lng": -43.9406468,
+      "faixa_etaria": "+",
       "estilo_musical": "MPB",
       "organizador": [
         {
@@ -278,10 +278,10 @@
       "data": "2026-02-13",
       "publico": 9000,
       "cep": "30110-000",
-      "endereco": "Av. Augusto de Lima, Centro, BH",
-      "lat": 868,
-      "lng": 6785,
-      "faixa_etaria": "Livre",
+      "endereco": "Av. Augusto de Lima - Centro, Belo Horizonte - MG, Brasil",
+      "lat": -19.9233115,
+      "lng": -43.94255649999999,
+      "faixa_etaria": "+",
       "estilo_musical": "Samba",
       "organizador": [
         {
@@ -323,9 +323,9 @@
       "data": "2026-02-14",
       "publico": 1400,
       "cep": "30130-110",
-      "endereco": "Rua da Bahia, BH",
-      "lat": 868,
-      "lng": 6785,
+      "endereco": "R. da Bahia - Belo Horizonte, MG, Brasil",
+      "lat": -19.9270862,
+      "lng": -43.9380468,
       "faixa_etaria": "16+",
       "estilo_musical": "MPB",
       "organizador": [
@@ -368,11 +368,11 @@
       "data": "2026-02-14",
       "publico": 22000,
       "cep": "30150-010",
-      "endereco": "Av. Álvares Cabral, BH",
-      "lat": 868,
-      "lng": 6785,
+      "endereco": "Av. Álvares Cabral - Belo Horizonte, MG, Brasil",
+      "lat": -19.9293453,
+      "lng": -43.9438103,
       "faixa_etaria": "18+",
-      "estilo_musical": "Pop, Eletrônico",
+      "estilo_musical": "Eletrônica, Pop",
       "organizador": [
         {
           "nome_org": "Luciana Dias",
@@ -412,12 +412,12 @@
       "avaliacao": 4.7,
       "data": "2026-02-15",
       "publico": 16000,
-      "cep": "30160-020",
-      "endereco": "Av. do Contorno, BH",
-      "lat": 868,
-      "lng": 6785,
-      "faixa_etaria": "Livre",
-      "estilo_musical": "Samba, Axé, Afro-beat",
+      "cep": "30110-042",
+      "endereco": "Av. do Contorno - Belo Horizonte, MG, 30110-042, Brasil",
+      "lat": -19.9177246,
+      "lng": -43.9464643,
+      "faixa_etaria": "+",
+      "estilo_musical": "Axé, Samba, Afro-Beat",
       "organizador": [
         {
           "nome_org": "João Lucas Ribeiro",
@@ -458,9 +458,9 @@
       "data": "2026-02-15",
       "publico": 1000,
       "cep": "30120-060",
-      "endereco": "Rua Curitiba, Centro, BH",
-      "lat": 868,
-      "lng": 6785,
+      "endereco": "R. Curitiba - Centro, Belo Horizonte - MG, Brasil",
+      "lat": -19.919693,
+      "lng": -43.94155749999999,
       "faixa_etaria": "16+",
       "estilo_musical": "Sertanejo",
       "organizador": [
@@ -503,10 +503,10 @@
       "data": "2026-02-16",
       "publico": 13000,
       "cep": "30190-001",
-      "endereco": "Av. Amazonas, BH",
-      "lat": 868,
-      "lng": 6785,
-      "faixa_etaria": "Livre",
+      "endereco": "Av. Amazonas - Nova Suíça, Belo Horizonte - MG, Brasil",
+      "lat": -19.9295953,
+      "lng": -43.9776843,
+      "faixa_etaria": "+",
       "estilo_musical": "Pop",
       "organizador": [
         {
@@ -547,11 +547,11 @@
       "avaliacao": 4.8,
       "data": "2026-02-17",
       "publico": 8000,
-      "cep": "30130-000",
-      "endereco": "Praça Sete, BH",
-      "lat": 868,
-      "lng": 6785,
-      "faixa_etaria": "Livre",
+      "cep": "30110-002",
+      "endereco": "Praça Sete de Setembro - Centro, Belo Horizonte - MG, 30110-002, Brasil",
+      "lat": -19.9189954,
+      "lng": -43.9386306,
+      "faixa_etaria": "+",
       "estilo_musical": "Pop",
       "organizador": [
         {
@@ -593,11 +593,11 @@
       "data": "2026-02-18",
       "publico": 15000,
       "cep": "30180-010",
-      "endereco": "Rua Guajajaras, BH",
-      "lat": 868,
-      "lng": 6785,
-      "faixa_etaria": "Livre",
-      "estilo_musical": "MPB, Axé, Samba",
+      "endereco": "Rua dos Guajajaras - Belo Horizonte, MG, Brasil",
+      "lat": -19.923992,
+      "lng": -43.94542149999999,
+      "faixa_etaria": "+",
+      "estilo_musical": "Axé, Samba, MPB",
       "organizador": [
         {
           "nome_org": "Renata B. Silva",
@@ -638,9 +638,9 @@
       "data": "2026-02-18",
       "publico": 900,
       "cep": "30111-000",
-      "endereco": "Av. Getúlio Vargas, BH",
-      "lat": 868,
-      "lng": 6785,
+      "endereco": "Av. Getúlio Vargas - Belo Horizonte, MG, Brasil",
+      "lat": -19.9358321,
+      "lng": -43.9315322,
       "faixa_etaria": "18+",
       "estilo_musical": "Eletrônica",
       "organizador": [
@@ -670,141 +670,6 @@
             {
               "id": 4,
               "src": "assets/img/blocoexemplo.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "nome_bloco": "Caio",
-      "descricao_geral": "Descrição padrão do bloco carnavalesco. Você pode editar depois.",
-      "avaliacao": 0,
-      "data": "2026-02-13",
-      "publico": 0,
-      "cep": "00000-000",
-      "endereco": "Endereço padrão",
-      "faixa_etaria": "Livre",
-      "lat": 0,
-      "lng": 0,
-      "estilo_musical": "Axé",
-      "organizador": [
-        {
-          "nome_org": "Caioba",
-          "email_org": "luiznxmaia@gmail.com",
-          "cnpj": "21.201.210/2012-01",
-          "senha": "caiobapit"
-        }
-      ],
-      "postagem": [
-        {
-          "descricao_card": "Descrição padrão da postagem do bloco.",
-          "imagens": [
-            {
-              "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
-            },
-            {
-              "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
-            },
-            {
-              "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
-            },
-            {
-              "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 17,
-      "nome_bloco": "Caio Amorin",
-      "descricao_geral": "",
-      "avaliacao": "",
-      "data": "",
-      "publico": 0,
-      "cep": "",
-      "endereco": "",
-      "faixa_etaria": "",
-      "lat": "",
-      "lng": "",
-      "estilo_musical": "",
-      "organizador": [
-        {
-          "nome_org": "Caio Amora",
-          "email_org": "luiznxmaia@gmail.com",
-          "cnpj": "12.121.212/1212-43",
-          "senha": "caioba1001"
-        }
-      ],
-      "postagem": [
-        {
-          "descricao_card": "",
-          "imagens": [
-            {
-              "id": 1,
-              "src": ""
-            },
-            {
-              "id": 2,
-              "src": ""
-            },
-            {
-              "id": 3,
-              "src": ""
-            },
-            {
-              "id": 4,
-              "src": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "nome_bloco": "a",
-      "descricao_geral": "",
-      "avaliacao": "",
-      "data": "",
-      "publico": "",
-      "cep": "",
-      "endereco": "",
-      "faixa_etaria": "",
-      "lat": "",
-      "lng": "",
-      "estilo_musical": "",
-      "organizador": [
-        {
-          "nome_org": "01785957643",
-          "email_org": "luiznxmaia@gmail.com",
-          "cnpj": "21.111.111/1111-11",
-          "senha": "1111111111"
-        }
-      ],
-      "postagem": [
-        {
-          "descricao_card": "",
-          "imagens": [
-            {
-              "id": 1,
-              "src": ""
-            },
-            {
-              "id": 2,
-              "src": ""
-            },
-            {
-              "id": 3,
-              "src": ""
-            },
-            {
-              "id": 4,
-              "src": ""
             }
           ]
         }
