@@ -4,7 +4,7 @@ function initAutocomplete() {
     const input = document.getElementById('campo-endereco');
     if (input) {
         autocomplete = new google.maps.places.Autocomplete(input, {
-            types: ['geocode'], // ou ['address']
+            types: ['geocode'],
             componentRestrictions: { country: 'br' },
         });
 
@@ -17,6 +17,10 @@ function initAutocomplete() {
             const cepComponent = place.address_components.find(c => c.types.includes("postal_code"));
             if (cepComponent) {
                 $('input[name="cep"]').val(cepComponent.long_name.replace(/\D/g, ''));
+                const $cepInput = $('input[name="cep"]');
+                const cepLimpo = cepComponent.long_name.replace(/\D/g, '');
+                $cepInput.val(cepLimpo);
+                $cepInput.trigger('input');
             }
         });
 
@@ -25,6 +29,8 @@ function initAutocomplete() {
 
 
 $(document).ready(async function () {
+
+    $('input[name="cep"]').mask('00000-000');
 
     initAutocomplete();
     const API_URL = "http://localhost:3000/blocos";

@@ -7,6 +7,14 @@
     margin-top: 10px;
     margin-bottom: 30px;
 }
+textarea.form-control{
+    max-height: 150px;
+}
+
+#formInfo{
+    margin-bottom: 20px;
+}
+
 .btn-verde {
     background-color: #0A8B9A;
     border-color: #0A8B9A;
@@ -32,10 +40,13 @@ main{
     left: 0;
 }
 
+#blocosDropdown .dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
 
 #dropdownEstilos {
-    background-color: white;
-    border: 1px solid #ced4da;
     color: #495057;
     height: 44px !important;
 }
