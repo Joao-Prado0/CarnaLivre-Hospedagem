@@ -1,166 +1,95 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const formCadastro = document.querySelector('form');
-    
-    formCadastro.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        
-        const usuario = {
-            nomeCompleto: document.getElementById('fullname').value,
-            nomeUsuario: document.getElementById('username').value,
-            email: document.getElementById('email').value,
-            dataNascimento: document.getElementById('birthdate').value,
-            senha: document.getElementById('password').value
-        };
-        
-        
-        if (!validarCampos(usuario)) {
-            return;
+document.querySelector("form").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const nomeBloco = document.getElementById("fullname").value;
+  const nomeOrg = document.getElementById("username").value;
+  const emailOrg = document.getElementById("email").value;
+  const cnpj = document.getElementById("cnpj").value;
+  const senha = document.getElementById("password").value;
+
+  try {
+    // Primeiro, pega todos os blocos existentes
+    const resposta = await fetch("http://localhost:3000/blocos");
+    const blocos = await resposta.json();
+
+    // Encontra o maior ID atual
+    const ultimoId = blocos.length > 0
+      ? Math.max(...blocos.map(bloco => Number(bloco.id)))
+      : 0;
+
+    const novoId = ultimoId + 1;
+
+    const novoBloco = {
+      id: novoId,
+      nome_bloco: nomeBloco,
+      descricao_geral: "",
+      avaliacao: "",
+      data: "",
+      publico: "",
+      cep: "",
+      endereco: "",
+      faixa_etaria: "",
+      lat: "",
+      lng: "",
+      estilo_musical: "",
+      organizador: [
+        {
+          nome_org: nomeOrg,
+          email_org: emailOrg,
+          cnpj: cnpj,
+          senha: senha
         }
-        
-        
-        armazenarLocalmente(usuario);
-        
-        
-        enviarParaJSON(usuario);
+      ],
+      postagem: [
+        {
+          descricao_card: "",
+          imagens: [
+            { id: 1, src: "" },
+            { id: 2, src: "" },
+            { id: 3, src: "" },
+            { id: 4, src: "" }
+          ]
+        }
+      ]
+    };
+
+    
+    const respostaPost = await fetch("http://localhost:3000/blocos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(novoBloco)
     });
-    
-    function validarCampos(usuario) {
-        if (!usuario.nomeCompleto || !usuario.nomeUsuario || !usuario.email || !usuario.dataNascimento || !usuario.senha) {
-            alert('Por favor, preencha todos os campos!');
-            return false;
-        }
-        
-        if (usuario.senha.length < 6) {
-            alert('A senha deve ter pelo menos 6 caracteres!');
-            return false;
-        }
-        
-        if (!validarEmail(usuario.email)) {
-            alert('Por favor, insira um e-mail válido!');
-            return false;
-        }
-        
-        return true;
-    }
-    
-    function validarEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-    
-    function armazenarLocalmente(usuario) {
-        
-        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-        
-        
-        const usuarioExistente = usuarios.find(u => u.email === usuario.email || u.nomeUsuario === usuario.nomeUsuario);
-        
-        if (usuarioExistente) {
-            alert('Este e-mail ou nome de usuário já está cadastrado!');
-            return;
-        }
-        
-        
-        usuarios.push(usuario);
-        
-        
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        
-        alert('Cadastro realizado com sucesso!');
-        formCadastro.reset();
-    }
-    
-    function enviarParaJSON(bloco) {
-    fetch('/cadastrar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(bloco)
-    })
-    .then(res => {
-        if (!res.ok) {
-            return res.json().then(data => { throw new Error(data.mensagem); });
-        }
-        return res.json();
-    })
-    .then(data => {
-        alert(data.mensagem); // Só mostra se quiser
-    })
-    .catch(err => {
-        alert('Erro: ' + err.message);
-    });
-}
 
-});
-
-function validarCNPJ(cnpj) {
-    cnpj = cnpj.replace(/[^\d]+/g, '');
-
-    if (cnpj.length !== 14) return false;
-
-    // Elimina CNPJs inválidos conhecidos
-    if (/^(\d)\1+$/.test(cnpj)) return false;
-
-    let tamanho = cnpj.length - 2;
-    let numeros = cnpj.substring(0, tamanho);
-    let digitos = cnpj.substring(tamanho);
-    let soma = 0;
-    let pos = tamanho - 7;
-
-    for (let i = tamanho; i >= 1; i--) {
-        soma += numeros.charAt(tamanho - i) * pos--;
-        if (pos < 2) pos = 9;
-    }
-
-    let resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-    if (resultado != digitos.charAt(0)) return false;
-
-    tamanho += 1;
-    numeros = cnpj.substring(0, tamanho);
-    soma = 0;
-    pos = tamanho - 7;
-
-    for (let i = tamanho; i >= 1; i--) {
-        soma += numeros.charAt(tamanho - i) * pos--;
-        if (pos < 2) pos = 9;
-    }
-
-    resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-    if (resultado != digitos.charAt(1)) return false;
-
-    return true;
-}
-document.querySelector("form").addEventListener("submit", function (e) {
-    const cnpjInput = document.querySelector("#cnpj");
-    const cnpjValue = cnpjInput.value;
-
-    if (!validarCNPJ(cnpjValue)) {
-        e.preventDefault(); 
-        cnpjInput.setCustomValidity("CNPJ inválido.Tente novamente.");
-        cnpjInput.reportValidity(); 
+    if (respostaPost.ok) {
+      alert("Bloco cadastrado com sucesso!");
     } else {
-        cnpjInput.setCustomValidity(""); 
+      alert("Erro ao cadastrar bloco.");
     }
-});
-const dados = {
-  nomeDoBloco: "Bloco da Alegria",
-  nomeDoResponsavel: "Maria Silva",
-  email: "maria@email.com",
-  cnpj: "12345678000100",
-  senha: "123456"
-};
-
-fetch('http://localhost:3000/blocos', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(dados)
-})
-.then(res => {
-  if (res.ok) {
-    alert("Bloco cadastrado com sucesso!");
-  } else {
-    alert("Erro ao cadastrar.");
+  } catch (erro) {
+    console.error("Erro ao cadastrar bloco:", erro);
+    alert("Erro na conexão com o servidor.");
   }
+});
+
+
+
+
+function aplicarMascaraCNPJ(input) {
+    let valor = input.value.replace(/\D/g, ''); 
+    if (valor.length > 14) {
+        valor = valor.slice(0, 14);
+    }                                                  
+
+    valor = valor.replace(/^(\d{2})(\d)/, '$1.$2');
+    valor = valor.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+    valor = valor.replace(/\.(\d{3})(\d)/, '.$1/$2');
+    valor = valor.replace(/(\d{4})(\d)/, '$1-$2');
+
+    input.value = valor;
+}
+
+document.getElementById('cnpj').addEventListener('input', function () {
+    aplicarMascaraCNPJ(this);
 });

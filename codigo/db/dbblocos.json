@@ -1,7 +1,7 @@
 {
   "blocos": [
     {
-      "id": 1,
+      "id": "1",
       "nome_bloco": "Filhos da PUC",
       "descricao_geral": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi.",
       "avaliacao": 4.5,
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "nome_bloco": "Unidos da Savassi",
       "descricao_geral": "Tradicional no carnaval de BH, o Unidos da Savassi traz samba no pé e muita alegria no coração. Ideal para quem busca um desfile raiz.",
       "avaliacao": 4.2,
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "nome_bloco": "Funk BH",
       "descricao_geral": "Batidas marcantes e coreografias envolventes fazem do Funk BH uma das atrações mais animadas do carnaval belo-horizontino.",
       "avaliacao": 3.8,
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "nome_bloco": "Axé das Gerais",
       "descricao_geral": "Com sucessos do axé music, o bloco transforma as ruas em uma grande micareta à mineira, com muita dança e alto astral.",
       "avaliacao": 4.9,
@@ -181,10 +181,10 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "nome_bloco": "Rock na Rua",
       "descricao_geral": "Releituras de clássicos do rock em ritmo de carnaval, com guitarras e fantasia.",
-      "avaliacao": 4.0,
+      "avaliacao": 4,
       "data": "2026-02-15",
       "publico": 12000,
       "cep": "30170-120",
@@ -226,7 +226,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "nome_bloco": "Batuque Feminino",
       "descricao_geral": "Formado por mulheres percussionistas, o bloco celebra a força feminina com ritmos afro-brasileiros.",
       "avaliacao": 4.6,
@@ -271,7 +271,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "nome_bloco": "Samba do Mercado",
       "descricao_geral": "Saindo do coração do Mercado Central, o Samba do Mercado traz um repertório clássico do samba de raiz, animando os foliões com muito ritmo e tradição.",
       "avaliacao": 4.3,
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "nome_bloco": "Pagode no Asfalto",
       "descricao_geral": "Um verdadeiro baile a céu aberto, o Pagode no Asfalto conquista os foliões com clássicos do pagode dos anos 90 e hits atuais, sempre com muita animação.",
       "avaliacao": 3.9,
@@ -361,10 +361,10 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "nome_bloco": "Cortejo do Amor",
       "descricao_geral": "Celebrando a diversidade e a liberdade, o Cortejo do Amor é repleto de cores, glitter e mensagens de aceitação. Um dos blocos mais inclusivos de BH.",
-      "avaliacao": 5.0,
+      "avaliacao": 5,
       "data": "2026-02-14",
       "publico": 22000,
       "cep": "30150-010",
@@ -406,7 +406,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "nome_bloco": "Coração de Tambor",
       "descricao_geral": "Inspirado nas tradições afro-brasileiras, o Coração de Tambor mistura música, dança e espiritualidade em uma celebração poderosa e ancestral.",
       "avaliacao": 4.7,
@@ -451,7 +451,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "nome_bloco": "Brega BH",
       "descricao_geral": "Com muito romantismo e exagero, o Brega BH leva os clássicos do brega e do popular brasileiro para o meio da folia. Glitter, perucas e declarações de amor não faltam!",
       "avaliacao": 4.1,
@@ -496,7 +496,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "nome_bloco": "Bloco do Vinil",
       "descricao_geral": "Voltado aos amantes dos clássicos, o Bloco do Vinil traz um repertório recheado de hits dos anos 70, 80 e 90, com DJs e foliões caracterizados de época.",
       "avaliacao": 4.4,
@@ -541,7 +541,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "13",
       "nome_bloco": "Bloco do Jazz",
       "descricao_geral": "Com arranjos elaborados e instrumentos de sopro, o Bloco do Jazz apresenta uma experiência sonora refinada e contagiante, misturando improviso e marchinha.",
       "avaliacao": 4.8,
@@ -586,7 +586,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": "14",
       "nome_bloco": "Bloco dos Mixturados",
       "descricao_geral": "Misturando diversos estilos musicais e influências culturais, o Bloco dos Mixturados atrai um público diverso em busca de um carnaval plural e democrático.",
       "avaliacao": 4.2,
@@ -631,7 +631,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "15",
       "nome_bloco": "Techno no Asfalto",
       "descricao_geral": "O carnaval eletrônico de BH! O Techno no Asfalto transforma avenidas em pistas de dança com DJs e efeitos visuais impressionantes.",
       "avaliacao": 4.6,
@@ -670,6 +670,141 @@
             {
               "id": 4,
               "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "nome_bloco": "Caio",
+      "descricao_geral": "Descrição padrão do bloco carnavalesco. Você pode editar depois.",
+      "avaliacao": 0,
+      "data": "2026-02-13",
+      "publico": 0,
+      "cep": "00000-000",
+      "endereco": "Endereço padrão",
+      "faixa_etaria": "Livre",
+      "lat": 0,
+      "lng": 0,
+      "estilo_musical": "Axé",
+      "organizador": [
+        {
+          "nome_org": "Caioba",
+          "email_org": "luiznxmaia@gmail.com",
+          "cnpj": "21.201.210/2012-01",
+          "senha": "caiobapit"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "Descrição padrão da postagem do bloco.",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "nome_bloco": "Caio Amorin",
+      "descricao_geral": "",
+      "avaliacao": "",
+      "data": "",
+      "publico": 0,
+      "cep": "",
+      "endereco": "",
+      "faixa_etaria": "",
+      "lat": "",
+      "lng": "",
+      "estilo_musical": "",
+      "organizador": [
+        {
+          "nome_org": "Caio Amora",
+          "email_org": "luiznxmaia@gmail.com",
+          "cnpj": "12.121.212/1212-43",
+          "senha": "caioba1001"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": ""
+            },
+            {
+              "id": 2,
+              "src": ""
+            },
+            {
+              "id": 3,
+              "src": ""
+            },
+            {
+              "id": 4,
+              "src": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "nome_bloco": "a",
+      "descricao_geral": "",
+      "avaliacao": "",
+      "data": "",
+      "publico": "",
+      "cep": "",
+      "endereco": "",
+      "faixa_etaria": "",
+      "lat": "",
+      "lng": "",
+      "estilo_musical": "",
+      "organizador": [
+        {
+          "nome_org": "01785957643",
+          "email_org": "luiznxmaia@gmail.com",
+          "cnpj": "21.111.111/1111-11",
+          "senha": "1111111111"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "",
+          "imagens": [
+            {
+              "id": 1,
+              "src": ""
+            },
+            {
+              "id": 2,
+              "src": ""
+            },
+            {
+              "id": 3,
+              "src": ""
+            },
+            {
+              "id": 4,
+              "src": ""
             }
           ]
         }
