@@ -1,12 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     const formCadastro = document.querySelector('form');
-    const API_URL = 'http://localhost:3000/usuarios'; // URL do JSON Server
     
-    formCadastro.addEventListener('submit', async function(e) {
+    // Inicializa o LocalStorage se estiver vazio
+    if (!localStorage.getItem('usuarios')) {
+        localStorage.setItem('usuarios', JSON.stringify({
+            usuarios: []
+        }));
+    }
+
+    formCadastro.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Captura dos dados do formulário e conversão para o formato desejado
+        // Captura dos dados do formulário
         const usuario = {
+            id: Date.now(), // Usa o timestamp como ID único
             nome_completo: document.getElementById('fullname').value,
             login: document.getElementById('username').value,
             email: document.getElementById('email').value,
@@ -20,30 +27,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         try {
-            // Verifica se o usuário já existe
-            const response = await fetch(`${API_URL}?email=${usuario.email}`);
-            const usuarios = await response.json();
+            // Recupera os usuários do LocalStorage
+            const db = JSON.parse(localStorage.getItem('usuarios'));
             
-            if (usuarios.length > 0) {
+            // Verifica se o e-mail já existe
+            const emailExistente = db.usuarios.some(u => u.email === usuario.email);
+            
+            if (emailExistente) {
                 alert('Este e-mail já está cadastrado!');
                 return;
             }
             
-            // Cadastra o novo usuário
-            const cadastroResponse = await fetch(API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(usuario)
-            });
+            // Adiciona o novo usuário
+            db.usuarios.push(usuario);
             
-            if (cadastroResponse.ok) {
-                alert('Cadastro realizado com sucesso!');
-                formCadastro.reset();
-            } else {
-                throw new Error('Erro ao cadastrar usuário');
-            }
+            // Salva no LocalStorage
+            localStorage.setItem('usuarios', JSON.stringify(db));
+            
+            alert('Cadastro realizado com sucesso!');
+            formCadastro.reset();
+            
         } catch (error) {
             console.error('Erro:', error);
             alert('Ocorreu um erro ao cadastrar. Tente novamente mais tarde.');

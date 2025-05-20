@@ -7,6 +7,14 @@
     margin-top: 10px;
     margin-bottom: 30px;
 }
+textarea.form-control{
+    max-height: 150px;
+}
+
+#formInfo{
+    margin-bottom: 20px;
+}
+
 .btn-verde {
     background-color: #0A8B9A;
     border-color: #0A8B9A;
@@ -30,4 +38,43 @@ main{
     bottom: 0;
     right: 0;
     left: 0;
+}
+
+#blocosDropdown .dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+
+#dropdownEstilos {
+    color: #495057;
+    height: 44px !important;
+}
+
+#estilosDropdown {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+#estilosDropdown .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    padding: 0px 0px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#estilosDropdown .dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+#estilosDropdown input[type="checkbox"] {
+    accent-color: #6B0CB0;
+    cursor: pointer;
 }

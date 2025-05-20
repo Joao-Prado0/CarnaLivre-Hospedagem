@@ -1,7 +1,7 @@
-
-
 h1 {
   margin-bottom: 40px;
+  text-align: center;
+
 }
 
 #adicao-imagem {
@@ -76,10 +76,20 @@ h1 {
   position: relative;
 }
 
+.picture span {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
 .picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .picture:hover {
@@ -131,5 +141,6 @@ h1 {
   font-size: 16px;
   color: #333;
 }
+
 
 

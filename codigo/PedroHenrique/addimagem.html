@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -73,21 +74,20 @@
   <div id="adicao-imagem">
     <!-- Seção do Texto -->
     <div id="text-section">
-      <input type="text" id="caption-input" placeholder="Digite o texto aqui" />
+      <input type="text" id="caption-input" placeholder="Digite o texto aqui (max/160)" maxlength="160"/>
       <button id="text-upload-btn">Enviar Texto</button>
     </div>
 
     <!-- Seção da Imagem -->
     <div id="image-section">
-      <label class="picture" for="picture__input" id="picture-label">
-        <span>Escolher imagem</span>
-        <img id="preview-image" style="display: none;" />
-      </label>
-      <input type="file" accept="image/*" id="picture__input">
-      <button id="upload-btn">Enviar Imagem</button>
-    </div>
-  </div>
-
+  <label class="picture" for="picture__input" id="picture-label">
+    <span>Escolher imagem</span>
+    <img id="preview-image" style="display: none;" alt="Pré-visualização da imagem" />
+  </label>
+  <input type="file" accept="image/*" id="picture__input" />
+  <button id="upload-btn">Enviar Imagem</button>
+</div>
+</div>
   <div id="caption-gallery"></div>
   <div id="gallery"></div>
 </main>
