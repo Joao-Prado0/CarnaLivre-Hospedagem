@@ -5,28 +5,17 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body{
+    background-color: #0A8B9A !important;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: #0A8B9A;
-}
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-main {
-    flex-grow: 1; 
+main{
+    background-color: rgb(251,245,245);
+    height: fit-content;
+    margin-top: 10px;
     margin-left: 90px;
-    min-height: 450px; 
-    background-color: rgb(251, 245, 245);
+    margin-bottom: 0px;
     padding: 10px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0px 0px;
 }
 
 /* Cabeçalho - Inicio */
@@ -147,13 +136,13 @@ nav {
 
 /* Rodapé - Inicio */
 .rodape {
-    flex-shrink: 0; 
     background-color: #6a0dad;
     color: white;
     padding: 0.8rem 0;
+    margin-top: auto;
     width: 100%;
-    position: static; 
-    bottom: auto;    
+    position: relative;
+    bottom: 0;
 }
 
 .footer-content {
@@ -210,3 +199,62 @@ nav {
     color: rgba(255, 255, 255, 0.8);
 }
 /* Rodapé - Fim */
+
+/*-------------------------------------------------- Fim da Estrutura Padrão ------------------------------------ */
+#container-carrossel{
+    width: 55%;
+}
+.carousel-item img {
+    max-height: 400px;
+}
+#container-infos{
+    margin: 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(4,1fr);
+    column-gap: 50px;
+    row-gap: 20px;
+}
+#maps{
+    background-color: rgb(233, 233, 233);
+    grid-row: 1 / 5;
+    grid-column: 1 / 3;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 6px;
+}
+#texto-descricao{
+    background-color: rgb(233, 233, 233);
+    border-radius: 4px;
+    grid-row: 1 / 3;
+    grid-column: 3 / 7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 6px;
+}
+#texto-descricao p{
+    font-size: 105%;
+}
+#info-extras{
+    background-color: rgb(233, 233, 233);
+    grid-row: 3 / 5;
+    grid-column: 3 / 7;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 6px;
+}
+
+.fa-star{
+    color: goldenrod;
+}
+#comentarios-antigos{
+    margin: auto 20px 10px;
+    padding: 6px;
+    background-color: rgb(233, 233, 233); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#titulo-comentarios{
+    margin: auto 20px;
+}
+#comentario-novo{
+    margin: auto 20px;
+}

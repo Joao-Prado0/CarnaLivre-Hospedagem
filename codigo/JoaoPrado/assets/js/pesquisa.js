@@ -4,11 +4,11 @@ $(document).ready(function () {
     let blocos = [];
     let todosOsBlocos = [];
     $.ajax({
-        url:'http://localhost:3000/blocos',
+        url: 'http://localhost:3000/blocos',
         success: function (data) {
-        todosOsBlocos = data;
-        blocos = [...todosOsBlocos];
-        carregarMaisBlocos();
+            todosOsBlocos = data;
+            blocos = [...todosOsBlocos];
+            carregarMaisBlocos();
         },
         error: function () {
             alert("Erro ao carregar os dados do servidor.");
