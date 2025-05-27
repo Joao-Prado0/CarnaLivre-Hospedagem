@@ -156,7 +156,9 @@ function criarCard(cardbloco) {
 
     conteudo.append(img, i, h3, p);
 
-    let link = $('<a>').attr('href', 'bloco.html?id=' + cardbloco.id).attr('id', 'linkBloco');
+    let link = $('<a>').attr('href', 'paginablocos.html').attr('id', 'linkBloco').click(function () {
+        sessionStorage.setItem('selectedBlocoId', cardbloco.id);
+    });
     let button = $('<button>').text('Ver mais');
     link.append(button);
 
