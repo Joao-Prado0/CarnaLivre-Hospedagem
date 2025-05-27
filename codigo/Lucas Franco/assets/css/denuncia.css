@@ -1,0 +1,42 @@
+.conteudo{
+    color: #6B0CB0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.conteudo h2{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+textarea.form-control{
+    min-height: 90px !important;
+    max-height: 150px;
+}
+
+#formDenuncia{
+    width: 55%;
+}
+#formDenuncia input, .blocoDenuncia{
+    height: 44px;
+}
+
+.btn-verde {
+    background-color: #0A8B9A;
+    border-color: #0A8B9A;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  
+.btn-verde:hover {
+    background-color: #087580;
+    border-color: #076670;
+}
+
+.rodape{
+    position: absolute;
+    bottom: 0;
+}
+
+main{
+    height: calc(100vh - 220px - 86px);
+}
