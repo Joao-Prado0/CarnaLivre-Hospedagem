@@ -10,19 +10,19 @@
     },
     {
       "id": 2,
-      "nome_completo": "João Prado Campos",
-      "login": "Jprado",
-      "email": "joaoblablabla@gmail.com",
-      "data_nasc": "2002-02-12",
-      "senha": "4124121222"
+      "nome_completo": "Lucas Larinje da Rocha",
+      "login": "Luquionhas",
+      "email": "lucasgomesdarocha@gmail.com",
+      "data_nasc": "2003-01-15",
+      "senha": "lucasgames15"
     },
     {
       "id": 3,
       "nome_completo": "Davi Martins da Silva",
-      "login": "Jprado",
-      "email": "joaoblablabla@gmail.com",
-      "data_nasc": "2002-02-12",
-      "senha": "4124121222"
+      "login": "DavidMartin",
+      "email": "Davimatosdasilva@gmail.com",
+      "data_nasc": "2007-05-24",
+      "senha": "mamaefofa1313"
     }
   ]
 }
