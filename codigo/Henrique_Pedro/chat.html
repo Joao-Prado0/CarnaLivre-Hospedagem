@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat</title>
+    <title>Nome da página</title>
     <link rel="stylesheet" href="assets/css/fixos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -90,28 +90,22 @@
                     <i class="fa-solid fa-plus"></i> Grupo
                 </button>
             </div>
-            <ul class="contact-list">
-                <li class="contact active">João</li>
-                <li class="contact">pedro</li>
-                <li class="contact">luiz</li>
-                <li class="contact">henrique</li>
+            <ul class="contact-list" id="contactList">
+                <!-- Contatos serão carregados via JavaScript -->
             </ul>
         </div>
 
         <!-- Área do Chat -->
         <div class="chat-container">
             <div class="chat-header">
-                <h2>João</h2>
+                <h2 id="currentChatName">Selecione um contato</h2>
             </div>
-            <div class="chat-box">
-                <div class="message received">
-                    <p>Olá! Como você está?</p>
-                    <span class="time">10:00</span>
-                </div>
+            <div class="chat-box" id="chatBox">
+                <!-- Mensagens serão carregadas aqui -->
             </div>
             <div class="chat-input">
-                <input type="text" placeholder="Digite sua mensagem...">
-                <button>Enviar</button>
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem..." disabled>
+                <button id="sendButton" disabled>Enviar</button>
             </div>
         </div>
     </div>
@@ -161,7 +155,7 @@
                     </div>
                     <h6>Selecione os membros:</h6>
                     <div class="group-member-list" id="groupMemberList">
-                        <!-- Membros serão adicionados via JavaScript -->
+                        <!-- Membros serão carregados via JavaScript -->
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -172,12 +166,11 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/3fdf209596.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script src="assets/js/chat.js"></script>
-    <script src="assets/js/data.js"></script>
 </body>
-
 </html>
