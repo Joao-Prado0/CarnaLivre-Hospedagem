@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome da página</title>
+    <title>Chat</title>
     <link rel="stylesheet" href="assets/css/fixos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -68,7 +68,6 @@
         </nav>
     </header>
 
-    <!--Coloque aqui o contéudo principal da sua página-->
     <main>
         <aside class="barra-lateral">
             <div class="bl-icones ">
@@ -85,7 +84,12 @@
         <h2>Chat</h2>
         <!-- Sidebar de Contatos -->
         <div class="sidebar">
-            <h3>Contatos</h3>
+            <div class="sidebar-header">
+                <h3>Contatos</h3>
+                <button id="createGroupBtn" class="btn btn-sm btn-light">
+                    <i class="fa-solid fa-plus"></i> Grupo
+                </button>
+            </div>
             <ul class="contact-list">
                 <li class="contact active">João</li>
                 <li class="contact">pedro</li>
@@ -101,18 +105,13 @@
             </div>
             <div class="chat-box">
                 <div class="message received">
-                    <p></p>
+                    <p>Olá! Como você está?</p>
                     <span class="time">10:00</span>
                 </div>
-                <div class="message sent">
-                    <p></p>
-                    <span class="time"></span>
-                </div>
-              
             </div>
             <div class="chat-input">
-                <input type="text" placeholder="Digite sua mensagem..." disabled>
-                <button disabled>Enviar</button>
+                <input type="text" placeholder="Digite sua mensagem...">
+                <button>Enviar</button>
             </div>
         </div>
     </div>
@@ -147,10 +146,38 @@
         </div>
     </footer>
 
+    <!-- Modal para criar grupo -->
+    <div class="modal fade" id="groupModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Criar Novo Grupo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="groupName" class="form-label">Nome do Grupo</label>
+                        <input type="text" class="form-control" id="groupName" placeholder="Digite o nome do grupo">
+                    </div>
+                    <h6>Selecione os membros:</h6>
+                    <div class="group-member-list" id="groupMemberList">
+                        <!-- Membros serão adicionados via JavaScript -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="confirmGroupBtn">Criar Grupo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://kit.fontawesome.com/3fdf209596.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script src="assets/js/chat.js"></script>
+    <script src="assets/js/data.js"></script>
 </body>
 
 </html>
