@@ -70,10 +70,10 @@ function initMap() {
 
 async function carregarBlocos() {
   try {
-    const response = await fetch("../db/dbblocos.json");
+    const response = await fetch("http://localhost:3000/blocos");
     const dados = await response.json();
 
-    for (const bloco of dados.blocos) {
+    for (const bloco of dados) {
       if (bloco.lat && bloco.lng) {
         const marker = new google.maps.Marker({
           position: { lat: bloco.lat, lng: bloco.lng },

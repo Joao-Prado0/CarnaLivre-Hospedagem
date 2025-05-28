@@ -50,10 +50,10 @@ function initMap() {
 
 async function carregarDenuncias() {
   try {
-    const response = await fetch("../db/dbdenuncias.json");
+    const response = await fetch("http://localhost:3000/denuncias");
     const dados = await response.json();
 
-    for (const denuncia of dados.denuncias) {
+    for (const denuncia of dados) {
       if (denuncia.lat && denuncia.lng) {
         const marker = new google.maps.Marker({
           position: { lat: denuncia.lat, lng: denuncia.lng },
