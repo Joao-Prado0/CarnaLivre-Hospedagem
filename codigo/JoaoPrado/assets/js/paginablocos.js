@@ -1,5 +1,6 @@
 $(document).ready(function () {
   const id = sessionStorage.getItem('selectedBlocoId');
+  const url = "http://localhost:3000"
 
   if (!id) {
     window.location.href = 'pesquisablocos.html';
@@ -17,14 +18,18 @@ $(document).ready(function () {
       return false;
     }
   };
-  const loadBlocoData = async () => {
+  const carregaBlocoData = async () => {
     try {
       const bloco = await $.ajax({
-        url: `http://localhost:3000/blocos/${id}`,
+        url: `${url}/blocos/${id}`,
         method: 'GET'
       });
+      const comentarios = await $.ajax({
+        url: `${url}/comentarios?blocoId=${id}`,
+        method: 'GET'
+      })
 
-      carregarDadosBlocos(bloco);
+      carregarDadosBlocos(bloco, comentarios);
 
       const libraryLoaded = await loadMarkerLibrary();
       if (libraryLoaded) {
@@ -38,40 +43,70 @@ $(document).ready(function () {
     }
   };
 
-  loadBlocoData();
+  carregaBlocoData();
 
-  function carregarDadosBlocos(bloco) {
+  function carregarDadosBlocos(bloco, comentarios) {
     document.title = bloco.nome_bloco;
 
-    const $conteudoCarrossel = $('.carousel-inner').empty();
-    const $indicadoresCarrossel = $('.carousel-indicators').empty();
+    const conteudoCarrossel = $('.carousel-inner').empty();
+    const indicadoresCarrossel = $('.carousel-indicators').empty();
 
     $.each(bloco.postagem[0].imagens, function (index, imagem) {
-      $conteudoCarrossel.append(`
-        <div class="carousel-item ${index === 0 ? 'active' : ''}">
-          <img src="${imagem.src}" class="d-block w-100 mx-auto" alt="${bloco.nome_bloco}">
-        </div>
-      `);
+      const itemCarrossel = $('<div>')
+        .addClass('carousel-item')
+        .toggleClass('active', index === 0)
+        .append(
+          $('<img>')
+            .addClass('d-block w-100 mx-auto')
+            .attr('src', imagem.src)
+            .attr('alt', bloco.nome_bloco)
+        );
 
-      $indicadoresCarrossel.append(`
-        <button type="button" data-bs-target="#carouselExampleIndicators" 
-                data-bs-slide-to="${index}" class="${index === 0 ? 'active' : ''}" 
-                aria-label="Slide ${index + 1}">
-        </button>
-      `);
+      const indicador = $('<button>')
+        .attr({
+          type: 'button',
+          'data-bs-target': '#carouselExampleIndicators',
+          'data-bs-slide-to': index,
+          'aria-label': `Slide ${index + 1}`
+        })
+        .toggleClass('active', index === 0);
+
+      conteudoCarrossel.append(itemCarrossel);
+      indicadoresCarrossel.append(indicador);
     });
 
     $('h1').text(bloco.nome_bloco);
     $('#descricao').text(bloco.descricao_geral);
 
-    $('#info-extras ul').html(`
-      <li><strong>Data:</strong> ${formatarData(bloco.data)}</li>
-      <li><strong>Local:</strong> ${bloco.endereco}</li>
-      <li><strong>Público esperado:</strong> ${bloco.publico.toLocaleString()} pessoas</li>
-      <li><strong>Estilo musical:</strong> ${bloco.estilo_musical}</li>
-      <li><strong>Faixa etária:</strong> ${bloco.faixa_etaria}</li>
-      <li><strong>Avaliação:</strong> ${bloco.avaliacao}/5</li>
-    `);
+    const $listaInfos = $('#info-extras ul').empty();
+
+    $listaInfos.append($('<li>').html(`<strong>Data:</strong> ${formatarData(bloco.data)}`));
+    $listaInfos.append($('<li>').html(`<strong>Local:</strong> ${bloco.endereco}`));
+    $listaInfos.append($('<li>').html(`<strong>Público esperado:</strong> ${bloco.publico.toLocaleString()} pessoas`));
+    $listaInfos.append($('<li>').html(`<strong>Estilo musical:</strong> ${bloco.estilo_musical}`));
+    $listaInfos.append($('<li>').html(`<strong>Faixa etária:</strong> ${bloco.faixa_etaria}`));
+    $listaInfos.append($('<li>').html(`<strong>Avaliação:</strong> ${bloco.avaliacao}/5`));
+
+
+    comentarios.sort((a, b) => new Date(b.data) - new Date(a.data));
+    const abaComentarios = $('#comentarios-antigos').empty();
+
+    if (comentarios.length === 0) {
+      const msg = $('<p>').addClass('nenhum-comentario').text('Nenhum comentário foi feito ainda. Seja o primeiro!');
+      abaComentarios.append(msg);
+    } else {
+      for (let i = 0; i < comentarios.length; i++) {
+        let div = $('<div>').addClass('comentario-postado');
+        let texto = $('<p>').text(comentarios[i].texto);
+        let data = $('<p>').addClass('data').text(formatarData(comentarios[i].data));
+        for (let j = 0; j < parseInt(comentarios[i].avaliacao); j++) {
+          let estrela = $('<i>').addClass('fa-solid fa-star');
+          div.append(estrela);
+        }
+        div.append(texto, data);
+        abaComentarios.append(div);
+      }
+    }
   }
 
   function formatarData(dataString) {
