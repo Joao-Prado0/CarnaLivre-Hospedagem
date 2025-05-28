@@ -62,6 +62,7 @@ async function enviarDenuncia(dados) {
 }
 
 $(document).ready(async function () {
+    initAutocomplete();
     await carregarBlocos();
 
     $('#formDenuncia').submit(async function (event) {
