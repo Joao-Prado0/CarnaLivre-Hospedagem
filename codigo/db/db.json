@@ -3,7 +3,7 @@
     {
       "id": "1",
       "nome_bloco": "Filhos da PUC",
-      "descricao_geral": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi.",
+      "descricao_geral": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi. fwokenfoiw  kjweg nfoiwengoiwq fiownqifnwo3ir rw3jfnwiqnfqoin3qkw fokweno",
       "avaliacao": 4.5,
       "data": "2026-02-13",
       "publico": 20000,
@@ -729,6 +729,168 @@
       "lng": -43.9423594,
       "ocorrido": "assalto",
       "id": 3
+    }
+  ],
+  "comentarios": [
+    {
+      "id": 1,
+      "blocoId": 1,
+      "usuarioId": 1,
+      "texto": "Muito animado! A bateria estava perfeita e o clima super divertido.",
+      "avaliacao": 5,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 2,
+      "blocoId": 1,
+      "usuarioId": 2,
+      "texto": "Gostei da organização e da música, mas achei a concentração um pouco confusa.",
+      "avaliacao": 4,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 3,
+      "blocoId": 1,
+      "usuarioId": 3,
+      "texto": "Primeira vez indo nesse bloco e achei bem legal. Voltaria com certeza!",
+      "avaliacao": 4,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 4,
+      "blocoId": 1,
+      "usuarioId": 1,
+      "texto": "Faltou sombra e água fresca, mas a animação compensou!",
+      "avaliacao": 3,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 5,
+      "blocoId": 1,
+      "usuarioId": 2,
+      "texto": "Muito cheio, mas as músicas estavam ótimas e os músicos empolgados.",
+      "avaliacao": 4,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 6,
+      "blocoId": 2,
+      "usuarioId": 3,
+      "texto": "Samba de verdade, raiz! Muito emocionante ver essa cultura viva na rua!",
+      "avaliacao": 5,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 7,
+      "blocoId": 2,
+      "usuarioId": 1,
+      "texto": "Achei que ia ser melhor. Estava esperando mais percussionistas.",
+      "avaliacao": 3,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 8,
+      "blocoId": 2,
+      "usuarioId": 2,
+      "texto": "Curti muito! Energia boa, galera dançando e segurança presente.",
+      "avaliacao": 4,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 9,
+      "blocoId": 2,
+      "usuarioId": 3,
+      "texto": "Excelente bloco! Amei o samba no pé e a interação com o público.",
+      "avaliacao": 5,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 10,
+      "blocoId": 3,
+      "usuarioId": 1,
+      "texto": "Poderia ter mais espaço, mas as batidas estavam insanas! Muito bom!",
+      "avaliacao": 4,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 11,
+      "blocoId": 3,
+      "usuarioId": 2,
+      "texto": "Funk pesado do jeito que eu gosto. A coreografia foi o destaque!",
+      "avaliacao": 5,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 12,
+      "blocoId": 3,
+      "usuarioId": 3,
+      "texto": "Achei meio desorganizado, mas valeu pela vibe geral do bloco.",
+      "avaliacao": 3,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 13,
+      "blocoId": 3,
+      "usuarioId": 1,
+      "texto": "Não parei de dançar um segundo. Funk BH é demais!",
+      "avaliacao": 5,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 14,
+      "blocoId": 4,
+      "usuarioId": 2,
+      "texto": "Axé com qualidade! Me senti em Salvador, energia contagiante!",
+      "avaliacao": 5,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 15,
+      "blocoId": 4,
+      "usuarioId": 3,
+      "texto": "A apresentação foi linda, mas achei o som baixo em alguns momentos.",
+      "avaliacao": 4,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 16,
+      "blocoId": 4,
+      "usuarioId": 1,
+      "texto": "Muito animado, excelente para quem curte dançar com os amigos!",
+      "avaliacao": 4,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 17,
+      "blocoId": 5,
+      "usuarioId": 2,
+      "texto": "Rock e carnaval? Combinação perfeita! Adorei as releituras de clássicos.",
+      "avaliacao": 5,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 18,
+      "blocoId": 5,
+      "usuarioId": 3,
+      "texto": "Muito bom! Um dos poucos blocos com identidade rockeira!",
+      "avaliacao": 4,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 19,
+      "blocoId": 5,
+      "usuarioId": 1,
+      "texto": "Diferente e divertido. A galera se empolgou bastante com as guitarras.",
+      "avaliacao": 4,
+      "data": "2025-05-28T15:30:00"
+    },
+    {
+      "id": 20,
+      "blocoId": 5,
+      "usuarioId": 2,
+      "texto": "Esperava mais variedade no repertório, mas foi legal!",
+      "avaliacao": 3,
+      "data": "2025-05-28T15:30:00"
     }
   ]
 }

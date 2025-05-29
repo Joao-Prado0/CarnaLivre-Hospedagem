@@ -5,28 +5,17 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body{
+    background-color: #0A8B9A !important;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: #0A8B9A;
-}
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-main {
-    flex-grow: 1; 
+main{
+    background-color: white;
+    height: fit-content;
+    margin-top: 10px;
     margin-left: 90px;
-    min-height: 450px; 
-    background-color: rgb(251, 245, 245);
+    margin-bottom: 0px;
     padding: 10px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0px 0px;
 }
 
 /* Cabeçalho - Inicio */
@@ -147,13 +136,13 @@ nav {
 
 /* Rodapé - Inicio */
 .rodape {
-    flex-shrink: 0; 
     background-color: #6a0dad;
     color: white;
     padding: 0.8rem 0;
+    margin-top: auto;
     width: 100%;
-    position: static; 
-    bottom: auto;    
+    position: relative;
+    bottom: 0;
 }
 
 .footer-content {

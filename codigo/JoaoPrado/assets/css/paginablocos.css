@@ -5,11 +5,13 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-body{
+
+body {
     background-color: #0A8B9A !important;
 }
-main{
-    background-color: rgb(251,245,245);
+
+main {
+    background-color: rgb(251, 245, 245);
     height: fit-content;
     margin-top: 10px;
     margin-left: 90px;
@@ -23,35 +25,43 @@ nav {
     background-color: #6B0CB0;
     padding: 0;
 }
+
 .navbar {
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;
     height: 80px;
 }
+
 .navbar-brand img {
     height: 76px;
     width: auto;
 }
+
 .nav-link.dropdown-toggle::after {
     display: none !important;
 }
+
 .container-fluid {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     align-items: center;
 }
+
 #brpesquisa {
     width: 480px;
     margin-left: 80px;
 }
+
 .btn {
     padding: 0 12px;
 }
+
 .fa-list {
     font-size: 150%;
     color: white;
     margin-left: 10px;
 }
+
 #itens-lateral {
     list-style: none;
     display: flex;
@@ -60,15 +70,18 @@ nav {
     margin: 0;
     padding: 0;
 }
+
 #itens-lateral a {
     text-decoration: none;
     font-weight: bold;
     padding: 8px;
     color: white;
 }
+
 .fa-sun {
     font-size: 190%;
 }
+
 #circulo-profile {
     justify-self: end;
     border: 2px solid white;
@@ -78,15 +91,17 @@ nav {
     align-content: center;
     margin-right: 4px;
 }
+
 #circulo-profile i {
     margin: 8px;
     font-size: 130%;
     color: white;
 }
+
 /* Cabeçalho - Fim */
 
 /* Barra Lateral - Inicio */
-.barra-lateral{
+.barra-lateral {
     background-color: #0A8B9A;
     width: 90px;
     position: absolute;
@@ -94,20 +109,24 @@ nav {
     left: 0;
     bottom: 200px;
 }
-.bl-icones{
+
+.bl-icones {
     height: 60%;
 }
-.barra-lateral a{
+
+.barra-lateral a {
     color: white;
     text-decoration: none;
     font-size: 25px;
 }
-.bl-icones ul li{
+
+.bl-icones ul li {
     list-style: none;
     margin-bottom: 40px;
     margin-left: 28px;
 }
-.bl-icones ul li:not(.active):hover{
+
+.bl-icones ul li:not(.active):hover {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50%;
     width: 45px;
@@ -120,6 +139,7 @@ nav {
     margin-bottom: 40px;
     transition: background-color 0.5s ease;
 }
+
 .bl-icones ul li.active {
     background-color: black;
     border-radius: 50%;
@@ -132,6 +152,7 @@ nav {
     margin-right: auto;
     margin-bottom: 40px;
 }
+
 /* Barra Lateral - Fim */
 
 /* Rodapé - Inicio */
@@ -198,24 +219,28 @@ nav {
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.8);
 }
+
 /* Rodapé - Fim */
 
 /*-------------------------------------------------- Fim da Estrutura Padrão ------------------------------------ */
-#container-carrossel{
+#container-carrossel {
     width: 55%;
 }
+
 .carousel-item img {
     max-height: 400px;
 }
-#container-infos{
+
+#container-infos {
     margin: 20px 20px;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     column-gap: 50px;
     row-gap: 20px;
 }
-#maps{
+
+#maps {
     background-color: rgb(233, 233, 233);
     grid-row: 1 / 5;
     grid-column: 1 / 3;
@@ -223,18 +248,26 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 6px;
 }
-#texto-descricao{
+
+#texto-descricao {
     background-color: rgb(233, 233, 233);
     border-radius: 4px;
     grid-row: 1 / 3;
     grid-column: 3 / 7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    min-height: 150px;
 }
-#texto-descricao p{
+
+#texto-descricao p {
     font-size: 105%;
 }
-#info-extras{
+
+#info-extras {
     background-color: rgb(233, 233, 233);
     grid-row: 3 / 5;
     grid-column: 3 / 7;
@@ -243,18 +276,71 @@ nav {
     padding: 6px;
 }
 
-.fa-star{
+.fa-star {
     color: goldenrod;
 }
-#comentarios-antigos{
-    margin: auto 20px 10px;
-    padding: 6px;
-    background-color: rgb(233, 233, 233); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+#comentarios-antigos {
+  margin: auto 20px 10px;
+  padding: 12px;
+  background-color: rgb(233, 233, 233);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 300px;       
+  overflow-y: auto;       
+  border-radius: 6px;
 }
-#titulo-comentarios{
+
+.comentario-postado {
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.comentario-postado p {
+  margin: 4px 0;
+}
+
+.comentario-postado .data {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+#titulo-comentarios {
     margin: auto 20px;
 }
-#comentario-novo{
-    margin: auto 20px;
+
+#comentario-novo {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.nenhum-comentario {
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 2rem;
+    user-select: none;
+    gap: 0.3rem;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating input[type="radio"]:checked~label,
+.star-rating label:hover,
+.star-rating label:hover~label {
+    color: #ffc107;
 }
