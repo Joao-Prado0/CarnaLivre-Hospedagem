@@ -94,52 +94,54 @@ nav {
   color: white;
 }
 
-/* Barra Lateral */
-.barra-lateral {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 90px;
-  background-color: #0A8B9A;
+/* Barra Lateral - Inicio */
+.barra-lateral{
+    background-color: #0A8B9A;
+    width: 90px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    bottom: 200px;
 }
-.bl-icones {
-  height: 60%;
+.bl-icones{
+    height: 60%;
 }
-.barra-lateral a {
-  color: white;
-  text-decoration: none;
-  font-size: 25px;
+.barra-lateral a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
 }
-.bl-icones ul li {
-  list-style: none;
-  margin-bottom: 40px;
-  margin-left: 28px;
+.bl-icones ul li{
+    list-style: none;
+    margin-bottom: 40px;
+    margin-left: 28px;
 }
-.bl-icones ul li:not(.active):hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20px !important;
-  margin-right: auto;
-  margin-bottom: 40px;
-  transition: background-color 0.5s ease;
+.bl-icones ul li:not(.active):hover{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px !important;
+    margin-right: auto;
+    margin-bottom: 40px;
+    transition: background-color 0.5s ease;
 }
 .bl-icones ul li.active {
-  background-color: black;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20px !important;
-  margin-right: auto;
-  margin-bottom: 40px;
+    background-color: black;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px !important;
+    margin-right: auto;
+    margin-bottom: 40px;
 }
+/* Barra Lateral - Fim */
 
 /* Rodapé */
 footer {

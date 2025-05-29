@@ -16,99 +16,96 @@
 </head>
 <body>
 <header class="cabecalho">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/Logo.png" alt="Bootstrap" width="80" height="80">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-                <form class="d-flex" role="search">
-                    <input id="brpesquisa" class="form-control ms-2 me-2" type="search" placeholder="Pesquisar Denúncias"
-                        aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                </div>
-                <ul id="itens-lateral">
-                    <li class="">
-                        <a class="" aria-current="" href="#">
-                            <i class="fa-solid fa-sun"></i>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a class="" aria-current="" href="#">
-                            <div id="circulo-profile">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-  </header>
-
-  <!-- Conteúdo principal -->
-  <main>
-    <aside class="barra-lateral">
-      <div class="bl-icones">
-        <ul class="p-1 mt-2 d-flex flex-column">
-          <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
-          <li><a href="infoblocos.html"><i class="fa-solid fa-masks-theater"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-message"></i></a></li>
-          <li class="active"><a href="#"><i class="fa-solid fa-flag"></i></a></li>
-        </ul>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/Logo.png" alt="Bootstrap" width="80" height="80">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <form class="d-flex" role="search">
+          <input id="brpesquisa" class="form-control ms-2 me-2" type="search" placeholder="Pesquisar Denúncias"
+            aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-    </aside>
+      <ul id="itens-lateral">
+        <li><a href="#"><i class="fa-solid fa-sun"></i></a></li>
+        <li>
+          <a href="#">
+            <div id="circulo-profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
+<!-- Conteúdo principal -->
+<main>
+  <aside class="barra-lateral">
+    <div class="bl-icones">
+      <ul class="p-1 mt-2 d-flex flex-column">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="infoblocos.html"><i class="fa-solid fa-masks-theater"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-message"></i></a></li>
+        <li class="active"><a href="#"><i class="fa-solid fa-flag"></i></a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="conteudo-principal">
     <div class="container my-4">
       <div id="map" style="width: 100%; height: 850px; border-radius: 10px; box-shadow: 0 0 10px #aaa;"></div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <!-- Rodapé -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <img src="assets/img/Logo.png" alt="Logo" class="logo-footer" />
-      </div>
-      <div class="footer-section">
-        <h3>Produto</h3>
-        <ul>
-          <li><a href="#">Informação</a></li>
-          <li><a href="#">Recursos</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Companhia</h3>
-        <ul>
-          <li><a href="#">Saiba Mais</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </div>
+<!-- Rodapé -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <img src="assets/img/Logo.png" alt="Logo" class="logo-footer" />
     </div>
-    <div class="copyright">
-      <p>A product of HermesSentry</p>
-      <p>© 2025 Carna Livre. All rights reserved</p>
+    <div class="footer-section">
+      <h3>Produto</h3>
+      <ul>
+        <li><a href="#">Informação</a></li>
+        <li><a href="#">Recursos</a></li>
+      </ul>
     </div>
-  </footer>
+    <div class="footer-section">
+      <h3>Companhia</h3>
+      <ul>
+        <li><a href="#">Saiba Mais</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>A product of HermesSentry</p>
+    <p>© 2025 Carna Livre. All rights reserved</p>
+  </div>
+</footer>
 
-  <!-- Scripts -->
-  <script src="https://kit.fontawesome.com/3fdf209596.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<!-- Scripts -->
+<script src="https://kit.fontawesome.com/3fdf209596.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
-  <!-- Script do mapa de denúncias -->
-  <script src="assets/js/mapadenuncia.js"></script>
+<!-- Script do mapa de denúncias -->
+<script src="assets/js/mapadenuncia.js"></script>
 
-  <!-- Google Maps API -->
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVHh_LqyOkwnbqaUx4RtWipJkddswsiAQ&callback=initMap">
-  </script>
+<!-- Google Maps API -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVHh_LqyOkwnbqaUx4RtWipJkddswsiAQ&callback=initMap">
+</script>
 </body>
 </html>

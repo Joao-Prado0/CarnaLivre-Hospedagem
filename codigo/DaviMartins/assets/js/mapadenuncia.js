@@ -67,8 +67,9 @@ async function carregarDenuncias() {
             className: "map-marker-label",
           },
           icon: {
-            url: "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+            url: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
             scaledSize: new google.maps.Size(40, 40),
+            labelOrigin: new google.maps.Point(19, -3),
           },
         });
 
@@ -113,7 +114,7 @@ function destacarDenunciasProximas(userPos) {
 const style = document.createElement("style");
 style.textContent = `
   .map-marker-label {
-    background-color: rgba(255, 193, 7, 0.9);
+    background-color: rgba(211, 47, 47, 0.8);
     padding: 2px 6px;
     border-radius: 4px;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
