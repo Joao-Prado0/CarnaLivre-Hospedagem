@@ -199,3 +199,39 @@ nav {
     color: rgba(255, 255, 255, 0.8);
 }
 /* Rodapé - Fim */
+
+body {
+  background-color: #fef6f6;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.titulo {
+  color: #d31b5b;
+  font-size: 24px;
+}
+
+.perfil img {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.card-info {
+  background: #ddd;
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-sair {
+  background: #d61e1e;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}

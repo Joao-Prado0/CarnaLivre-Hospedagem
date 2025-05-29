@@ -83,15 +83,22 @@
         </aside>
         <div>
             <!--oi apaguem esses paragrafos na hora de fazer-->
-            <p>insira o conteudo do site aqui</p>
-            <p>insira o conteudo do site aqui</p>
-            <p>insira o conteudo do site aqui</p>
-            <p>insira o conteudo do site aqui</p>
-            <p>insira o conteudo do site aqui</p>
-            <p>insira o conteudo do site aqui</p>
-            <p>insira o conteudo do site aqui</p>
-            <p>insira o conteudo do site aqui</p>
-            <p>insira o conteudo do site aqui</p>
+<body>
+  <h1 class="titulo">Usuário</h1>
+  <div class="perfil">
+    <img src="assets/img/perfil-icone.png" class="foto-perfil" />
+  </div>
+  <div class="card-info">
+    <p><strong>Nome:</strong> <span id="nome"></span></p>
+    <p><strong>Data Nascimento:</strong> <span id="dataNascimento"></span></p>
+    <p><strong>E-mail:</strong> <span id="email"></span></p>
+    <p><strong>Senha:</strong> <span id="senha">********</span> <span onclick="mostrarSenha()" style="cursor: pointer;">👁</span></p>
+    <button onclick="editar()">Editar</button>
+  </div>
+  <button class="btn-sair">Sair</button>
+
+  <script src="assets/js/usuarioedit.js"></script>
+</body>
             <p class="mb-3">insira o conteudo do site aqui</p>
         </div>
     </main>
