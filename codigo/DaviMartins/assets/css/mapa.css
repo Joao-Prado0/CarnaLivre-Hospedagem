@@ -22,4 +22,26 @@
     #map {
       height: 350px;
     }
+  
   }
+  .denuncia-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.botao-denuncia {
+  background-color: #D9D9D9;
+  border: none;
+  padding: 20px 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.botao-denuncia:hover {
+  background-color: #ddd;
+}
