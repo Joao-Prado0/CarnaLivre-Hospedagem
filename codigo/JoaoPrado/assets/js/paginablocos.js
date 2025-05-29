@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  let bloco;
   const id = sessionStorage.getItem('selectedBlocoId');
   const url = "http://localhost:3000"
 
@@ -20,7 +21,7 @@ $(document).ready(function () {
   };
   const carregaBlocoData = async () => {
     try {
-      const bloco = await $.ajax({
+      bloco = await $.ajax({
         url: `${url}/blocos/${id}`,
         method: 'GET'
       });
@@ -41,6 +42,46 @@ $(document).ready(function () {
       console.error('Erro ao carregar dados do bloco:', error);
       window.location.href = 'pesquisablocos.html';
     }
+
+
+    $('#envia-comentario').on('click', async function () {
+      const texto = $('#texto-comentario').val().trim();
+      const avaliacao = $('input[name="avaliacao"]:checked').val();
+      const blocoId = parseInt(id);
+      const usuarioId = 1;
+
+      if (!texto || !avaliacao) {
+        alert('Por favor, preencha tanto a avaliação quanto o comentário');
+        return;
+      }
+
+      const novoComentario = {
+        blocoId: blocoId,
+        usuarioId: usuarioId,
+        texto: texto,
+        avaliacao: parseInt(avaliacao),
+        data: new Date().toISOString()
+      };
+      try {
+        $.ajax({
+          url: `${url}/comentarios`,
+          method: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify(novoComentario)
+        });
+
+        $('#texto-comentario').val('');
+        $('#texto-comentario').prop('checked', false);
+
+        const comentariosAtualizados = await $.get(`${url}/comentarios?blocoId=${blocoId}`);
+        carregarDadosBlocos({ ...bloco }, comentariosAtualizados);
+      } catch (error) {
+        console.error('Erro ao enviar comentário:', error);
+        alert('Erro ao enviar comentário. Tente novamente.');
+      }
+    });
+
+
   };
 
   carregaBlocoData();

@@ -122,14 +122,35 @@
 
                 </div>
                 <div id="comentario-novo" class="mb-3 w-100">
-                    <h4 id="">Deixe seu comentário:</h4>
+
                     <div class="row g-2 align-items-end">
-                        <div class="col-9">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        <div class="mb-3 mx-auto">
+                            <h5 id="">Avaliação</h5>
+                            <div class="star-rating">
+                                <input type="radio" id="estrela1" name="avaliacao" value="5">
+                                <label for="estrela1" title="5 estrela">★</label>
+
+                                <input type="radio" id="estrela2" name="avaliacao" value="4">
+                                <label for="estrela2" title="4 estrelas">★</label>
+
+                                <input type="radio" id="estrela3" name="avaliacao" value="3">
+                                <label for="estrela3" title="3 estrelas">★</label>
+
+                                <input type="radio" id="estrela4" name="avaliacao" value="2">
+                                <label for="estrela4" title="2 estrelas">★</label>
+
+                                <input type="radio" id="estrela5" name="avaliacao" value="1">
+                                <label for="estrela5" title="1 estrelas">★</label>
+                            </div>
+                        </div>
+                        <h5 id="">Deixe seu comentário:</h5>
+                        <div class="col-6">
+                            <textarea class="form-control" id="texto-comentario" rows="3"
                                 maxlength="400"></textarea>
                         </div>
+
                         <div class="col-auto">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                            <button class="btn btn-outline-secondary" type="button" id="envia-comentario">Button</button>
                         </div>
                     </div>
                 </div>
