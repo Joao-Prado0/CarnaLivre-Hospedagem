@@ -1,17 +1,19 @@
-.conteudo{
+.conteudo {
     color: #6B0CB0;
     text-align: center;
     margin-bottom: 30px;
 }
-.conteudo h2{
+
+.conteudo h2 {
     margin-top: 10px;
     margin-bottom: 30px;
 }
-textarea.form-control{
+
+textarea.form-control {
     max-height: 150px;
 }
 
-#formInfo{
+#formInfo {
     margin-bottom: 20px;
 }
 
@@ -21,19 +23,22 @@ textarea.form-control{
     color: white;
     border-radius: 20px;
     padding: 10px;
-  }
-  
+}
+
 .btn-verde:hover {
     background-color: #087580;
     border-color: #076670;
 }
-input{
+
+input {
     height: 44px;
 }
-main{
-    height: calc(100vh - 220px);
+
+main {
+    height: 430px
 }
-.rodape{
+
+.rodape {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -77,4 +82,51 @@ main{
 #estilosDropdown input[type="checkbox"] {
     accent-color: #6B0CB0;
     cursor: pointer;
+}
+
+/* Responsividade Mobile - Inicio */
+@media screen and (max-width:600px) {
+    h2 {
+        margin-bottom: 10px !important;
+    }
+
+    textarea.form-control {
+        height: 50px !important;
+    }
+
+    button {
+        margin-bottom: 30px;
+    }
+
+    .principal {
+        height: 600px !important;
+    }
+
+    form {
+        height: fit-content;
+    }
+
+    .rodape {
+        position: relative;
+        bottom: 0;
+        margin-top: 120px;
+    }
+}
+
+/* Responsividade Mobile - Fim */
+
+@media (max-height: 650px) {
+    textarea.form-control {
+        height: 50px !important;
+    }
+
+    .rodape {
+        position: relative;
+        bottom: 0;
+        margin-top: 120px;
+    }
+
+    .principal {
+        height: calc(200vh + 200px);
+    }
 }
