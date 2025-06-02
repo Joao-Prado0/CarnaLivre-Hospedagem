@@ -81,26 +81,272 @@
             </div>
             
         </aside>
-        <div>
+        
             <!--oi apaguem esses paragrafos na hora de fazer-->
-<body>
-  <h1 class="titulo">Usuário</h1>
-  <div class="perfil">
-    <img src="assets/img/perfil-icone.png" class="foto-perfil" />
-  </div>
-  <div class="card-info">
-    <p><strong>Nome:</strong> <span id="nome"></span></p>
-    <p><strong>Data Nascimento:</strong> <span id="dataNascimento"></span></p>
-    <p><strong>E-mail:</strong> <span id="email"></span></p>
-    <p><strong>Senha:</strong> <span id="senha">********</span> <span onclick="mostrarSenha()" style="cursor: pointer;">👁</span></p>
-    <button onclick="editar()">Editar</button>
-  </div>
-  <button class="btn-sair">Sair</button>
+            
+<main id="usuario-container" style="padding: 20px; background: white; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <h2 style="color: crimson; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">Usuário</h2>
 
-  <script src="assets/js/usuarioedit.js"></script>
-</body>
+  <div style="display: inline-block; background: #f2f2f2; padding: 20px; border-radius: 10px; width: 300px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Foto de perfil" width="100" style="transition: transform 0.3s ease; cursor: pointer;">
+    <br><br>
+    <form id="form-usuario">
+      <input type="hidden" id="id" />
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label style="display: block; margin-bottom: 5px; color: #555; font-weight: 600;">Nome completo:</label>
+        <input type="text" id="nome_completo" class="form-input" />
+      </div>
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label style="display: block; margin-bottom: 5px; color: #555; font-weight: 600;">Login:</label>
+        <input type="text" id="login" class="form-input" />
+      </div>
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label style="display: block; margin-bottom: 5px; color: #555; font-weight: 600;">Data de nascimento:</label>
+        <input type="date" id="data_nasc" class="form-input" />
+      </div>
+
+      <div style="margin-bottom: 15px; text-align: left;">
+        <label style="display: block; margin-bottom: 5px; color: #555; font-weight: 600;">Email:</label>
+        <input type="email" id="email" class="form-input" />
+      </div>
+
+      <div style="margin-bottom: 20px; text-align: left; position: relative;">
+        <label style="display: block; margin-bottom: 5px; color: #555; font-weight: 600;">Senha:</label>
+        <input type="password" id="senha" class="form-input" />
+        <span id="toggle-password" style="position: absolute; right: 10px; top: 30px; cursor: pointer; color: #666;">👁️</span>
+      </div>
  
-    </main>
+<button type="submit" class="btn-salvar" style="position: relative; overflow: hidden;">
+  <span class="btn-text">Salvar</span>
+  <span class="btn-loading" style="display: none;">⌛</span>
+  <span class="btn-success" style="display: none;">✓</span>
+</button>
+
+<!-- ✅ Botão Sair agora DENTRO do formulário e da div -->
+
+</form>
+</div>
+ <!-- Fecha o formulário -->
+ <!-- Fecha a div cinza -->
+<!-- Botão sair fixo no canto inferior direito -->
+<button onclick="sair()" class="btn-sair-fixo">Sair</button>
+
+
+</main>
+
+<style>
+  /* Estilos globais */
+  .form-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .form-input:focus {
+    border-color: teal;
+    box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.2);
+    outline: none;
+  }
+  
+  /* Efeitos hover */
+  #usuario-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Botão Salvar */
+  .btn-salvar {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .btn-salvar:hover {
+    background-color: #006666;
+    box-shadow: 0 2px 8px rgba(0, 128, 128, 0.3);
+  }
+  
+  .btn-salvar:active {
+    transform: scale(0.98);
+  }
+  
+  /* Botão Sair */
+.btn-sair-fixo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #d62828;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.btn-sair-fixo:hover {
+  background-color: #b02121;
+}
+
+  
+  /* Animação de loading */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .btn-loading {
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Efeito de senha */
+  #toggle-password:hover {
+    color: teal;
+  }
+</style>
+
+<script>
+  const usuarioId = 1; // Altere para o ID do usuário logado
+
+  // Carrega os dados do usuário
+  function carregarUsuario() {
+    const loading = document.querySelector('.btn-loading');
+    const success = document.querySelector('.btn-success');
+    const btnText = document.querySelector('.btn-text');
+    
+    btnText.style.display = 'none';
+    loading.style.display = 'inline-block';
+    
+    fetch(`http://localhost:3000/usuarios/${usuarioId}`)
+      .then(res => res.json())
+      .then(usuario => {
+        document.getElementById('id').value = usuario.id;
+        document.getElementById('nome_completo').value = usuario.nome_completo;
+        document.getElementById('login').value = usuario.login;
+        document.getElementById('email').value = usuario.email;
+        document.getElementById('data_nasc').value = usuario.data_nasc;
+        document.getElementById('senha').value = usuario.senha;
+        
+        loading.style.display = 'none';
+        success.style.display = 'inline-block';
+        setTimeout(() => {
+          success.style.display = 'none';
+          btnText.style.display = 'inline-block';
+        }, 1000);
+      })
+      .catch(error => {
+        console.error('Erro ao carregar usuário:', error);
+        loading.style.display = 'none';
+        btnText.style.display = 'inline-block';
+      });
+  }
+
+  // Alternar visibilidade da senha
+  document.getElementById('toggle-password').addEventListener('click', function() {
+    const senhaInput = document.getElementById('senha');
+    if (senhaInput.type === 'password') {
+      senhaInput.type = 'text';
+      this.textContent = '👁️‍🗨️';
+    } else {
+      senhaInput.type = 'password';
+      this.textContent = '👁️';
+    }
+  });
+
+  // Enviar formulário
+  document.getElementById('form-usuario').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const btnSalvar = document.querySelector('.btn-salvar');
+    const btnText = btnSalvar.querySelector('.btn-text');
+    const loading = btnSalvar.querySelector('.btn-loading');
+    const success = btnSalvar.querySelector('.btn-success');
+    
+    btnText.style.display = 'none';
+    loading.style.display = 'inline-block';
+    
+    const usuarioAtualizado = {
+      nome_completo: document.getElementById('nome_completo').value,
+      login: document.getElementById('login').value,
+      email: document.getElementById('email').value,
+      data_nasc: document.getElementById('data_nasc').value,
+      senha: document.getElementById('senha').value
+    };
+
+    const id = document.getElementById('id').value;
+
+    fetch(`http://localhost:3000/usuarios/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(usuarioAtualizado)
+    })
+    .then(res => res.json())
+    .then(data => {
+      loading.style.display = 'none';
+      success.style.display = 'inline-block';
+      
+      setTimeout(() => {
+        success.style.display = 'none';
+        btnText.style.display = 'inline-block';
+      }, 1000);
+      
+      // Feedback visual
+      const formDiv = document.querySelector('#usuario-container > div');
+      formDiv.style.boxShadow = '0 0 0 3px rgba(0, 200, 0, 0.3)';
+      setTimeout(() => {
+        formDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+      }, 1000);
+    })
+    .catch(error => {
+      console.error('Erro ao atualizar usuário:', error);
+      loading.style.display = 'none';
+      btnText.style.display = 'inline-block';
+      
+      // Feedback de erro
+      const formDiv = document.querySelector('#usuario-container > div');
+      formDiv.style.boxShadow = '0 0 0 3px rgba(200, 0, 0, 0.3)';
+      setTimeout(() => {
+        formDiv.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+      }, 1000);
+    });
+  });
+
+  // Efeito hover no container principal
+  document.querySelector('#usuario-container > div').addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-5px)';
+    this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.15)';
+  });
+  
+  document.querySelector('#usuario-container > div').addEventListener('mouseleave', function() {
+    this.style.transform = '';
+    this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+  });
+
+  // Carrega os dados quando a página é aberta
+  document.addEventListener('DOMContentLoaded', carregarUsuario);
+</script>
+ 
+   
 
     <footer class="rodape">
         <div class="footer-content">
