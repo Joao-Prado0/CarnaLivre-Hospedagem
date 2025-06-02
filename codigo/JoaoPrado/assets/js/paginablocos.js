@@ -21,6 +21,7 @@ $(document).ready(function () {
   };
   const carregaBlocoData = async () => {
     try {
+      const usuarioLogado = await verificarUsuarioLogado();
       bloco = await $.ajax({
         url: `${url}/blocos/${id}`,
         method: 'GET'
@@ -81,6 +82,18 @@ $(document).ready(function () {
       }
     });
 
+    async function verificarUsuarioLogado() {
+      const userId = sessionStorage.getItem('userId');
+      if (!userId) return null;
+
+      const bloco = await $.get(`${url}/blocos/${id}`);
+      const isOrganizador = bloco.organizador.some(org => org.email_org === sessionStorage.getItem('userEmail'));
+
+      return {
+        id: userId,
+        isOrganizador: isOrganizador,
+      };
+    }
 
   };
 
