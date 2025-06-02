@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    sessionStorage.removeItem('selectedBlocoId');
     let blocosCarregados = 0;
     const blocosPagina = 6;
     let blocos = [];
@@ -157,7 +158,8 @@ function criarCard(cardbloco) {
     conteudo.append(img, i, h3, p);
 
     let link = $('<a>').attr('href', 'paginablocos.html').attr('id', 'linkBloco').click(function () {
-        sessionStorage.setItem('selectedBlocoId', cardbloco.id);
+        sessionStorage.setItem('selectedBlocoId', cardbloco.id.toString());
+        window.location.href = 'paginablocos.html';
     });
     let button = $('<button>').text('Ver mais');
     link.append(button);

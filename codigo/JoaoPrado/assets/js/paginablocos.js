@@ -2,9 +2,15 @@ $(document).ready(function () {
   let bloco;
   const id = sessionStorage.getItem('selectedBlocoId');
   const url = "http://localhost:3000"
-
+console.log('Conteúdo do sessionStorage:', sessionStorage);
+  const usuarioLogado = {
+    id: sessionStorage.getItem('userId'),
+    email: sessionStorage.getItem('userEmail'),
+    tipo: sessionStorage.getItem('tipoUsuario')
+  }
   if (!id) {
-    window.location.href = 'pesquisablocos.html';
+    console.log("erro");
+    
     return;
   }
 
@@ -21,17 +27,18 @@ $(document).ready(function () {
   };
   const carregaBlocoData = async () => {
     try {
-      const usuarioLogado = await verificarUsuarioLogado();
-      bloco = await $.ajax({
-        url: `${url}/blocos/${id}`,
-        method: 'GET'
-      });
-      const comentarios = await $.ajax({
-        url: `${url}/comentarios?blocoId=${id}`,
-        method: 'GET'
-      })
+      bloco = await $.get(`${url}/blocos/${id}`);
+      const comentarios = await $.get(`${url}/comentarios?blocoId=${id}`);
+      const organizadorDoBloco = bloco.organizador.some(org => org.email_org === usuarioLogado.email);
+      usuarioLogado.organizador = organizadorDoBloco;
 
-      carregarDadosBlocos(bloco, comentarios);
+      carregarDadosBlocos(bloco, comentarios, usuarioLogado);
+
+      if (!usuarioLogado.organizador) {
+        $('#comentario-novo').show();
+      } else {
+        $('#comentario-novo').hide();
+      }
 
       const libraryLoaded = await loadMarkerLibrary();
       if (libraryLoaded) {
@@ -41,7 +48,6 @@ $(document).ready(function () {
       }
     } catch (error) {
       console.error('Erro ao carregar dados do bloco:', error);
-      window.location.href = 'pesquisablocos.html';
     }
 
 
@@ -61,45 +67,24 @@ $(document).ready(function () {
         usuarioId: usuarioId,
         texto: texto,
         avaliacao: parseInt(avaliacao),
-        data: new Date().toISOString()
+        data: new Date().toISOString(),
+        resposta: { texto: '', data: '', organizadorId: '' }
       };
       try {
-        $.ajax({
-          url: `${url}/comentarios`,
-          method: 'POST',
-          contentType: 'application/json',
-          data: JSON.stringify(novoComentario)
-        });
-
+        await $.post(`${url}/comentarios`, JSON.stringify(novoComentario), 'json');
         $('#texto-comentario').val('');
         $('#texto-comentario').prop('checked', false);
 
         const comentariosAtualizados = await $.get(`${url}/comentarios?blocoId=${blocoId}`);
-        carregarDadosBlocos({ ...bloco }, comentariosAtualizados);
+        carregarDadosBlocos({ ...bloco }, comentariosAtualizados, usuarioLogado);
       } catch (error) {
         console.error('Erro ao enviar comentário:', error);
         alert('Erro ao enviar comentário. Tente novamente.');
       }
     });
-
-    async function verificarUsuarioLogado() {
-      const userId = sessionStorage.getItem('userId');
-      if (!userId) return null;
-
-      const bloco = await $.get(`${url}/blocos/${id}`);
-      const isOrganizador = bloco.organizador.some(org => org.email_org === sessionStorage.getItem('userEmail'));
-
-      return {
-        id: userId,
-        isOrganizador: isOrganizador,
-      };
-    }
-
   };
 
-  carregaBlocoData();
-
-  function carregarDadosBlocos(bloco, comentarios) {
+  function carregarDadosBlocos(bloco, comentarios, usuarioLogado) {
     document.title = bloco.nome_bloco;
 
     const conteudoCarrossel = $('.carousel-inner').empty();
@@ -141,24 +126,65 @@ $(document).ready(function () {
     $listaInfos.append($('<li>').html(`<strong>Faixa etária:</strong> ${bloco.faixa_etaria}`));
     $listaInfos.append($('<li>').html(`<strong>Avaliação:</strong> ${bloco.avaliacao}/5`));
 
-
-    comentarios.sort((a, b) => new Date(b.data) - new Date(a.data));
     const abaComentarios = $('#comentarios-antigos').empty();
+    comentarios.sort((a, b) => new Date(b.data) - new Date(a.data));
+    console.log('Comentarios:', comentarios);
+    
 
-    if (comentarios.length === 0) {
+    if (!comentarios.length) {
       const msg = $('<p>').addClass('nenhum-comentario').text('Nenhum comentário foi feito ainda. Seja o primeiro!');
       abaComentarios.append(msg);
     } else {
       for (let i = 0; i < comentarios.length; i++) {
-        let div = $('<div>').addClass('comentario-postado');
-        let texto = $('<p>').text(comentarios[i].texto);
-        let data = $('<p>').addClass('data').text(formatarData(comentarios[i].data));
+        const div = $('<div>').addClass('comentario-postado');
+        const texto = $('<p>').text(comentarios[i].texto);
+        const data = $('<p>').addClass('data').text(formatarData(comentarios[i].data));
+
         for (let j = 0; j < parseInt(comentarios[i].avaliacao); j++) {
           let estrela = $('<i>').addClass('fa-solid fa-star');
           div.append(estrela);
         }
         div.append(texto, data);
-        abaComentarios.append(div);
+
+
+        if (comentarios[i].resposta && comentarios[i].resposta.texto) {
+          div.append(
+            $('<div>').addClass('resposta-organizador mt-2 ps-3 border-start border-3').append(
+              $('<p>').addClass('mb-1 fw-bold').text('Resposta do Organizador:'),
+              $('<p>').text(comentarios[i].resposta.texto),
+              $('<p>').addClass('data-resposta small text-muted').text(formatarData(comentarios[i].resposta.data))
+            )
+          )
+        } else if (usuarioLogado && usuarioLogado.organizador) {
+          const textarea = $('<textarea>').addClass('form-control').attr('rows', 2).attr('placeholder', 'Responder...');
+          const botao = $('<button>').addClass('btn btn-sm btn-success mt-2').text('Responder').attr("id", "btnResponder");
+
+          botao.on('click', async () => {
+            const respostaTexto = textarea.val().trim();
+            if (!respostaTexto) return;
+
+            const novaResposta = {
+              texto: respostaTexto,
+              data: new Date().toISOString(),
+              organizadorId: usuarioLogado.id
+            };
+
+            await $.ajax({
+              url: `${url}/comentarios/${comentarios[i].id}`,
+              method: 'PATCH',
+              contentType: 'application/json',
+              data: JSON.stringify({ resposta: novaResposta })
+            });
+
+            const comentariosAtualizados = await $.get(`${url}/comentarios?blocoId=${bloco.id}`);
+            carregarDadosBlocos(bloco, comentariosAtualizados, usuarioLogado);
+          });
+
+          const respostaDiv = $('<div>').addClass('mt-2');
+          respostaDiv.append(textarea,botao);
+
+          div.append(respostaDiv);
+        }
       }
     }
   }
@@ -210,4 +236,6 @@ $(document).ready(function () {
       console.error('Erro ao inicializar mapa:', error);
     }
   }
+
+  carregaBlocoData();
 });
