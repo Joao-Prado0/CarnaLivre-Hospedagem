@@ -105,8 +105,6 @@ $(document).ready(function () {
             });
         }
 
-
-
         $('#btn-ver-mais').hide();
     }
 

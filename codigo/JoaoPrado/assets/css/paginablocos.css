@@ -223,6 +223,10 @@ nav {
 /* Rodapé - Fim */
 
 /*-------------------------------------------------- Fim da Estrutura Padrão ------------------------------------ */
+#container-carrossel h1{
+    font-family: "Righteous", sans-serif;
+    color: #6B0CB0;
+}
 #container-carrossel {
     width: 55%;
 }

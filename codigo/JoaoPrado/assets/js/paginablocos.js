@@ -157,7 +157,7 @@ console.log('Conteúdo do sessionStorage:', sessionStorage);
           )
         } else if (usuarioLogado && usuarioLogado.organizador) {
           const textarea = $('<textarea>').addClass('form-control').attr('rows', 2).attr('placeholder', 'Responder...');
-          const botao = $('<button>').addClass('btn btn-sm btn-success mt-2').text('Responder').attr("id", "btnResponder");
+          const botao = $('<button>').addClass('btn btn-sm btn-primary mt-2').text('Responder').attr("id", "btnResponder");
 
           botao.on('click', async () => {
             const respostaTexto = textarea.val().trim();
@@ -184,8 +184,11 @@ console.log('Conteúdo do sessionStorage:', sessionStorage);
           respostaDiv.append(textarea,botao);
 
           div.append(respostaDiv);
+          
         }
+        abaComentarios.append(div);
       }
+      
     }
   }
 
