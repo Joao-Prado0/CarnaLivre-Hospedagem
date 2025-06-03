@@ -2,7 +2,7 @@ $(document).ready(function () {
   let bloco;
   const id = sessionStorage.getItem('selectedBlocoId');
   const url = "http://localhost:3000"
-console.log('Conteúdo do sessionStorage:', sessionStorage);
+  console.log('Conteúdo do sessionStorage:', sessionStorage);
   const usuarioLogado = {
     id: sessionStorage.getItem('userId'),
     email: sessionStorage.getItem('userEmail'),
@@ -10,7 +10,7 @@ console.log('Conteúdo do sessionStorage:', sessionStorage);
   }
   if (!id) {
     console.log("erro");
-    
+
     return;
   }
 
@@ -71,7 +71,13 @@ console.log('Conteúdo do sessionStorage:', sessionStorage);
         resposta: { texto: '', data: '', organizadorId: '' }
       };
       try {
-        await $.post(`${url}/comentarios`, JSON.stringify(novoComentario), 'json');
+        await $.ajax({
+          url: `${url}/comentarios`,
+          method: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify(novoComentario)
+        });
+
         $('#texto-comentario').val('');
         $('#texto-comentario').prop('checked', false);
 
@@ -124,12 +130,12 @@ console.log('Conteúdo do sessionStorage:', sessionStorage);
     $listaInfos.append($('<li>').html(`<strong>Público esperado:</strong> ${bloco.publico.toLocaleString()} pessoas`));
     $listaInfos.append($('<li>').html(`<strong>Estilo musical:</strong> ${bloco.estilo_musical}`));
     $listaInfos.append($('<li>').html(`<strong>Faixa etária:</strong> ${bloco.faixa_etaria}`));
-    $listaInfos.append($('<li>').html(`<strong>Avaliação:</strong> ${bloco.avaliacao}/5`));
+    $listaInfos.append($('<li>').html(`<strong>Avaliação:</strong> ${bloco.avaliacao}`));
 
     const abaComentarios = $('#comentarios-antigos').empty();
     comentarios.sort((a, b) => new Date(b.data) - new Date(a.data));
     console.log('Comentarios:', comentarios);
-    
+
 
     if (!comentarios.length) {
       const msg = $('<p>').addClass('nenhum-comentario').text('Nenhum comentário foi feito ainda. Seja o primeiro!');
@@ -181,14 +187,14 @@ console.log('Conteúdo do sessionStorage:', sessionStorage);
           });
 
           const respostaDiv = $('<div>').addClass('mt-2');
-          respostaDiv.append(textarea,botao);
+          respostaDiv.append(textarea, botao);
 
           div.append(respostaDiv);
-          
+
         }
         abaComentarios.append(div);
       }
-      
+
     }
   }
 

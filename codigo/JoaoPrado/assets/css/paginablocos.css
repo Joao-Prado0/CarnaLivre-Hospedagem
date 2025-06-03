@@ -8,6 +8,7 @@
 
 body {
     background-color: #0A8B9A !important;
+    overflow-x: hidden;
 }
 
 main {
@@ -346,5 +347,5 @@ nav {
 .star-rating input[type="radio"]:checked~label,
 .star-rating label:hover,
 .star-rating label:hover~label {
-    color: #ffc107;
+    color: goldenrod;
 }
