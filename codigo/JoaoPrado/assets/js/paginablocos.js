@@ -196,6 +196,24 @@ $(document).ready(function () {
       }
 
     }
+    if (!usuarioLogado.organizador) {
+      $('#btn-compartilhar').show();
+
+      $('#btn-compartilhar').click(function () {
+        if (navigator.share) {
+          navigator.share({
+            title: bloco.nome_bloco,
+            text: bloco.descricao_geral,
+            url: window.location.href
+          })
+            .catch(console.error);
+        } else {
+          alert('Compartilhe este link: ' + window.location.href);
+        }
+      });
+    } else {
+      $('#btn-compartilhar').hide();
+    }
   }
 
   function formatarData(dataString) {
