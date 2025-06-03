@@ -225,21 +225,35 @@ nav {
 
 /*-------------------------------------------------- Fim da Estrutura Padrão ------------------------------------ */
 #container-superior {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  position: relative;
+    position: relative;
+    height: 60px;
 }
 
 #container-superior h1 {
-  flex: 1;
-  text-align: center;
-  font-family: "Righteous", sans-serif;
-  color: #6B0CB0;
-  margin: 0;
+    font-family: "Righteous", sans-serif;
+    color: #6B0CB0;
+    margin: 0;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    z-index: 1;
 }
-#btn-compartilhar {
+
+#botoes-direita {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.btn-icone {
     background-color: #6B0CB0;
     color: white;
     border: none;
@@ -249,16 +263,18 @@ nav {
     cursor: pointer;
     display: flex;
     align-items: center;
+    gap: 8px;
     transition: background-color 0.3s ease;
 }
 
-#btn-compartilhar:hover {
+.btn-icone:hover {
     background-color: #4a0878;
 }
 
-#btn-compartilhar i {
+.btn-icone i {
     font-size: 16px;
 }
+
 #container-carrossel {
     width: 55%;
     max-width: 800px;
@@ -381,4 +397,3 @@ nav {
 .star-rating label:hover~label {
     color: goldenrod;
 }
-

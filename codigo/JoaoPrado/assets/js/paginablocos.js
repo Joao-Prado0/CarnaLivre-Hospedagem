@@ -196,8 +196,21 @@ $(document).ready(function () {
       }
 
     }
-    if (!usuarioLogado.organizador) {
+    if (usuarioLogado.organizador) {
+      $('#btn-compartilhar').hide();
+      $('#btn-foto').show();
+      $('#btn-editar').show();
+
+      $('#btn-foto').click(function(){
+        window.location.href = `${url}/PedroHenrique/addimagem.html`;
+      })
+      $('#btn-editar').click(function(){
+        window.location.href = `${url}/LucasFranco/infoblocos.html`;
+      })
+    } else {
       $('#btn-compartilhar').show();
+      $('#btn-foto').hide();
+      $('#btn-editar').hide();
 
       $('#btn-compartilhar').click(function () {
         if (navigator.share) {
@@ -211,8 +224,6 @@ $(document).ready(function () {
           alert('Compartilhe este link: ' + window.location.href);
         }
       });
-    } else {
-      $('#btn-compartilhar').hide();
     }
   }
 
