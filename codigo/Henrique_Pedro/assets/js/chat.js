@@ -138,4 +138,46 @@ class ChatSystem {
         this.elements.messageInput.value = '';
     }
 
-   
+    showGroupModal() {
+        this.elements.groupMemberList.innerHTML = '';
+        this.chatData.contacts.forEach(contact => {
+            const memberItem = document.createElement('div');
+            memberItem.className = 'group-member-item';
+            memberItem.innerHTML = `
+                <input type="checkbox" id="member-${contact}" value="${contact}">
+                <label for="member-${contact}">${contact}</label>
+            `;
+            this.elements.groupMemberList.appendChild(memberItem);
+        });
+        this.elements.groupModal.show();
+    }
+
+    async createGroup() {
+        const groupName = this.elements.groupNameInput.value.trim();
+        if (!groupName) {
+            alert('Por favor, digite um nome para o grupo');
+            return;
+        }
+        
+        const members = Array.from(this.elements.groupMemberList.querySelectorAll('input:checked'))
+                            .map(el => el.value);
+        
+        if (members.length < 2) {
+            alert('Selecione pelo menos 2 membros para o grupo');
+            return;
+        }
+        
+        this.chatData.groups.push({
+            name: groupName,
+            members: members
+        });
+        
+        this.chatData.messages[groupName] = [];
+        
+        await this.saveChatData();
+        this.updateContactList();
+        this.elements.groupModal.hide();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => new ChatSystem());
