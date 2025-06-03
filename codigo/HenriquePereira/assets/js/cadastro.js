@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const usuario = {
             // O JSON Server geralmente cria o ID automaticamente, mas vamos manter o seu método por enquanto.
             // Se quiser que o JSON Server crie o ID, remova a linha 'id' abaixo.
-            id: String(Date.now()), // JSON Server aceita string ou número para ID. Vamos manter como string para consistência se Date.now() for grande.
+             // JSON Server aceita string ou número para ID. Vamos manter como string para consistência se Date.now() for grande.
             nome_completo: document.getElementById('fullname').value,
             login: document.getElementById('username').value,
             email: document.getElementById('email').value,

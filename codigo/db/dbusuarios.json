@@ -31,6 +31,14 @@
       "email": "desamribeiro@yahoo.com.br",
       "data_nasc": "2007-05-13",
       "senha": "Samuel14"
+    },
+    {
+      "id": "247e",
+      "nome_completo": "Luizin Da Silva",
+      "login": "Luiz",
+      "email": "luiz2412@gmail.com",
+      "data_nasc": "2000-12-24",
+      "senha": "LuizMaia13"
     }
   ]
 }
