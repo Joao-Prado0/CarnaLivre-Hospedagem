@@ -68,8 +68,14 @@
         </aside>
 
         <div id="conteudo" class="">
+
             <div id="container-carrossel" class="mx-auto">
-                <h1 class="text-center"></h1>
+                <div id="container-superior">
+                    <h1 class="text-center"></h1>
+                    <button id="btn-compartilhar" class="btn-share">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                </div>
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -102,6 +108,7 @@
                     </button>
                 </div>
             </div>
+
             <div>
                 <div id="container-infos">
                     <div id="maps">
@@ -145,8 +152,7 @@
                         </div>
                         <h5 id="">Deixe seu comentário:</h5>
                         <div class="col-6">
-                            <textarea class="form-control" id="texto-comentario" rows="3"
-                                maxlength="400"></textarea>
+                            <textarea class="form-control" id="texto-comentario" rows="3" maxlength="400"></textarea>
                         </div>
                         <div class="col-auto">
                             <button class="btn btn-primary" type="button" id="envia-comentario">Enviar</button>
