@@ -1,21 +1,21 @@
 /* Container geral do mapa - Versão Esticada */
 #map {
-    width: 100%;
-    height: 90vh;  /* Aumentei para 95vh (quase toda a tela) */
+    width: calc(100% - 40px); /* Deixa 20px de espaço em cada lado */
+    margin: 10px 20px;
+    height: 85vh;
     border-radius: 5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    margin: 10px;  /* Removi margin-bottom para evitar espaçamento */
     transition: all 0.3s ease;
 }
 
-/* Garantir que o corpo da página não tenha margens extras */
+
 body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;  /* Evita rolagem horizontal indesejada */
+    overflow-x: hidden; 
 }
 
-/* Input de busca do mapa (mantido igual) */
+/* Input de busca do mapa */
 #brpesquisa:focus {
     outline: none;
     border-color: #198754; 
@@ -25,16 +25,16 @@ body, html {
 /* Responsividade para mobile */
 @media (max-width: 768px) {
     #map {
-        height: 80vh;  /* Aumentei a altura em mobile */
-        border-radius: 0;  /* Opcional: remove bordas em telas pequenas */
+        height: 80vh;  
+        border-radius: 0; 
     }
 }
 
-/* Estilos do botão de denúncia (mantidos) */
+/* Estilos do botão de denúncia */
 .denuncia-container {
     display: flex;
     justify-content: center;
-    margin: 20px 0;  /* Reduzi a margem inferior */
+    margin: 20px 0; 
 }
 
 .botao-denuncia {
