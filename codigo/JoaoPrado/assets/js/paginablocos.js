@@ -1,12 +1,15 @@
 $(document).ready(function () {
   let bloco;
-  const id = sessionStorage.getItem('selectedBlocoId');
   const url = "http://localhost:3000"
   console.log('Conteúdo do sessionStorage:', sessionStorage);
+  const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+  const usuarioCorrente = JSON.parse (usuarioCorrenteJSON);
+  const id = sessionStorage.getItem('selectedBlocoId') || usuarioCorrente.id;
+
   const usuarioLogado = {
-    id: sessionStorage.getItem('userId'),
-    email: sessionStorage.getItem('userEmail'),
-    tipo: sessionStorage.getItem('tipoUsuario')
+    id: usuarioCorrente.id,
+    email: usuarioCorrente.email,
+    tipo: usuarioCorrente.tip
   }
   if (!id) {
     console.log("erro");

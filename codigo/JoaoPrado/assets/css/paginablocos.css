@@ -224,6 +224,7 @@ nav {
 /* Rodapé - Fim */
 
 /*-------------------------------------------------- Fim da Estrutura Padrão ------------------------------------ */
+/*-Início Titulo e botões-*/
 #container-superior {
     position: relative;
     height: 60px;
@@ -275,6 +276,8 @@ nav {
     font-size: 16px;
 }
 
+/*-Fim Titulo e botões-*/
+/*-Início carrrossel-*/
 #container-carrossel {
     width: 55%;
     max-width: 800px;
@@ -292,7 +295,9 @@ nav {
     column-gap: 50px;
     row-gap: 20px;
 }
+/*-Fim carrrossel-*/
 
+/*-Início informações do bloco-*/
 #maps {
     background-color: rgb(233, 233, 233);
     grid-row: 1 / 5;
@@ -328,7 +333,9 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 6px;
 }
+/*-Fim informações do bloco-*/
 
+/*-Início comentários*/
 .fa-star {
     color: goldenrod;
 }
@@ -397,3 +404,4 @@ nav {
 .star-rating label:hover~label {
     color: goldenrod;
 }
+/*-Fim comentários*/
