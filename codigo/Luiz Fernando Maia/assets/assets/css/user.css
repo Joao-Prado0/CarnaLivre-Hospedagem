@@ -235,3 +235,76 @@ body {
   bottom: 30px;
   right: 30px;
 }
+
+  .form-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .form-input:focus {
+    border-color: teal;
+    box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.2);
+    outline: none;
+  }
+  
+  /* Efeitos hover */
+  #usuario-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Botão Salvar */
+  .btn-salvar {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .btn-salvar:hover {
+    background-color: #006666;
+    box-shadow: 0 2px 8px rgba(0, 128, 128, 0.3);
+  }
+  
+  .btn-salvar:active {
+    transform: scale(0.98);
+  }
+  
+  /* Botão Sair */
+.btn-animado {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+  }
+
+  .btn-animado:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Animação de loading */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .btn-loading {
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Efeito de senha */
+  #toggle-password:hover {
+    color: teal;
+  }
