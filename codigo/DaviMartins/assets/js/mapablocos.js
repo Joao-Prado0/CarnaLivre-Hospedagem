@@ -94,18 +94,42 @@ async function carregarBlocos() {
 
         blocosMarkers[bloco.id] = marker;
 
-        marker.addListener("click", () => {
-          infoWindow.setContent(`
-            <div style="max-width:300px">
-              <h3 style="margin-top:0;color:#d32f2f">${bloco.nome_bloco}</h3>
-              <p><strong>📍 Endereço:</strong> ${bloco.endereco}</p>
-              <p><strong>📅 Data:</strong> ${new Date(bloco.data).toLocaleDateString("pt-BR")}</p>
-              <p><strong>🎵 Estilo:</strong> ${bloco.estilo_musical}</p>
-              <p><strong>👥 Público:</strong> ${bloco.publico.toLocaleString("pt-BR")} pessoas</p>
-            </div>
-          `);
-          infoWindow.open(map, marker);
-        });
+marker.addListener("click", () => {
+  infoWindow.setContent(`
+      <div style="
+      max-width: 300px;
+      padding: 4px 12px 12px 12px; 
+      margin: 0;
+      text-align: center;
+    ">
+      <h3 style="margin-top:0; color:#d32f2f;">${bloco.nome_bloco}</h3>
+      <p style="text-align: left;"><strong>📍 Endereço:</strong> ${bloco.endereco}</p>
+      <p style="text-align: left;"><strong>📅 Data:</strong> ${new Date(bloco.data).toLocaleDateString("pt-BR")}</p>
+      <p style="text-align: left;"><strong>🎵 Estilo:</strong> ${bloco.estilo_musical}</p>
+      <p style="text-align: left;"><strong>👥 Público:</strong> ${bloco.publico.toLocaleString("pt-BR")} pessoas</p>
+      
+      <a href="#" onclick="
+        sessionStorage.setItem('selectedBlocoId', '${bloco.id}');
+        window.location.href = '/JoaoPrado/paginablocos.html';
+        return false;
+      
+        " style="
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background-color: #d32f2f;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+      ">
+        Ver mais sobre o bloco
+      </a>
+    </div>
+  `);
+  infoWindow.open(map, marker);
+});
+
       }
     }
   } catch (erro) {
