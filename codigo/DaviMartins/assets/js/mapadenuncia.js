@@ -123,5 +123,5 @@ style.textContent = `
 document.head.appendChild(style);
 
 function abrirFormularioDenuncia() {
-  window.location.href = "codigo/Lucas Franco/denuncia.html";
+  window.location.href = '/LucasFranco/denuncia.html';;
 }
