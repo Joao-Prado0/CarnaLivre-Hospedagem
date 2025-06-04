@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const formCadastro = document.querySelector('form');
-    const jsonServerUrl = 'http://localhost:3000/usuarios'; // URL base do seu JSON Server para o recurso "usuarios"
+    const jsonServerUrl = 'http://localhost:3000/usuarios'; 
 
-    formCadastro.addEventListener('submit', async function(e) { // Adicionamos async aqui
+    formCadastro.addEventListener('submit', async function(e) { 
         e.preventDefault();
         
         // Captura dos dados do formulário
         const usuario = {
-            // O JSON Server geralmente cria o ID automaticamente, mas vamos manter o seu método por enquanto.
-            // Se quiser que o JSON Server crie o ID, remova a linha 'id' abaixo.
-             // JSON Server aceita string ou número para ID. Vamos manter como string para consistência se Date.now() for grande.
+            // REMOVA ou COMENTE a linha abaixo:
+            // id: String(Date.now()), 
             nome_completo: document.getElementById('fullname').value,
             login: document.getElementById('username').value,
             email: document.getElementById('email').value,
@@ -36,25 +35,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Adiciona o novo usuário via POST request
+            // O JSON Server irá gerar o ID automaticamente
             const responseCadastro = await fetch(jsonServerUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(usuario),
+                body: JSON.stringify(usuario), // Enviando o objeto usuario SEM o campo 'id'
             });
 
             if (!responseCadastro.ok) {
-                // Se o servidor retornar um erro, podemos tentar ver a mensagem de erro
-                const errorData = await responseCadastro.json().catch(() => null); // Tenta pegar o JSON do erro
+                const errorData = await responseCadastro.json().catch(() => null); 
                 const errorMessage = errorData ? JSON.stringify(errorData) : responseCadastro.statusText;
                 throw new Error(`Erro ao cadastrar usuário: ${errorMessage}`);
             }
             
-            // const novoUsuarioCadastrado = await responseCadastro.json(); // Opcional: pegar o usuário retornado pelo servidor
-            // console.log('Usuário cadastrado:', novoUsuarioCadastrado);
+            // const novoUsuarioCadastrado = await responseCadastro.json(); 
+            // console.log('Usuário cadastrado com ID gerado pelo servidor:', novoUsuarioCadastrado);
 
-            alert('Cadastro realizado com sucesso!');
+            alert('Cadastro realizado com sucesso! O ID foi gerado automaticamente.');
             formCadastro.reset();
             
         } catch (error) {
