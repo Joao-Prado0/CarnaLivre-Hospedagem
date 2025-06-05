@@ -2,43 +2,19 @@
   "usuarios": [
     {
       "id": 1,
-      "nome_completo": "João Prado Campos",
-      "login": "Jprado",
-      "email": "joaoblablabla@gmail.com",
-      "data_nasc": "2002-02-12",
-      "senha": "4124121222"
+      "nome_completo": "Henrique Periera",
+      "login": "1rickyss",
+      "email": "ricky1305prr@gmail.com",
+      "data_nasc": "2003-05-13",
+      "senha": "ricardo13"
     },
     {
       "id": 2,
-      "nome_completo": "Lucas Larinje da Rocha",
-      "login": "Luquionhas",
-      "email": "lucasgomesdarocha@gmail.com",
-      "data_nasc": "2003-01-15",
-      "senha": "lucasgames15"
-    },
-    {
-      "id": 3,
-      "nome_completo": "Davi Martins da Silva",
-      "login": "DavidMartin",
-      "email": "Davimatosdasilva@gmail.com",
-      "data_nasc": "2007-05-24",
-      "senha": "mamaefofa1313"
-    },
-    {
-      "id": "1748987866541",
-      "nome_completo": "Henrique Periera",
-      "login": "1rickyss",
-      "email": "desamribeiro@yahoo.com.br",
-      "data_nasc": "2007-05-13",
-      "senha": "Samuel14"
-    },
-    {
-      "id": "247e",
       "nome_completo": "Luizin Da Silva",
-      "login": "Luiz",
+      "login": "Luzibngamer",
       "email": "luiz2412@gmail.com",
-      "data_nasc": "2000-12-24",
-      "senha": "LuizMaia13"
+      "data_nasc": "2003-05-13",
+      "senha": "luizomelhor"
     }
   ]
 }
