@@ -31,7 +31,7 @@ body {
 .container {
     width: 85% !important;
     max-width: 400px !important;
-    margin: 0 auto !important;
+    margin: 15px auto !important;
     background: #DDDDDD !important;
     padding: 1.2rem !important;
     border-radius: 8px !important;
@@ -45,10 +45,10 @@ body {
 
 /* Títulos médios */
 h1 {
-    color: #6a0dad;
+    color: #6a0dad !important;
     text-align: center;
     margin: 0 0 1.2rem 0; /* Espaçamento aumentado */
-    font-size: 1.4rem; /* Fonte maior */
+    font-size: 30px !important; /* Fonte maior */
     font-weight: 600;
 }
 
