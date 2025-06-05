@@ -31,13 +31,24 @@ class ChatSystem {
             groupMemberList: document.getElementById('groupMemberList'),
             confirmGroupBtn: document.getElementById('confirmGroupBtn')
         };
+
+        // Desabilita o botão enviar inicialmente
+        this.elements.sendButton.disabled = true;
     }
 
     initEvents() {
         this.elements.sendButton.addEventListener('click', () => this.sendMessage());
+
         this.elements.messageInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') this.sendMessage();
         });
+
+        // Habilita/desabilita botão enviar conforme o input de texto
+        this.elements.messageInput.addEventListener('input', () => {
+            const text = this.elements.messageInput.value.trim();
+            this.elements.sendButton.disabled = text.length === 0;
+        });
+
         this.elements.createGroupBtn.addEventListener('click', () => this.showGroupModal());
         this.elements.confirmGroupBtn.addEventListener('click', () => this.createGroup());
     }
@@ -136,6 +147,7 @@ class ChatSystem {
         await this.saveChatData();
         this.addMessageToChat('Você', text, time, false);
         this.elements.messageInput.value = '';
+        this.elements.sendButton.disabled = true; // desabilita botão após enviar
     }
 
     showGroupModal() {
@@ -181,3 +193,4 @@ class ChatSystem {
 }
 
 document.addEventListener('DOMContentLoaded', () => new ChatSystem());
+
