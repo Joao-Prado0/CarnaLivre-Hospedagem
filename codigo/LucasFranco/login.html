@@ -4,45 +4,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvimento de Interfaces Web | Login de Usuário</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Login de Usuário</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/login.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div id="login">
-    <h3 class="text-center text-white pt-5">Novo Usuário</h3>
-    <div class="container">
-      <div id="login-row" class="row justify-content-center align-items-center">
-        <div id="login-column" class="col-md-6">
-          <div id="login-box" class="col-md-12">
-            <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
-              <h3 class="text-center text-info">Login</h3>
-              <div class="form-group">
-                <label for="username" class="text-info">Usuário</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Senha</label><br>
-                                <input type="password" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group text-end pt-2">                                
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Novo usuario</button>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Login">  
-                            </div>
-                        </form>
-                    </div>
-                   
+  <header class="header-logo">
+    <img src="assets/img/Logo.png" alt="Carna Livre" class="logo-main">
+  </header>
+
+  <main>
+    <div id="login">
+      <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+          <div id="login-column" class="col-md-6">
+            <div id="login-box" class="col-md-12">
+              <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
+                <h3 class="text-center fw-semibold">Login</h3>
+                <div class="input-css form-group">
+                  <label for="username" class="fw-semibold mb-1">Usuário:</label><br>
+                  <input type="text" name="username" id="username" class="form-control" placeholder="Digite seu email">
                 </div>
+                <div class="input-css form-group">
+                  <label for="password" class="fw-semibold mt-2 mb-1">Senha:</label><br>
+                  <input type="password" name="password" id="password" class="form-control mb-3" placeholder="*********">
+                </div>
+                <div class="form-group form-botoes d-flex flex-column">
+                  <input type="submit" name="submit" class="btn btn-roxo mb-2" value="Login">
+                  <button type="button" class="btn btn-roxo" data-toggle="modal" data-target="#loginModal">Crie sua conta</button>
+                </div>
+              </form>
             </div>
+
+          </div>
         </div>
-    </div>    
+      </div>
+    </div>
 
-    <script src="assets/js/login.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h4 class="text-center mt-2 mb-3">Você pretende prosseguir o cadastro como:</h3>
+            <div class="d-flex justify-content-center mb-2">
+              <a href="../HenriquePereira/cadastrousuario.html" class="me-3"><button type="button" class="btn btn-roxo">Folião</button></a>
+              <a href="../LuizMaia/assets/cadastro-bloco.html"><button type="button" class="btn btn-roxo">Organizador</button></a>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+  <footer class="rodape">
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="assets/img/Logo.png" alt="Logo" class="logo-footer">
+      </div>
+
+      <div class="footer-section">
+        <h3>Produto</h3>
+        <ul>
+          <li><a href="#">Informação</a></li>
+          <li><a href="#">Recursos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Companhia</h3>
+        <ul>
+          <li><a href="#">Saiba Mais</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>A product of HermesSentry</p>
+      <p>© 2025 Carna Livre. All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/login.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

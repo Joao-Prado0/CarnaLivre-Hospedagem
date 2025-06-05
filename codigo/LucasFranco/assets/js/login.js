@@ -101,7 +101,15 @@ function processaFormLogin(event) {
     // Valida login e se estiver ok, redireciona para tela inicial da aplicação
     resultadoLogin = loginUser(email, password);
     if (resultadoLogin) {
-        window.location.href = 'index.html';
+        usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+        usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+
+        if(usuarioCorrente.tipo === 'foliao'){
+            window.location.href = '../DaviMartins/mapablocos.html';
+        }
+        else{
+            window.location.href = '../LucasFranco/infoblocos.html';
+        }
     }
     else { // Se login falhou, avisa ao usuário
         alert('Usuário ou senha incorretos');

@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    max-height: 100vh;
+}
+
+.header-logo {
+    text-align: center;
+    padding: 0.8rem 0;
+    background-color: #6a0dad;
+    height: 115px;
+}
+
+.logo-main {
+    width: 90px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-roxo {
+    background-color: #6a0dad;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn-roxo:hover {
+    background-color: #5a0b9d;
+    color: white;
+}
+
+.input-css input:focus {
+    border-color: #6a0dad;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.2);
+}
+
+.input-css input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #CCCCCC;
+    font-size: 0.9rem;
+}
+
+.input-css input::placeholder {
+    color: #999999;
+    font-size: 0.85rem;
+}
+
+main{
+    color: #6a0dad;
+     height: 100%;
+}
+
+#login{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px;
+    padding: 20px;
+    margin: 25px auto;
+    width: 360px;
+    border-radius: 6px;
+    background-color: #DDD;
+}
+
+.container, #login-column{
+    width: 100%;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#6a0dad;
+    border: #6a0dad;
+    border-radius: 5px;
+}
+
+.form-botoes button, .form-botoes input{
+    width: 100%;
+}
+
+/* Rodapé - Inicio */
+.rodape {
+    background-color: #6a0dad;
+    color: white;
+    padding: 0.8rem 0;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    height: 220px;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.logo-footer {
+    width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.footer-section h3 {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.footer-section ul li a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+/* Rodapé - Fim */
