@@ -1,14 +1,15 @@
 .main-container {
-    width: 100%;
-    max-width: 900px;
-    height: 600px;
+    margin: 15px 15px 15px 105px; /* Espaço para a barra lateral (esquerda) e margens */
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 3px white; /* Linha branca fina em volta */
     display: flex;
+    height: calc(100vh - 150px); /* Altura total menos cabeçalho e rodapé */
+    max-width: calc(100% - 120px); /* Deixa espaço da barra lateral */
     overflow: hidden;
 }
 
+/* Sidebar */
 .sidebar {
     width: 250px;
     background-color: #1194a2;
@@ -64,6 +65,7 @@
     background-color: #15bed172;
 }
 
+/* Chat */
 .chat-container {
     flex: 1;
     display: flex;
@@ -146,7 +148,7 @@
     background-color: #0d7a8a;
 }
 
-/* Modal styles */
+/* Modal */
 .modal-content {
     border-radius: 10px;
 }
