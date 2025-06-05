@@ -1,16 +1,12 @@
 class ChatSystem {
     constructor() {
-        this.dbPath = 'db/dbchat.json';
+        this.apiBase = 'http://localhost:3000';
         this.currentChat = null;
         this.isGroupChat = false;
         this.chatData = {
-            contacts: ["João", "Pedro", "Luiz", "Henrique"],
+            contacts: [],
             groups: [],
-            messages: {
-                "João": [
-                    { sender: "João", text: "Olá! Como você está?", time: "10:00" }
-                ]
-            }
+            messages: {}
         };
 
         this.initElements();
@@ -44,24 +40,33 @@ class ChatSystem {
 
     async loadChatData() {
         try {
-            const response = await fetch(this.dbPath);
-            if (!response.ok) throw new Error('Erro ao carregar dados');
-            this.chatData = await response.json();
+           
+            const contactsRes = await fetch(`${this.apiBase}/contacts`);
+            this.chatData.contacts = await contactsRes.json();
+
+          
+            const groupsRes = await fetch(`${this.apiBase}/groups`);
+            this.chatData.groups = await groupsRes.json();
+
+            
+            const messagesRes = await fetch(`${this.apiBase}/messages`);
+            const messagesArr = await messagesRes.json();
+
+           
+            this.chatData.messages = {};
+            messagesArr.forEach(msg => {
+                if (!this.chatData.messages[msg.chat]) {
+                    this.chatData.messages[msg.chat] = [];
+                }
+                this.chatData.messages[msg.chat].push(msg);
+            });
+
             this.updateContactList();
             if (this.chatData.contacts.length > 0) {
                 this.openChat(this.chatData.contacts[0], false);
             }
         } catch (error) {
-            console.error("Erro ao carregar dbchat.json:", error);
-            this.updateContactList();
-        }
-    }
-
-    async saveChatData() {
-        try {
-            localStorage.setItem('chatDataBackup', JSON.stringify(this.chatData));
-        } catch (error) {
-            console.error("Erro ao salvar dados:", error);
+            console.error("Erro ao carregar dados do JSON Server:", error);
         }
     }
 
@@ -119,23 +124,39 @@ class ChatSystem {
     async sendMessage() {
         const text = this.elements.messageInput.value.trim();
         if (!text || !this.currentChat) return;
-        
+
         const now = new Date();
         const time = `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`;
-        
-        if (!this.chatData.messages[this.currentChat]) {
-            this.chatData.messages[this.currentChat] = [];
-        }
-        
-        this.chatData.messages[this.currentChat].push({
+
+        const newMessage = {
+            chat: this.currentChat,
             sender: 'Você',
             text: text,
             time: time
-        });
-        
-        await this.saveChatData();
-        this.addMessageToChat('Você', text, time, false);
-        this.elements.messageInput.value = '';
+        };
+
+        try {
+           
+            const res = await fetch(`${this.apiBase}/messages`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newMessage)
+            });
+
+            if (!res.ok) throw new Error('Falha ao enviar mensagem');
+
+           
+            if (!this.chatData.messages[this.currentChat]) {
+                this.chatData.messages[this.currentChat] = [];
+            }
+            this.chatData.messages[this.currentChat].push(newMessage);
+
+            this.addMessageToChat('Você', text, time, false);
+            this.elements.messageInput.value = '';
+        } catch (error) {
+            console.error("Erro ao enviar mensagem:", error);
+            alert("Erro ao enviar mensagem.");
+        }
     }
 
     showGroupModal() {
@@ -166,17 +187,34 @@ class ChatSystem {
             alert('Selecione pelo menos 2 membros para o grupo');
             return;
         }
-        
-        this.chatData.groups.push({
+
+        const newGroup = {
             name: groupName,
             members: members
-        });
+        };
+
+        try {
+            
+            const res = await fetch(`${this.apiBase}/groups`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newGroup)
+            });
+            if (!res.ok) throw new Error('Falha ao criar grupo');
+
+           
+            this.chatData.groups.push(newGroup);
+
         
-        this.chatData.messages[groupName] = [];
-        
-        await this.saveChatData();
-        this.updateContactList();
-        this.elements.groupModal.hide();
+            this.chatData.messages[groupName] = [];
+
+            this.updateContactList();
+            this.elements.groupModal.hide();
+            this.elements.groupNameInput.value = '';
+        } catch (error) {
+            console.error("Erro ao criar grupo:", error);
+            alert("Erro ao criar grupo.");
+        }
     }
 }
 
