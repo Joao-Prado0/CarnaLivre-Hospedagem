@@ -1,12 +1,13 @@
 .main-container {
-    margin: 15px 15px 15px 105px; /* Espaço para a barra lateral (esquerda) e margens */
+    margin: 15px 15px 15px 105px; 
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 0 3px white; /* Linha branca fina em volta */
+    box-shadow: 0 0 0 3px white; 
     display: flex;
-    height: calc(100vh - 150px); /* Altura total menos cabeçalho e rodapé */
-    max-width: calc(100% - 120px); /* Deixa espaço da barra lateral */
+    height: calc(100vh - 150px); 
+    max-width: calc(100% - 120px); 
     overflow: hidden;
+    
 }
 
 /* Sidebar */
