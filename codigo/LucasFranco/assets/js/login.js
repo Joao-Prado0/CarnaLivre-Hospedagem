@@ -95,8 +95,6 @@ function processaFormLogin(event) {
     // Obtem os dados de login e senha a partir do formulário de login
     var email = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    console.log(password);
-    console.log(email);
 
     // Valida login e se estiver ok, redireciona para tela inicial da aplicação
     resultadoLogin = loginUser(email, password);
@@ -108,7 +106,7 @@ function processaFormLogin(event) {
             window.location.href = '../DaviMartins/mapablocos.html';
         }
         else{
-            window.location.href = '../LucasFranco/infoblocos.html';
+            window.location.href = '../JoaoPrado/paginablocos.html';
         }
     }
     else { // Se login falhou, avisa ao usuário
@@ -134,7 +132,6 @@ function loginUser(login, senha) {
 
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
             sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
-            console.log(usuarioCorrente);
 
             // Retorna true para usuário encontrado
             return true;
@@ -154,7 +151,6 @@ function loginUser(login, senha) {
 
                 // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
                 sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
-                console.log(usuarioCorrente);
 
                 // Retorna true para usuário encontrado
                 return true;
