@@ -308,3 +308,75 @@ body {
   #toggle-password:hover {
     color: teal;
   }
+  #toggle-password {
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+#toggle-password:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#toggle-password:active {
+  transform: scale(0.95);
+}
+
+#eye-icon, #eye-off-icon {
+  transition: all 0.3s ease;
+}
+
+#toggle-password:hover #eye-icon,
+#toggle-password:hover #eye-off-icon {
+  stroke: teal;
+}
+#notificacao {
+  position: fixed;
+  top: 115px;
+  right: 20px;
+  transform: translateY(-20px);
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#notificacao .icone {
+  width: 28px;
+  height: 28px;
+  animation: pop 0.5s ease;
+}
+
+#notificacao.visivel {
+  opacity: 1;
+  transform: translateY(10);
+}
+
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.lixeira-icon {
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.lixeira-icon:hover {
+  transform: rotate(-15deg) scale(1.1);
+  stroke: darkred;
+}
+
