@@ -9,7 +9,7 @@ $(document).ready(function () {
   const usuarioLogado = {
     id: usuarioCorrente.id,
     email: usuarioCorrente.email,
-    tipo: usuarioCorrente.tip
+    tipo: usuarioCorrente.tipo
   }
   if (!id) {
     console.log("erro");
