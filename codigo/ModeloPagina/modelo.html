@@ -10,7 +10,9 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -31,34 +33,33 @@
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa-solid fa-list"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
                 <ul id="itens-lateral">
-                    <li class="">
+                    <li class="me-3">
+                        <div id="circulo-profile" class="dropdown">
+                            <button class=" btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" id="btn_logout">Efetuar Logout</button></li>
+                            </ul>
+                            <script>
+                                function logoutUser() {
+                                    usuarioCorrente = {};
+                                    sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
+                                    window.location = '../LucasFranco/login.html';
+                                }
+
+                                // Associa a função de logout ao botão
+                                document.getElementById('btn_logout').addEventListener('click', logoutUser);
+                            </script>
+                        </div>
+
+                    </li>
+                    <li class="me-3">
                         <a class="" aria-current="" href="#">
                             <i class="fa-solid fa-sun"></i>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a class="" aria-current="" href="#">
-                            <div id="circulo-profile">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
                         </a>
                     </li>
                 </ul>
@@ -98,9 +99,9 @@
     <footer class="rodape">
         <div class="footer-content">
             <div class="footer-section">
-                <img src="assets/img/Logo.png" alt="Logo" class="logo-footer">     
+                <img src="assets/img/Logo.png" alt="Logo" class="logo-footer">
             </div>
-            
+
             <div class="footer-section">
                 <h3>Produto</h3>
                 <ul>
@@ -108,7 +109,7 @@
                     <li><a href="#">Recursos</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Companhia</h3>
                 <ul>
@@ -117,7 +118,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="copyright">
             <p>A product of HermesSentry</p>
             <p>© 2025 Carna Livre. All rights reserved</p>
