@@ -2,20 +2,29 @@ $(document).ready(function () {
   let bloco;
   const url = "http://localhost:3000"
   console.log('Conteúdo do sessionStorage:', sessionStorage);
+  const id = sessionStorage.getItem('selectedBlocoId');
+
   const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
-  const usuarioCorrente = JSON.parse (usuarioCorrenteJSON);
-  const id = sessionStorage.getItem('selectedBlocoId') || usuarioCorrente.id;
 
-  const usuarioLogado = {
-    id: usuarioCorrente.id,
-    email: usuarioCorrente.email,
-    tipo: usuarioCorrente.tipo
+  let usuarioCorrente = null;
+  if (usuarioCorrenteJSON) {
+    try {
+      usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+    } catch (e) {
+      console.warn("Erro ao fazer parse do usuarioCorrente:", e);
+    }
   }
-  if (!id) {
-    console.log("erro");
 
+  if (!id) {
+    console.error("Nenhum bloco selecionado.");
     return;
   }
+
+  const usuarioLogado = {
+    id: usuarioCorrente?.id ?? null,
+    email: usuarioCorrente?.email ?? '',
+    tipo: usuarioCorrente?.tipo ?? ''
+  };
 
   let AdvancedMarkerElement, PinElement;
 
@@ -57,8 +66,8 @@ $(document).ready(function () {
     $('#envia-comentario').on('click', async function () {
       const texto = $('#texto-comentario').val().trim();
       const avaliacao = $('input[name="avaliacao"]:checked').val();
-      const blocoId = parseInt(id);
-      const usuarioId = 1;
+      const blocoId = id;
+      const usuarioId = 1; //mudar depois
 
       if (!texto || !avaliacao) {
         alert('Por favor, preencha tanto a avaliação quanto o comentário');
@@ -204,10 +213,10 @@ $(document).ready(function () {
       $('#btn-foto').show();
       $('#btn-editar').show();
 
-      $('#btn-foto').click(function(){
+      $('#btn-foto').click(function () {
         window.location.href = `${url}/PedroHenrique/addimagem.html`;
       })
-      $('#btn-editar').click(function(){
+      $('#btn-editar').click(function () {
         window.location.href = `${url}/LucasFranco/infoblocos.html`;
       })
     } else {
