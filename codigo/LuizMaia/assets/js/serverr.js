@@ -7,6 +7,9 @@ const PORT = 3000;
 // Middlewares
 app.use(express.json());
 app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, "..")));
+app.use(express.static(publicPath));
+
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "editusuario.html"));
@@ -15,7 +18,7 @@ app.get("/", (req, res) => {
 
 
 // Caminho para o JSON
-const DB_PATH = path.join(__dirname, "..","..","db", "dbusuarios.json");
+const DB_PATH = path.join(ROOT_DIR,"codigo","db", "dbusuarios.json");
 
 
 // GET /usuarios/:id

@@ -92,7 +92,7 @@ document.getElementById('btn-excluir').addEventListener('click', async () => {
       alert("Conta excluída com sucesso!");
       localStorage.removeItem('usuarioId'); // limpar o id após exclusão
       // Redirecionar para página inicial ou de login
-      window.location.href = "../../LucasFranco/login.html";
+      window.location.href = "../LucasFranco/login.html";
     } else {
       throw new Error("Erro ao excluir conta");
     }
