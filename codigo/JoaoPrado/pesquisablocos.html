@@ -202,19 +202,27 @@
                         </ul>
                     </div>
                     <ul id="itens-lateral">
-                        <li class="">
-                            <a class="" aria-current="" href="#">
-                                <i class="fa-solid fa-sun"></i>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a class="" aria-current="" href="#">
-                                <div id="circulo-profile">
-                                    <i class="fa-solid fa-user"></i>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                    <li class="me-3">
+                        <div id="circulo-profile" class="dropdown">
+                            <button class=" btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" id="btn_logout">Efetuar Logout</button></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="me-3">
+                        <div class="row">
+                            <div class="col text-white"><i class="clima fa-solid fa-sun"></i><span id="addTemp" class="ms-2"></span></div>
+                        </div>
+                        <div class="row">
+                            <div id="addDesc" class="col text-white"></div>
+                        </div>
+                    </li>
+                </ul>
                 </div>
             </nav>
         </header>
@@ -276,6 +284,7 @@
 
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/pesquisa.js"></script>
+    <script src="../ModeloPagina/assets/js/fixos.js"></script>
     <script src="https://kit.fontawesome.com/caf1fa5fb3.js" crossorigin="anonymous"></script>
 </body>
 

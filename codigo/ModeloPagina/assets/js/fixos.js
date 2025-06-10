@@ -1,7 +1,5 @@
 const previsaoURL = 'https://api.openweathermap.org/data/2.5/weather?q=Belo%20Horizonte,BR&appid=aa3b1ae55071f47063e72e1dc41f471d&units=metric&lang=pt_br';
 
-const chaveAPI = 'aa3b1ae55071f47063e72e1dc41f471d';
-
 function logoutUser() {
     usuarioCorrente = {};
     sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));

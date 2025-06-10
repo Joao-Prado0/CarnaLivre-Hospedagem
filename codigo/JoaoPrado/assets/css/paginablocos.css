@@ -80,7 +80,7 @@ nav {
 }
 
 .fa-sun {
-    font-size: 190%;
+    font-size: 130%;
 }
 
 #circulo-profile {
@@ -97,6 +97,18 @@ nav {
     margin: 8px;
     font-size: 130%;
     color: white;
+}
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    border-color: rgba(255, 255, 255, 0) !important;
+}
+
+.dropdown-toggle::after {
+    content: none !important;
 }
 
 /* Cabeçalho - Fim */
