@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/fixos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="assets/js/fixos.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,18 +23,6 @@
                 <a class="navbar-brand" href="#">
                     <img src="assets/img/Logo.png" alt="Bootstrap" width="80" height="80">
                 </a>
-                <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-                    <form class="d-flex" role="search">
-                        <input id="brpesquisa" class="form-control ms-2 me-2" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
                 <ul id="itens-lateral">
                     <li class="me-3">
                         <div id="circulo-profile" class="dropdown">
@@ -44,23 +33,16 @@
                             <ul class="dropdown-menu">
                                 <li><button class="dropdown-item" id="btn_logout">Efetuar Logout</button></li>
                             </ul>
-                            <script>
-                                function logoutUser() {
-                                    usuarioCorrente = {};
-                                    sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
-                                    window.location = '../LucasFranco/login.html';
-                                }
-
-                                // Associa a função de logout ao botão
-                                document.getElementById('btn_logout').addEventListener('click', logoutUser);
-                            </script>
                         </div>
 
                     </li>
                     <li class="me-3">
-                        <a class="" aria-current="" href="#">
-                            <i class="fa-solid fa-sun"></i>
-                        </a>
+                        <div class="row">
+                            <div class="col text-white"><i class="clima fa-solid fa-sun"></i><span id="addTemp" class="ms-2"></span></div>
+                        </div>
+                        <div class="row">
+                            <div id="addDesc" class="col text-white"></div>
+                        </div>
                     </li>
                 </ul>
             </div>
