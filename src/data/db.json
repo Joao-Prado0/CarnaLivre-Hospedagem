@@ -27,19 +27,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -72,19 +72,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -117,19 +117,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -162,19 +162,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -207,19 +207,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -252,19 +252,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -297,19 +297,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -342,19 +342,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -387,19 +387,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -432,19 +432,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -477,19 +477,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -522,19 +522,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -567,19 +567,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -612,19 +612,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
@@ -657,19 +657,19 @@
           "imagens": [
             {
               "id": 1,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 2,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 3,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             },
             {
               "id": 4,
-              "src": "assets/img/blocoexemplo.jpg"
+              "src": "../assets/img/blocoexemplo.jpg"
             }
           ]
         }
