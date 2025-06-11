@@ -143,6 +143,7 @@ nav {
     width: 100%;
     position: relative;
     bottom: 0;
+    margin-top: 40px;
 }
 
 .footer-content {
@@ -282,7 +283,28 @@ body {
   .btn-salvar:active {
     transform: scale(0.98);
   }
+  /*Botão excluir*/
+  .btn-excluir {
+    background-color:red;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+  }
   
+  .btn-excluir:hover {
+    background-color: rgb(128, 10, 10);
+    box-shadow: red
+  }
+  
+  .btn-excluir:active {
+    transform: scale(0.98);
+  }
   /* Botão Sair */
 .btn-animado {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
