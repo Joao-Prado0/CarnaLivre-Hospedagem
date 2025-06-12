@@ -15,6 +15,10 @@ $(document).ready(function () {
     }
   }
 
+  if (!usuarioCorrente) {
+    window.location.href = 'login.html';
+    return;
+  }
   if (!id) {
     console.error("Nenhum bloco selecionado.");
     return;

@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    let usuarioCorrente = null;
+
+    if (usuarioCorrenteJSON) {
+        try {
+            usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+        } catch (e) {
+            console.warn("Erro ao fazer parse do usuarioCorrente:", e);
+        }
+    }
+
+    if (!usuarioCorrente) {
+        window.location.href = 'login.html';
+        return;
+    }
     sessionStorage.removeItem('selectedBlocoId');
     let blocosCarregados = 0;
     const blocosPagina = 6;
