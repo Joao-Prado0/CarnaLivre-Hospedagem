@@ -1,35 +1,22 @@
+import { BlocosCarnaval } from "../../services/blocos-services.js";
+const blocoService = new BlocosCarnaval();
+
 $(document).ready(function () {
-    const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
-    let usuarioCorrente = null;
-
-    if (usuarioCorrenteJSON) {
-        try {
-            usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
-        } catch (e) {
-            console.warn("Erro ao fazer parse do usuarioCorrente:", e);
-        }
-    }
-
-    if (!usuarioCorrente) {
-        window.location.href = 'login.html';
-        return;
-    }
     sessionStorage.removeItem('selectedBlocoId');
     let blocosCarregados = 0;
     const blocosPagina = 6;
     let blocos = [];
     let todosOsBlocos = [];
-    $.ajax({
-        url: 'http://localhost:3000/blocos',
-        success: function (data) {
-            todosOsBlocos = data;
+    (async () => {
+        try {
+            todosOsBlocos = await blocoService.getBlocos();
             blocos = [...todosOsBlocos];
             carregarMaisBlocos();
-        },
-        error: function () {
+        } catch (error) {
+            console.error("Erro ao buscar blocos:", error);
             alert("Erro ao carregar os dados do servidor.");
         }
-    });
+    })();
     $('#btn-ver-mais').click(function () {
         carregarMaisBlocos();
     });

@@ -1,3 +1,9 @@
+import { BlocosCarnaval } from "../../services/blocos-services.js";
+const blocoService = new BlocosCarnaval();
+
+import { Comentarios } from "../../services/blocos-services.js";
+const comentarioService = new Comentarios();
+
 $(document).ready(function () {
   let bloco;
   const url = "http://localhost:3000"
@@ -15,10 +21,6 @@ $(document).ready(function () {
     }
   }
 
-  if (!usuarioCorrente) {
-    window.location.href = 'login.html';
-    return;
-  }
   if (!id) {
     console.error("Nenhum bloco selecionado.");
     return;
@@ -43,8 +45,9 @@ $(document).ready(function () {
   };
   const carregaBlocoData = async () => {
     try {
-      bloco = await $.get(`${url}/blocos/${id}`);
-      const comentarios = await $.get(`${url}/comentarios?blocoId=${id}`);
+      bloco = await blocoService.getBloco(id);
+      const todosComentarios = await comentarioService.getComentarios();
+      const comentarios = todosComentarios.filter(c => c.blocoId == id);
       const organizadorDoBloco = bloco.organizador.some(org => org.email_org === usuarioLogado.email);
       usuarioLogado.organizador = organizadorDoBloco;
 
@@ -71,7 +74,7 @@ $(document).ready(function () {
       const texto = $('#texto-comentario').val().trim();
       const avaliacao = $('input[name="avaliacao"]:checked').val();
       const blocoId = id;
-      const usuarioId = 1; //mudar depois
+      const usuarioId = usuarioLogado.id;
 
       if (!texto || !avaliacao) {
         alert('Por favor, preencha tanto a avaliação quanto o comentário');
@@ -87,17 +90,13 @@ $(document).ready(function () {
         resposta: { texto: '', data: '', organizadorId: '' }
       };
       try {
-        await $.ajax({
-          url: `${url}/comentarios`,
-          method: 'POST',
-          contentType: 'application/json',
-          data: JSON.stringify(novoComentario)
-        });
+        await comentarioService.novoComentario(novoComentario);
 
         $('#texto-comentario').val('');
         $('#texto-comentario').prop('checked', false);
 
-        const comentariosAtualizados = await $.get(`${url}/comentarios?blocoId=${blocoId}`);
+        const todosComentariosAtualizados = await comentarioService.getComentarios();
+        const comentariosAtualizados = todosComentariosAtualizados.filter(c => c.blocoId == blocoId);
         carregarDadosBlocos({ ...bloco }, comentariosAtualizados, usuarioLogado);
       } catch (error) {
         console.error('Erro ao enviar comentário:', error);
@@ -191,14 +190,14 @@ $(document).ready(function () {
               organizadorId: usuarioLogado.id
             };
 
-            await $.ajax({
-              url: `${url}/comentarios/${comentarios[i].id}`,
-              method: 'PATCH',
-              contentType: 'application/json',
-              data: JSON.stringify({ resposta: novaResposta })
-            });
+            const comentarioAtualizado = {
+              ...comentarios[i],
+              resposta: novaResposta
+            };
+            await comentarioService.atualizarComentario(comentarios[i].id, comentarioAtualizado);
 
-            const comentariosAtualizados = await $.get(`${url}/comentarios?blocoId=${bloco.id}`);
+            const todosComentariosAtualizados = await comentarioService.getComentarios();
+            const comentariosAtualizados = todosComentariosAtualizados.filter(c => c.blocoId == bloco.id);
             carregarDadosBlocos(bloco, comentariosAtualizados, usuarioLogado);
           });
 
