@@ -14,7 +14,6 @@ if (usuarioCorrenteJSON) {
 
 if (!usuarioCorrente) {
     window.location.href = LOGIN_URL;
-    return;
 }
 
 
