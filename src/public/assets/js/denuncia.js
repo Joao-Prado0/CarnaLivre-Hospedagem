@@ -1,4 +1,9 @@
-const API_URL = "http://localhost:3000";
+import { BlocosCarnaval } from "../../services/blocos-services.js";
+const blocoService = new BlocosCarnaval();
+
+import { Denuncias } from "../../services/blocos-services.js";
+const denunciaService = new Denuncias();
+
 let autocomplete;
 
 function initAutocomplete() {
@@ -21,14 +26,10 @@ function initAutocomplete() {
 
 async function carregarBlocos() {
     try {
-        const response = await fetch(`${API_URL}/blocos`);
-        if (!response.ok) throw new Error('Erro na requisição');
+        const blocos = await blocoService.getBlocos();
 
-        const blocosCache = await response.json();
-        const select = $('.blocoDenuncia');
-
-        blocosCache.forEach(bloco => {
-            select.append(`<option value="${bloco.id}">${bloco.nome_bloco}</option>`);
+        blocos.forEach(bloco => {
+            $('.blocoDenuncia').append(`<option value="${bloco.id}">${bloco.nome_bloco}</option>`);
         });
     }
     catch (error) {
@@ -42,19 +43,9 @@ async function enviarDenuncia(dados) {
         if (!dados.bloco || dados.bloco === 'Qual bloco você estava?') {
             throw new Error('Selecione um bloco');
         }
+        denunciaService.novaDenuncia(dados);
+        alert("Denuncia realizada com sucesso!");
 
-        const response = await fetch(`${API_URL}/denuncias`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(dados)
-        });
-
-        if (response.ok) {
-            alert("Denuncia realizada com sucesso!");
-
-        } else {
-            throw new Error("Erro na resposta do servidor");
-        }
     } catch (error) {
         console.error("Erro:", error);
         alert("Erro ao cadastrar denuncia.");
