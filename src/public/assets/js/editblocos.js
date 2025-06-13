@@ -3,7 +3,6 @@ const blocoService = new BlocosCarnaval();
 
 let autocomplete;
 let bloco;
-const API_URL = "http://localhost:3000/blocos";
 
 function initAutocomplete() {
     const input = document.getElementById('campo-endereco');
@@ -33,13 +32,15 @@ function initAutocomplete() {
 }
 
 async function carregarBlocos(id) {
-    const response = await fetch(API_URL);
-    bloco = await response.json();
-    const select = $('.nomeBloco');
-
-    bloco.forEach(bloco => {
-        select.append(`<option value="${bloco.id}">${bloco.nome_bloco}</option>`);
-    });
+    try {
+        bloco = await blocoService.getBloco(id);
+        $('input[name=nomeBloco]').attr('placeholder', bloco.nome_bloco);
+        preencheDados();
+    }
+    catch (error) {
+        console.error("Erro ao buscar blocos:", error);
+        alert("Erro ao carregar os dados do servidor.");
+    }
 }
 
 function preencheDados() {
@@ -67,54 +68,45 @@ function formatarData(dataString) {
 }
 
 async function atualizaInfo() {
-    let place;
     try {
-        place = autocomplete?.getPlace?.();
-    } catch (e) {
-        place = null;
-    }
-
-    const enderecoCompleto = place?.formatted_address || $('#campo-endereco').val();
-
-    let latitude = bloco.lat;
-    let longitude = bloco.lng;
-
-    if (place?.geometry?.location) {
-        latitude = place.geometry.location.lat();
-        longitude = place.geometry.location.lng();
-    }
-
-    const dadosAtualizados = {
-        ...bloco,
-        descricao_geral: $('textarea[name="descricao"]').val(),
-        data: $('input[name="datahora"]').val().split('T')[0],
-        publico: parseInt($('input[name="publico"]').val()) || 0,
-        cep: $('input[name="cep"]').val(),
-        endereco: enderecoCompleto,
-        lat: latitude,
-        lng: longitude,
-        faixa_etaria: $('input[name="faixaetaria"]').val() + "+",
-        estilo_musical: $('.estilo-checkbox:checked').map(function () {
-            return this.value;
-        }).get().join(', ')
-    };
-
-    try {
-        const response = await fetch(`${API_URL}/${idBloco}`, {
-            method: "PATCH",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(dadosAtualizados)
-        });
-
-        if (response.ok) {
-            alert("Bloco atualizado com sucesso!");
-
-        } else {
-            throw new Error("Erro na resposta do servidor");
+        let place;
+        try {
+            place = autocomplete?.getPlace?.();
+        } catch (e) {
+            place = null;
         }
-    } catch (error) {
-        console.error("Erro:", error);
-        alert("Erro ao atualizar bloco. Verifique o console.");
+
+        const enderecoCompleto = place?.formatted_address || $('#campo-endereco').val();
+
+        let latitude = bloco.lat;
+        let longitude = bloco.lng;
+
+        if (place?.geometry?.location) {
+            latitude = place.geometry.location.lat();
+            longitude = place.geometry.location.lng();
+        }
+
+        const dadosAtualizados = {
+            ...bloco,
+            descricao_geral: $('textarea[name="descricao"]').val(),
+            data: $('input[name="datahora"]').val().split('T')[0],
+            publico: parseInt($('input[name="publico"]').val()) || 0,
+            cep: $('input[name="cep"]').val(),
+            endereco: enderecoCompleto,
+            lat: latitude,
+            lng: longitude,
+            faixa_etaria: $('input[name="faixaetaria"]').val() + "+",
+            estilo_musical: $('.estilo-checkbox:checked').map(function () {
+                return this.value;
+            }).get().join(', ')
+        };
+
+        await blocoService.atualizarBloco(bloco.id, dadosAtualizados);
+        alert("Bloco atualizado com sucesso!");
+    }
+    catch (error) {
+        console.error("Erro ao atualizar bloco:", error);
+        alert("Erro ao atualizar o bloco. Por favor, tente novamente.");
     }
 }
 
