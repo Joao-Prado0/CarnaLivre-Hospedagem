@@ -1,19 +1,23 @@
 const previsaoURL = 'https://api.openweathermap.org/data/2.5/weather?q=Belo%20Horizonte,BR&appid=aa3b1ae55071f47063e72e1dc41f471d&units=metric&lang=pt_br';
 const LOGIN_URL = 'login.html';
-var usuarioCorrente = {};
 
-/*
-usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+let usuarioCorrente = null;
+
 if (usuarioCorrenteJSON) {
-    usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+    try {
+        usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+    } catch (e) {
+        console.warn("Erro ao fazer parse do usuarioCorrente:", e);
+    }
 }
 
-
-// Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
-if (!usuarioCorrente.login) {
+if (!usuarioCorrente) {
     window.location.href = LOGIN_URL;
+    return;
 }
-*/
+
+
 
 function logoutUser() {
     usuarioCorrente = {};
