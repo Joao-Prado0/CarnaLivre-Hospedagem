@@ -683,15 +683,25 @@
       "login": "Jprado",
       "email": "joaoblablabla@gmail.com",
       "data_nasc": "2002-02-12",
-      "senha": "4124121222"
+      "senha": "4124121222",
+      "chat": {
+        "contacts": [],
+        "groups": [],
+        "messages": {}
+      }
     },
     {
       "id": 2,
-      "nome_completo": "João Prado Campos",
-      "login": "Jprado",
-      "email": "joaoblablabla@gmail.com",
+      "nome_completo": "João Campos",
+      "login": "joaoo",
+      "email": "joaoao@gmail.com",
       "data_nasc": "2002-02-12",
-      "senha": "4124121222"
+      "senha": "12345",
+      "chat": {
+        "contacts": [],
+        "groups": [],
+        "messages": {}
+      }
     },
     {
       "id": 3,
@@ -699,7 +709,12 @@
       "login": "Jprado",
       "email": "joaoblablabla@gmail.com",
       "data_nasc": "2002-02-12",
-      "senha": "4124121222"
+      "senha": "4124121222",
+      "chat": {
+        "contacts": [],
+        "groups": [],
+        "messages": {}
+      }
     }
   ],
   "denuncias": [
