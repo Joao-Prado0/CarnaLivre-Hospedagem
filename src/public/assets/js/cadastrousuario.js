@@ -15,13 +15,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = document.getElementById('email').value;
             const data_nasc = document.getElementById('birthdate').value;
             const senha = document.getElementById('password').value;
+            const chat = {
+                "contacts": [],
+                "groups": [],
+                "messages": []
+            }
 
             const usuarioSemId = {
                 nome_completo,
                 login,
                 email,
                 data_nasc,
-                senha
+                senha,
+                chat
             };
 
             // Validação básica
