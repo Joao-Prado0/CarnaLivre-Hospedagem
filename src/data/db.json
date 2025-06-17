@@ -1,7 +1,7 @@
 {
   "blocos": [
     {
-      "id": "1",
+      "id": 1,
       "nome_bloco": "Filhos da PUC",
       "descricao_geral": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi. fwokenfoiw  kjweg nfoiwengoiwq fiownqifnwo3ir rw3jfnwiqnfqoin3qkw fokweno",
       "avaliacao": 4.5,
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "nome_bloco": "Unidos da Savassi",
       "descricao_geral": "Tradicional no carnaval de BH, o Unidos da Savassi traz samba no pé e muita alegria no coração. Ideal para quem busca um desfile raiz.",
       "avaliacao": 4.2,
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": 3,
       "nome_bloco": "Funk BH",
       "descricao_geral": "Batidas marcantes e coreografias envolventes fazem do Funk BH uma das atrações mais animadas do carnaval belo-horizontino.",
       "avaliacao": 3.8,
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "nome_bloco": "Axé das Gerais",
       "descricao_geral": "Com sucessos do axé music, o bloco transforma as ruas em uma grande micareta à mineira, com muita dança e alto astral.",
       "avaliacao": 4.9,
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "nome_bloco": "Rock na Rua",
       "descricao_geral": "Releituras de clássicos do rock em ritmo de carnaval, com guitarras e fantasia.",
       "avaliacao": 4,
@@ -226,7 +226,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": 6,
       "nome_bloco": "Batuque Feminino",
       "descricao_geral": "Formado por mulheres percussionistas, o bloco celebra a força feminina com ritmos afro-brasileiros.",
       "avaliacao": 4.6,
@@ -271,7 +271,7 @@
       ]
     },
     {
-      "id": "7",
+      "id": 7,
       "nome_bloco": "Samba do Mercado",
       "descricao_geral": "Saindo do coração do Mercado Central, o Samba do Mercado traz um repertório clássico do samba de raiz, animando os foliões com muito ritmo e tradição.",
       "avaliacao": 4.3,
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "id": "8",
+      "id": 8,
       "nome_bloco": "Pagode no Asfalto",
       "descricao_geral": "Um verdadeiro baile a céu aberto, o Pagode no Asfalto conquista os foliões com clássicos do pagode dos anos 90 e hits atuais, sempre com muita animação.",
       "avaliacao": 3.9,
@@ -361,7 +361,7 @@
       ]
     },
     {
-      "id": "9",
+      "id": 9,
       "nome_bloco": "Cortejo do Amor",
       "descricao_geral": "Celebrando a diversidade e a liberdade, o Cortejo do Amor é repleto de cores, glitter e mensagens de aceitação. Um dos blocos mais inclusivos de BH.",
       "avaliacao": 5,
@@ -406,7 +406,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": 10,
       "nome_bloco": "Coração de Tambor",
       "descricao_geral": "Inspirado nas tradições afro-brasileiras, o Coração de Tambor mistura música, dança e espiritualidade em uma celebração poderosa e ancestral.",
       "avaliacao": 4.7,
@@ -451,7 +451,7 @@
       ]
     },
     {
-      "id": "11",
+      "id": 11,
       "nome_bloco": "Brega BH",
       "descricao_geral": "Com muito romantismo e exagero, o Brega BH leva os clássicos do brega e do popular brasileiro para o meio da folia. Glitter, perucas e declarações de amor não faltam!",
       "avaliacao": 4.1,
@@ -496,7 +496,7 @@
       ]
     },
     {
-      "id": "12",
+      "id": 12,
       "nome_bloco": "Bloco do Vinil",
       "descricao_geral": "Voltado aos amantes dos clássicos, o Bloco do Vinil traz um repertório recheado de hits dos anos 70, 80 e 90, com DJs e foliões caracterizados de época.",
       "avaliacao": 4.4,
@@ -541,7 +541,7 @@
       ]
     },
     {
-      "id": "13",
+      "id": 13,
       "nome_bloco": "Bloco do Jazz",
       "descricao_geral": "Com arranjos elaborados e instrumentos de sopro, o Bloco do Jazz apresenta uma experiência sonora refinada e contagiante, misturando improviso e marchinha.",
       "avaliacao": 4.8,
@@ -586,7 +586,7 @@
       ]
     },
     {
-      "id": "14",
+      "id": 14,
       "nome_bloco": "Bloco dos Mixturados",
       "descricao_geral": "Misturando diversos estilos musicais e influências culturais, o Bloco dos Mixturados atrai um público diverso em busca de um carnaval plural e democrático.",
       "avaliacao": 4.2,
@@ -631,7 +631,7 @@
       ]
     },
     {
-      "id": "15",
+      "id": 15,
       "nome_bloco": "Techno no Asfalto",
       "descricao_geral": "O carnaval eletrônico de BH! O Techno no Asfalto transforma avenidas em pistas de dança com DJs e efeitos visuais impressionantes.",
       "avaliacao": 4.6,
