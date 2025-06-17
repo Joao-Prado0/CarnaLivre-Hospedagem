@@ -1,3 +1,6 @@
+import { Usuarios } from "../../services/blocos-services.js";
+const usuarioService = new Usuarios();
+
 document.addEventListener('DOMContentLoaded', function() {
     const formCadastro = document.querySelector('form');
     const jsonServerUrl = 'http://localhost:3000/usuarios';
@@ -39,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Buscar todos os usuários para encontrar o maior ID
-            const responseTodosUsuarios = await fetch(jsonServerUrl);
+            const responseTodosUsuarios = await usuarioService.getUsuarios();
             if (!responseTodosUsuarios.ok) {
                 throw new Error(`Erro ao buscar usuários: ${responseTodosUsuarios.statusText}`);
             }
@@ -53,13 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             // Adiciona o novo usuário via POST request
-            const responseCadastro = await fetch(jsonServerUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(usuario),
-            });
+            const responseCadastro = await usuarioService.novoUsuario(usuario);
 
             if (!responseCadastro.ok) {
                 const errorData = await responseCadastro.json().catch(() => null);
