@@ -680,15 +680,10 @@
     {
       "id": 1,
       "nome_completo": "João Prado Campos",
-      "login": "Jprado",
-      "email": "joaoblablabla@gmail.com",
+      "login": "Jprado12",
       "data_nasc": "2002-02-12",
-      "senha": "4124121222",
-      "chat": {
-        "contacts": [],
-        "groups": [],
-        "messages": {}
-      }
+      "email": "joaoblablabla@gmail.com",
+      "senha": "4124121222"
     },
     {
       "id": 2,

@@ -1,4 +1,7 @@
 // assets/js/cadastroo.js
+import { BlocosCarnaval } from "../../services/blocos-services.js";
+const blocoService = new BlocosCarnaval();
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form-cadastro');
     
@@ -69,15 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             // Enviar para o JSON Server
-            const response = await fetch('http://localhost:3000/blocos', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(novoBloco)
-            });
+            const response = await blocoService.novoBloco(novoBloco);
             
-            if (response.ok) {
+            if (response && response.id) {
                 alert('Bloco cadastrado com sucesso!');
                 form.reset();
             } else {
@@ -119,8 +116,7 @@ function validarCNPJ(cnpj) {
 // Função para verificar se email ou CNPJ já existem
 async function verificarBlocosExistentes(email, cnpj) {
     try {
-        const response = await fetch('http://localhost:3000/blocos');
-        const blocos = await response.json();
+        const blocos = await blocoService.getBlocos();
         
         let emailExistente = false;
         let cnpjExistente = false;
