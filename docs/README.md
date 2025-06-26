@@ -31,11 +31,11 @@ O carnaval é um dos símbolos do nosso país, são cinco dias em que o povo bra
 
 ## Problema
 
-Os principais problemas apontados envolvem a falta de segurança no carnaval, como furtos, brigas e assédios, mas há também diversas dúvidas sobre a organização dos blocos de carnaval, das forças de segurança e de saúde, e da infaestrutura da cidade para eventos grandes.
+Falando de forma mais local (atenderemos o carnaval da nossa cidade), a cidade de Belo Horizonte tem sido palco de um enorme crescimento na festa de rua com dados da prefeitura de Belo Horizonte mostrando um aumento de 220% no número de blocos cadastrados na prefeitura nos últimos 10 anos. Com esse aumento exponecial da festa, problemas habituais do carnaval como assédio, furtos, roubos, brigas, etc. se tornam mais proeminentes no contexto atual, por uma falta de capacidade do governo de gerir essa nova realidade da cidade. Além de problemas envolvendo a lei, o enorme aumento no fluxo de pessoas, tanto locais quanto turistas, acarreta na super lotação de alguns blocos o que desagrada pessoas que curtiam a festa antigamente. Por fim, esse aumento também torna a busca por blocos que agradam mais confusa, principalmente pela falta de uma plataforma moderna que centralize as informações dos blocos.
 
 ## Objetivos
 
-A finalidade do CarnaLivre é desenvolver um software para solucionar o problema de falta de informações e segurança sobre o carnaval de Belo Horizonte. Com base nisso, o sistema recebe informações sobre os blocos de carnaval, cadastradas pelos próprios organizadores, analisa e classifica essas informações em categorias, e permite que os usuários acessem essas informações. Além disso, o sistema contém uma seção de comentários para que os foliões compartilhem suas experiências e uma aba dedicada a denúncias, para casos mais graves, promovendo um ambiente mais seguro para todos.
+A finalidade do CarnaLivre é desenvolver uma aplicação web que busca ajudar a remediar os problemas no carnaval de Belo Horizonte. Nesse contexto criamos uma plataforma que centraliza todas as informações dos blocos, cadastradas pelos seus próprios organizadores, e apresentaremos elas com imagens, descrição, informações importantes e geolocalização, para facilitar os usuários a escolherem os blocos que mais os agrada. Além disso teremos avaliações de cada bloco para mostrar a opinião pública e ajudar os organizadores a melhorar seus eventos. Além disso, criamos uma aba para denúncia de crimes presenciados pelos cidadões e exibiremos essas informações em um mapa, para assim tentar mostrar aos usuários áreas da cidade que necessessitam mais cautela para aproveitar a festa. 
 
 ## Justificativa
 
@@ -43,7 +43,7 @@ A escolha do tema segurança no carnaval surgiu devido todos os participantes do
 
 ## Público-Alvo
 
-O CarnaLivre é voltado principalmente para dois públicos: os foliões, que buscam informações seguras e atualizadas sobre os blocos de carnaval, além de um canal para compartilhar experiências e fazer denúncias; e os organizadores de blocos, que precisam de uma plataforma prática para divulgar seus eventos, atrair mais público e colaborar com a organização e segurança da festa. Ambos se beneficiam da proposta do sistema, já que ele promove uma comunicação mais clara, fortalece a confiança entre participantes e ajuda a tornar o carnaval mais seguro e bem estruturado para todos.
+O CarnaLivre é voltado principalmente para dois públicos: os foliões, que nesse caso são todos os cidadões que aproveitam a festa mais democrática do mundo, sendo assim um público alvo bem abrangente englobando as mais diversas etnias, classes sociais, faixas etárias, etc., esses usuários utilizaram nossa aplicação visando justamente a facilidade no acesso a informações do carnaval; e os organizadores de blocos, que precisam de uma plataforma prática para divulgar seus eventos, atrair mais público e colaborar com a organização e segurança da festa. Ambos se beneficiam da proposta do sistema, já que ele promove uma comunicação mais clara, fortalece a confiança entre participantes e ajuda a tornar o carnaval mais seguro e bem estruturado para todos.
 
 # Product Discovery
 
@@ -702,6 +702,6 @@ As referências utilizadas no trabalho foram:
 > Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
 >
 > **Orientações**:
->
+>https://www.cnnbrasil.com.br/nacional/sudeste/mg/carnaval-em-bh-numero-de-blocos-cadastrados-cresce-3116-em-10-anos/
 > - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
 > - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
