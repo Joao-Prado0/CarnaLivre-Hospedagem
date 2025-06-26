@@ -346,38 +346,115 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 
 ## Estruturas de Dados
 
-Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
+Todas as estruturas descritas estão juntas no mesmo arquivo db.json. Estão funcionando como API Restful por meio do JSON-Server
 
-##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Blocos de Carnaval   
 
-Contatos da aplicação
+Cadastro de blocos de carnaval, com um único organizador atrelado a cada bloco, além de um objeto para imagens e descrição para cards.
 
 ```json
   {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
-  }
+      "id": 1,
+      "nome_bloco": "Filhos da PUC",
+      "descricao_geral": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi. fwokenfoiw  kjweg nfoiwengoiwq fiownqifnwo3ir rw3jfnwiqnfqoin3qkw fokweno",
+      "avaliacao": 4.5,
+      "data": "2026-02-13",
+      "publico": 20000,
+      "cep": "39442-218",
+      "endereco": "R. Pernambuco - Savassi, Belo Horizonte - MG, 39442-218, Brasil",
+      "faixa_etaria": "18+",
+      "lat": -19.9350252,
+      "lng": -43.9346582,
+      "estilo_musical": "Axé, Pop",
+      "organizador": [
+        {
+          "nome_org": "João P. Andrade",
+          "email_org": "joao@filhosdapuc.com",
+          "cnpj": "12.345.678/0001-00",
+          "senha": "senha123"
+        }
+      ],
+      "postagem": [
+        {
+          "descricao_card": "Samba no pé, tradição e muita energia no coração da Savassi.",
+          "imagens": [
+            {
+              "id": 1,
+              "src": "../assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 2,
+              "src": "../assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 3,
+              "src": "../assets/img/blocoexemplo.jpg"
+            },
+            {
+              "id": 4,
+              "src": "../assets/img/blocoexemplo.jpg"
+            }
+          ]
+        }
+      ]
+    },
   
 ```
 
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Usuários Foliões
 
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema
+Registro dos usuários do sistema utilizados para login e para o perfil do sistema.
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
-  }
+      "id": 2,
+      "nome_completo": "João Campos",
+      "login": "joaoo",
+      "email": "joaoao@gmail.com",
+      "data_nasc": "2002-02-12",
+      "senha": "12345",
+      "chat": {
+        "contacts": [],
+        "groups": [],
+        "messages": {}
+      }
+ },
+```
+
+##### Estrutura de Dados - Denúncias
+
+Cadastro de denúncias com descrição e localização para exibição em mapa interativo.
+
+```json
+  {
+      "id": 1,
+      "horario": "16:30",
+      "bloco": "Filhos da PUC",
+      "local": "R. Pernambuco - Savassi, Belo Horizonte - MG, 39442-218, Brasil",
+      "lat": -19.9350252,
+      "lng": -43.9346582,
+      "ocorrido": "assalto"
+    },
+```
+
+##### Estrutura de Dados - Comentários
+
+Cadastro de comentários atrelados a cada página de blocos, com objeto para armazenar a resposta do organizador bloco.
+
+```json
+  {
+      "id": 1,
+      "blocoId": 1,
+      "usuarioId": 1,
+      "texto": "Muito animado! A bateria estava perfeita e o clima super divertido.",
+      "avaliacao": 5,
+      "data": "2025-05-28T15:30:00",
+      "resposta": {
+        "texto": "Obrigado pelo feedback!",
+        "data": "2025-06-02T21:40:56.072Z",
+        "organizadorId": "99"
+      }
+ },
 ```
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
