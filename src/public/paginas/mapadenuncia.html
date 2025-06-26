@@ -60,7 +60,7 @@
       <ul class="p-1 mt-2 d-flex flex-column">
         <li><a href="mapablocos.html"><i class="fa-solid fa-house"></i></a></li>
         <li><a href="pesquisablocos.html"><i class="fa-solid fa-masks-theater"></i></a></li>
-        <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        <li><a href="editusuario.html"><i class="fa-solid fa-user"></i></a></li>
         <li><a href="chat.html"><i class="fa-solid fa-message"></i></a></li>
         <li class="active"><a href="mapadenuncia.html"><i class="fa-solid fa-flag"></i></a></li>
       </ul>
@@ -109,14 +109,24 @@
   integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
 <!-- Script do mapa de denúncias -->
-<script src="../assets/js/mapadenuncia.js"></script>
+<script type="module" src="../assets/js/mapadenuncia.js"></script>
 
 <!-- Script fixo -->
- <script src="../assets/js/clima_logout.js"></script>
+ <script type="module" src="../assets/js/clima_logout.js"></script>
 
 <!-- Google Maps API -->
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVHh_LqyOkwnbqaUx4RtWipJkddswsiAQ&callback=initMap">
+<script>
+  function loadGoogleMaps() {
+    const script = document.createElement('script');
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVHh_LqyOkwnbqaUx4RtWipJkddswsiAQ&libraries=places,geometry';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+    script.onload = () => {
+      if (window.initMap) window.initMap();
+    };
+  }
+  document.addEventListener('DOMContentLoaded', loadGoogleMaps);
 </script>
 </body>
 </html>

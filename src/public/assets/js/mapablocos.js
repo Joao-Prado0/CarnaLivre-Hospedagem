@@ -73,8 +73,7 @@ function initMap() {
 
 async function carregarBlocos() {
   try {
-    const response = await blocoService.getBlocos();
-    const dados = await response.json();
+    const dados = await blocoService.getBlocos();
 
     for (const bloco of dados) {
       if (bloco.lat && bloco.lng) {
@@ -203,3 +202,5 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+window.initMap = initMap;

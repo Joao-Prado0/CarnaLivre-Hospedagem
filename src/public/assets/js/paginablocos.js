@@ -217,10 +217,10 @@ $(document).ready(function () {
       $('#btn-editar').show();
 
       $('#btn-foto').click(function () {
-        window.location.href = `${url}/PedroHenrique/addimagem.html`;
+        window.location.href = "addimagem.html";
       })
       $('#btn-editar').click(function () {
-        window.location.href = `${url}/LucasFranco/infoblocos.html`;
+        window.location.href = "editblocos.html";
       })
     } else {
       $('#btn-compartilhar').show();

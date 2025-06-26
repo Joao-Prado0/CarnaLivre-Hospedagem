@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nome_bloco": "Filhos da PUC",
-      "descricao_geral": "O Bloco Filhos da PUC é composto por uma bateria vibrante formada por estudantes universitários. Com muita alegria e irreverência, o bloco desfila pelas ruas da Savassi. fwokenfoiw  kjweg nfoiwengoiwq fiownqifnwo3ir rw3jfnwiqnfqoin3qkw fokweno",
+      "descricao_geral": "O Bloco Filhos da PUC é uma das tradições mais animadas do Carnaval de Belo Horizonte, formado por uma bateria vibrante e energética composta por estudantes universitários. Com muita alegria, irreverência e espírito jovem, o bloco desfila pelas charmosas ruas do bairro Savassi, levando um repertório contagiante que mistura marchinhas clássicas com hits atuais. Conhecido por sua atmosfera descontraída e acolhedora, o bloco atrai tanto alunos da PUC quanto moradores da região e turistas, criando uma verdadeira festa democrática nas ruas. A cada ano, os participantes surpreendem com fantasias criativas e performances espontâneas que celebram a liberdade e a diversão típicas do carnaval.",
       "avaliacao": 4.5,
       "data": "2026-02-13",
       "publico": 20000,
@@ -720,7 +720,7 @@
       "local": "R. Pernambuco - Savassi, Belo Horizonte - MG, 39442-218, Brasil",
       "lat": -19.9350252,
       "lng": -43.9346582,
-      "ocorrido": "assalto"
+      "ocorrido": "Assalto"
     },
     {
       "horario": "16:30",
@@ -728,7 +728,7 @@
       "local": "R. Sergipe - Savassi, Belo Horizonte - MG, 39445-299, Brasil",
       "lat": -19.9345175,
       "lng": -43.9373307,
-      "ocorrido": "muitas brigas",
+      "ocorrido": "Muitas brigas",
       "id": 2
     },
     {
@@ -737,7 +737,7 @@
       "local": "Av. Amazonas - Centro, Belo Horizonte - MG, Brasil",
       "lat": -19.9211391,
       "lng": -43.9423594,
-      "ocorrido": "assalto",
+      "ocorrido": "Assalto",
       "id": 3
     }
   ],

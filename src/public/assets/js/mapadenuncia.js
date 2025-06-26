@@ -53,8 +53,7 @@ function initMap() {
 
 async function carregarDenuncias() {
   try {
-    const response = await denunciaService.getDenuncias();
-    const dados = await response.json();
+    const dados = await denunciaService.getDenuncias();
 
     for (const denuncia of dados) {
       if (denuncia.lat && denuncia.lng) {
@@ -81,7 +80,7 @@ async function carregarDenuncias() {
         marker.addListener("click", () => {
           infoWindow.setContent(`
             <div style="max-width:300px">
-              <h3 style="margin-top:0; color:#f57c00;">${denuncia.titulo}</h3>
+              <h3 style="margin-top:0; color:#f57c00;">${denuncia.ocorrido}</h3>
               <p><strong>📝 Descrição:</strong> ${denuncia.descricao}</p>
               <p><strong>👤 Denunciante:</strong> ${denuncia.nome || "Anônimo"}</p>
               <p><strong>📅 Data:</strong> ${new Date(denuncia.data).toLocaleString("pt-BR")}</p>
@@ -126,5 +125,8 @@ style.textContent = `
 document.head.appendChild(style);
 
 function abrirFormularioDenuncia() {
-  window.location.href = '/LucasFranco/denuncia.html';;
+  window.location.href = 'denuncia.html';;
 }
+
+window.abrirFormularioDenuncia = abrirFormularioDenuncia;
+window.initMap = initMap;
