@@ -336,7 +336,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Cadastro](docs/files/printCadastroFoliao.png)
+![Cadastro](files/printCadastroFoliao.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -349,7 +349,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Cadastro](docs/files/printTipoCadastro.png)
+![Cadastro](files/printTipoCadastro.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -362,7 +362,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printCadastroOrganizador.png)
+![Tela de Funcionalidade](files/printCadastroOrganizador.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -375,7 +375,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printLogin.png)
+![Tela de Funcionalidade](files/printLogin.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -388,7 +388,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printMapaBlocos.png)
+![Tela de Funcionalidade](files/printMapaBlocos.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -401,7 +401,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printMapaDenuncias.png)
+![Tela de Funcionalidade](files/printMapaDenuncias.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -414,7 +414,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printCriacaoDenuncia.png)
+![Tela de Funcionalidade](files/printCriacaoDenuncia.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -427,7 +427,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printPesquisaBlocos.png)
+![Tela de Funcionalidade](files/printPesquisaBlocos.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -440,7 +440,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printPesquisaBlocos2.png)
+![Tela de Funcionalidade](files/printPesquisaBlocos2.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -453,7 +453,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printLogout&APIclima.png)
+![Tela de Funcionalidade](files/printLogout&APIclima.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -466,7 +466,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printPaginaBlocos.png)
+![Tela de Funcionalidade](files/printPaginaBlocos.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -479,7 +479,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printAbaComentariosFoliao.png)
+![Tela de Funcionalidade](files/printAbaComentariosFoliao.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -492,7 +492,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printAbaComentariosOrg.png)
+![Tela de Funcionalidade](files/printAbaComentariosOrg.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -505,7 +505,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printAddImagem.png)
+![Tela de Funcionalidade](files/printAddImagem.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -518,7 +518,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printEditBloco.png)
+![Tela de Funcionalidade](files/printEditBloco.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
@@ -531,7 +531,7 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](docs/files/printEdicaoUsuarioComum.png)
+![Tela de Funcionalidade](files/printEdicaoUsuarioComum.png)
 
 ##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
 
