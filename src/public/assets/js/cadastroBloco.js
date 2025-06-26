@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response && response.id) {
                 alert('Bloco cadastrado com sucesso!');
                 form.reset();
+                window.location.href = 'login.html';
             } else {
                 throw new Error('Erro ao cadastrar bloco');
             }

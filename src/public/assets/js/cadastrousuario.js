@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             alert(`Cadastro realizado com sucesso! ID gerado: ${usuario.id}`);
             formCadastro.reset();
+            window.location.href = 'login.html';
 
         } catch (error) {
             console.error('Erro:', error);

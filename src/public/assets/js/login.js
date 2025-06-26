@@ -103,10 +103,10 @@ function processaFormLogin(event) {
         usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
 
         if(usuarioCorrente.tipo === 'foliao'){
-            window.location.href = '../DaviMartins/mapablocos.html';
+            window.location.href = 'mapablocos.html';
         }
         else{
-            window.location.href = '../JoaoPrado/paginablocos.html';
+            window.location.href = 'paginablocos.html';
         }
     }
     else { // Se login falhou, avisa ao usuário
