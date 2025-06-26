@@ -1,3 +1,6 @@
+import { BlocosCarnaval } from "../../services/blocos-services.js";
+const blocoService = new BlocosCarnaval();
+
 // Mapa dos blocos com geolocalização, zoom automático e pesquisa
 let map;
 let blocosMarkers = {};
@@ -70,7 +73,7 @@ function initMap() {
 
 async function carregarBlocos() {
   try {
-    const response = await fetch("http://localhost:3000/blocos");
+    const response = await blocoService.getBlocos();
     const dados = await response.json();
 
     for (const bloco of dados) {

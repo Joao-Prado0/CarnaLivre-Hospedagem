@@ -1,3 +1,6 @@
+import { Denuncias } from "../../services/blocos-services.js";
+const denunciaService = new Denuncias();
+
 let map;
 let denunciasMarkers = {};
 let infoWindow;
@@ -50,7 +53,7 @@ function initMap() {
 
 async function carregarDenuncias() {
   try {
-    const response = await fetch("http://localhost:3000/denuncias");
+    const response = await denunciaService.getDenuncias();
     const dados = await response.json();
 
     for (const denuncia of dados) {
