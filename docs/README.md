@@ -336,6 +336,214 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
+![Cadastro](docs/files/printCadastroFoliao.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Cadastro](docs/files/printTipoCadastro.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printCadastroOrganizador.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printLogin.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printMapaBlocos.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printMapaDenuncias.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printCriacaoDenuncia.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printPesquisaBlocos.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printPesquisaBlocos2.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printLogout&APIclima.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printPaginaBlocos.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printAbaComentariosFoliao.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printAbaComentariosOrg.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printAddImagem.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printEditBloco.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](docs/files/printEdicaoUsuarioComum.png)
+
+##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Acesse o menu principal e escolha a opção Cadastros
+  * Em seguida, escolha a opção Contatos
+* **Tela da funcionalidade**:
+
 ![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
