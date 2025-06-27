@@ -261,13 +261,7 @@ Tela de informações do bloco, permite que o organizador acesse e altere as con
 
 ### Protótipo Interativo
 
-**✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
-
-✅ [Protótipo Interativo (MarvelApp)](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Um protótipo interativo apresenta o projeto de interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse lidando com o software pronto. Utilize as mesmas ferramentas de construção de wireframes para montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
+✅ [Protótipo Interativo (Figma)](https://www.figma.com/proto/lIcNjqnRvlVUjhwUDng2L3/fluxo-de-telas?node-id=0-1&t=YJlqvOI4P2aIrHGR-1)
 
 # Metodologia
 
@@ -282,7 +276,7 @@ API de clima
 | Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010200-hermes_sentry |
 | Protótipo do site         | Figma      | https://www.figma.com/design/lIcNjqnRvlVUjhwUDng2L3/fluxo-de-telas?node-id=0-1&p=f&t=jGkhIGoeICWzf4sn-0 |
 | Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
+| Protótipo Interativo       | Figma  | https://www.figma.com/proto/lIcNjqnRvlVUjhwUDng2L3/fluxo-de-telas?node-id=0-1&t=YJlqvOI4P2aIrHGR-1   |
 |                             |            |                                                    |
 
 ## Gerenciamento do Projeto
