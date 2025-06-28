@@ -30,6 +30,7 @@ function initAutocomplete() {
 
     }
 }
+window.initAutocomplete = initAutocomplete;
 
 async function carregarBlocos(id) {
     try {

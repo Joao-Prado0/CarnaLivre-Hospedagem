@@ -150,6 +150,7 @@ function loginUser(login, senha) {
                 usuarioCorrente.tipo = 'organizador';
 
                 // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
+                sessionStorage.setItem('selectedBlocoId', JSON.stringify(bloco.id));
                 sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
 
                 // Retorna true para usuário encontrado
