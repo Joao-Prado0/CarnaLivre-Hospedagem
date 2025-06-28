@@ -715,7 +715,7 @@
   "denuncias": [
     {
       "id": 1,
-      "horario": "16:30",
+      "dataHora": "2025-03-15T18:50",
       "bloco": "Filhos da PUC",
       "local": "R. Pernambuco - Savassi, Belo Horizonte - MG, 39442-218, Brasil",
       "lat": -19.9350252,
@@ -723,7 +723,7 @@
       "ocorrido": "Assalto"
     },
     {
-      "horario": "16:30",
+      "dataHora": "2025-03-15T14:00",
       "bloco": "Filhos da PUC",
       "local": "R. Sergipe - Savassi, Belo Horizonte - MG, 39445-299, Brasil",
       "lat": -19.9345175,
@@ -732,13 +732,22 @@
       "id": 2
     },
     {
-      "horario": "18:30",
+      "dataHora": "2025-03-26T18:30",
       "bloco": "Bloco do Vinil",
       "local": "Av. Amazonas - Centro, Belo Horizonte - MG, Brasil",
       "lat": -19.9211391,
       "lng": -43.9423594,
       "ocorrido": "Assalto",
       "id": 3
+    },
+    {
+      "dataHora": "2025-04-03T16:30",
+      "bloco": "Unidos da Savassi",
+      "local": "Savassi, Belo Horizonte - MG, Brasil",
+      "lat": -19.936238,
+      "lng": -43.9322763,
+      "ocorrido": "muito assalto e briga",
+      "id": 4
     }
   ],
   "comentarios": [
