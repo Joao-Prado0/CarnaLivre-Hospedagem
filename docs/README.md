@@ -319,67 +319,54 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 Esta seção apresenta as funcionalidades da solução.Info
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 1 - Cadastro de Foliões 
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite a criação de usuários comuns dentro da nossa aplicação. Os dados são salvos no nosso db.json.
 
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Estrutura de dados:** [Contatos](src/data/db.json/usuarios)
 * **Instruções de acesso:**
-  * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Abra o site na tela principal e clique em login no canto superior direito. (será encaminhado para página de login)
+  * Na página de login, selecione o botão "criar conta". Duas opções apareceram selecione o botão "folião"
+  * Crie uma conta com todos os dados exigidos. 
 * **Tela da funcionalidade**:
 
 ![Cadastro](files/printCadastroFoliao.png)
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 2 - Cadastro de Organizadores de blocos 
 
 Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 
 * **Estrutura de dados:** [Contatos](#ti_ed_contatos)
 * **Instruções de acesso:**
-  * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
-* **Tela da funcionalidade**:
-
-![Cadastro](files/printTipoCadastro.png)
-
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
-
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
-
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
-* **Instruções de acesso:**
-  * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Abra o site na tela principal e clique em login no canto superior direito. (será encaminhado para página de login)
+  * Na página de login, selecione o botão "criar conta". Duas opções apareceram selecione o botão "organizador"
+  * Crie uma conta com todos os dados solicitados.
 * **Tela da funcionalidade**:
 
 ![Tela de Funcionalidade](files/printCadastroOrganizador.png)
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 3 - Login do usuário 
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite o usuário logar em sua conta e iniciar o uso do restante do site (antes fica bloqueado). Os dados o usuário logado são passados pelo sessionStorage para as outras páginas.
 
 * **Estrutura de dados:** [Contatos](#ti_ed_contatos)
 * **Instruções de acesso:**
-  * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Abra o site na tela principal e clique em login no canto superior direito. (será encaminhado para página de login)
+  * Na página de login, preencha os dados solicitados e aperte enter para continuar
+  * Caso não tenha conta ou não tenha os dados de uma conta existente será necessária a criação de uma nova, como descrito nas outras funcionalidades.
 * **Tela da funcionalidade**:
 
 ![Tela de Funcionalidade](files/printLogin.png)
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 4 - Mapa de Blocos
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite a vizualização dinâmica da localização dos blocos cadastrados no site através da API do Google Maps inserida na nossa aplicação.
 
 * **Estrutura de dados:** [Contatos](#ti_ed_contatos)
 * **Instruções de acesso:**
-  * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Garanta que o login foi feito.
+  * Acessar a página do mapa clicando no icone de "casa" na barra lateral da página.
+  * Na página além de somente vizualizar pode se interagir com o mapa de duas formas: Clicar nos marcadores e acessar mais informações dos blcos, além de escrever o nome do bloco na barra de pesquisa filtrando assim os blocos que aparecem no maoa.
 * **Tela da funcionalidade**:
 
 ![Tela de Funcionalidade](files/printMapaBlocos.png)
