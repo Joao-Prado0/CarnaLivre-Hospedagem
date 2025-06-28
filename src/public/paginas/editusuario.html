@@ -19,32 +19,44 @@
 
 <body>
   <header class="cabecalho">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../assets/img/Logo.png" alt="Bootstrap" width="80" height="80">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/Logo.png" alt="Bootstrap" width="80" height="80">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <ul id="itens-lateral">
+                    <li class="me-3">
+                        <div id="circulo-profile" class="dropdown">
+                            <button class=" btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" id="btn_logout">Efetuar Logout</button></li>
+                            </ul>
+                        </div>
 
-        </div>
-        <ul id="itens-lateral">
-          <li class="">
-            <a class="" aria-current="" href="#">
-              <i class="fa-solid fa-sun"></i>
-            </a>
-          </li>
-          <li class="">
-            <a class="" aria-current="" href="#">
-              <div id="circulo-profile">
-                <i class="fa-solid fa-user"></i>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-      </div>
-    </nav>
-  </header>
+                    </li>
+                    <li class="me-3">
+                        <div class="row">
+                            <div class="col text-white"><i class="clima fa-solid fa-sun"></i><span id="addTemp" class="ms-2"></span></div>
+                        </div>
+                        <div class="row">
+                            <div id="addDesc" class="col text-white"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
 
   <main>
     <aside class="barra-lateral">
@@ -60,12 +72,12 @@
 
     </aside>
 
-    <main id="usuario-container"
+    <div id="usuario-container"
       style="padding: 20px; background: white; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
       <h2 style="color: teal; margin-bottom: 20px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">Usuário</h2>
 
-      <div
-        style="display: inline-block; background: #f2f2f2; padding: 20px; border-radius: 10px; width: 300px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+      <div class="user-container"
+        style="display: inline-block; background: #f2f2f2; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;">
         <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Foto de perfil" width="100"
           style="transition: transform 0.3s ease; cursor: pointer;">
         <br><br>
@@ -132,11 +144,10 @@
         </form>
       </div>
 
-    </main>
+    </div>
     <div class="d-flex">
       <button id="meuBotao" class="btn btn-danger  btn-animado ms-auto" href="login">Sair</button>
     </div>
-
     <div id="notificacao" class="oculto">
       <svg class="icone" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" fill="#4CAF50" />
@@ -144,6 +155,7 @@
       </svg>
       <span>Dados atualizados com sucesso!</span>
     </div>
+    </main>
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
     <script type="module" src="../assets/js/editusuario.js"></script>

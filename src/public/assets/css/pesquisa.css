@@ -27,6 +27,7 @@ body {
 
 main {
     flex-grow: 1;
+    margin-top: 10px;
     margin-left: 90px;
     min-height: 450px;
     background-color: rgb(251, 245, 245);
@@ -353,3 +354,29 @@ nav {
 }
 
 /* Filtros - Fim */
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+    }
+    .barra-lateral {
+        display: none;
+    }
+    #brpesquisa {
+        display: none;
+    }
+    #container-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .card-blocos {
+        width: 100%;
+        height: auto;
+    }
+    .card-conteudo p {
+        font-size: 100%;
+    }
+    .cabecalho .d-flex {
+        display: none !important;
+    }
+}

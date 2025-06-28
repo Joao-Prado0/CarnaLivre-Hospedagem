@@ -7,6 +7,9 @@
 }
 body{
     background-color: #0A8B9A !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 main{
     background-color: white;
@@ -16,6 +19,7 @@ main{
     margin-bottom: 0px;
     padding: 10px;
     border-radius: 5px 5px 0px 0px;
+    flex-grow: 1;
 }
 
 /* Cabeçalho - Inicio */
@@ -104,7 +108,7 @@ nav {
     position: absolute;
     top: 80px;
     left: 0;
-    bottom: 200px;
+    bottom: 0;
 }
 .bl-icones{
     height: 60%;
@@ -154,7 +158,6 @@ nav {
     margin-top: auto;
     width: 100%;
     position: relative;
-    bottom: 0;
 }
 
 .footer-content {
@@ -223,11 +226,15 @@ nav {
 }
 
 textarea.form-control {
+    min-height: 90px !important;
     max-height: 150px;
 }
 
-#formInfo {
-    margin-bottom: 20px;
+#formDenuncia{
+    width: 55%;
+}
+#formDenuncia input, .blocoDenuncia{
+    height: 44px;
 }
 
 .btn-verde {
@@ -243,26 +250,10 @@ textarea.form-control {
     border-color: #076670;
 }
 
-input {
-    height: 44px;
-}
-
-main {
-    height: 430px
-}
-
-.rodape {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
 #blocosDropdown .dropdown-item:hover {
     background-color: #f0f0f0;
     color: black;
 }
-
 
 #dropdownEstilos {
     color: #495057;
@@ -297,49 +288,16 @@ main {
     cursor: pointer;
 }
 
-/* Responsividade Mobile - Inicio */
-@media screen and (max-width:600px) {
-    h2 {
-        margin-bottom: 10px !important;
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
     }
 
-    textarea.form-control {
-        height: 50px !important;
+    #formDenuncia {
+        width: 100%;
     }
 
-    button {
-        margin-bottom: 30px;
-    }
-
-    .principal {
-        height: 600px !important;
-    }
-
-    form {
-        height: fit-content;
-    }
-
-    .rodape {
-        position: relative;
-        bottom: 0;
-        margin-top: 120px;
-    }
-}
-
-/* Responsividade Mobile - Fim */
-
-@media (max-height: 650px) {
-    textarea.form-control {
-        height: 50px !important;
-    }
-
-    .rodape {
-        position: relative;
-        bottom: 0;
-        margin-top: 120px;
-    }
-
-    .principal {
-        height: calc(200vh + 200px);
+    .conteudo h2 {
+        font-size: 1.5rem;
     }
 }

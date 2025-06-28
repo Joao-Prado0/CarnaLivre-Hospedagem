@@ -9,6 +9,9 @@
 body {
     background-color: #0A8B9A !important;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
@@ -19,6 +22,7 @@ main {
     margin-bottom: 0px;
     padding: 10px;
     border-radius: 5px 5px 0px 0px;
+    flex-grow: 1;
 }
 
 /* Cabeçalho - Inicio */
@@ -120,7 +124,7 @@ nav {
     position: absolute;
     top: 80px;
     left: 0;
-    bottom: 200px;
+    bottom: 0;
 }
 
 .bl-icones {
@@ -175,8 +179,6 @@ nav {
     padding: 0.8rem 0;
     margin-top: auto;
     width: 100%;
-    position: relative;
-    bottom: 0;
 }
 
 .footer-content {
@@ -240,6 +242,7 @@ nav {
 #container-superior {
     position: relative;
     height: 60px;
+    margin-bottom: 1rem;
 }
 
 #container-superior h1 {
@@ -317,6 +320,7 @@ nav {
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 6px;
+    min-height: 250px;
 }
 
 #texto-descricao {
@@ -417,3 +421,64 @@ nav {
     color: goldenrod;
 }
 /*-Fim comentários*/
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .barra-lateral {
+        display: none;
+    }
+
+    #container-superior {
+        position: static;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    #container-superior h1 {
+        position: static;
+        transform: none;
+        line-height: 1.2;
+        font-size: 1.8rem;
+    }
+
+    #botoes-direita {
+        position: static;
+        transform: none;
+    }
+    
+    #container-carrossel {
+        width: 100%;
+    }
+
+    #container-infos {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    #comentario-novo .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #comentario-novo .col-6, #comentario-novo .col-auto {
+        width: 100%;
+    }
+
+    #comentario-novo button {
+        margin-top: 10px;
+        width: 80%;
+    }
+
+    .form-control{
+        width: 80% !important;
+    }
+}
