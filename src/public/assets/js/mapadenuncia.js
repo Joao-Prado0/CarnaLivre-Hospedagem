@@ -80,10 +80,9 @@ async function carregarDenuncias() {
         marker.addListener("click", () => {
           infoWindow.setContent(`
             <div style="max-width:300px">
-              <h3 style="margin-top:0; color:#f57c00;">${denuncia.ocorrido}</h3>
-              <p><strong>📝 Descrição:</strong> ${denuncia.descricao}</p>
-              <p><strong>👤 Denunciante:</strong> ${denuncia.nome || "Anônimo"}</p>
-              <p><strong>📅 Data:</strong> ${new Date(denuncia.data).toLocaleString("pt-BR")}</p>
+              <h3 style="margin-top:0; color:red;">${denuncia.ocorrido}</h3>
+              <p><strong>🗓️ Data:</strong> ${new Date(denuncia.dataHora).toLocaleDateString('pt-BR').slice(0, 8)} às ${new Date(denuncia.dataHora).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}</p>
+              <p><strong>📌 Bloco:</strong> ${denuncia.bloco}</p>
             </div>
           `);
           infoWindow.open(map, marker);
