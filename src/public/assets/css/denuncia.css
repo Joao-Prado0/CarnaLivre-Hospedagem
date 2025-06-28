@@ -253,3 +253,9 @@ textarea.form-control{
 main{
     height: calc(100vh - 220px - 86px);
 }
+
+@media (max-width: 768px) {
+    form{
+        width: 90% !important;
+    }
+}

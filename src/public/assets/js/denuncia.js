@@ -71,7 +71,7 @@ $(document).ready(async function () {
         }
 
         const dadosDenuncia = {
-            horario: $('input[name="horario"]').val(),
+            dataHora: $('input[name="dataHora"]').val(),
             bloco: $('.blocoDenuncia option:selected').text(),
             local: enderecoCompleto,
             lat: latitude,
