@@ -51,4 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Associa a função de logout ao botão
     document.getElementById('btn_logout').addEventListener('click', logoutUser);
     carregarClima();
+
+    if(usuarioCorrente.tipo == 'organizador'){
+        const iconeMensagem = document.querySelector('.fa-message');
+        const itemDaLista = iconeMensagem.closest('li');
+        itemDaLista.style.display = 'none';
+    }
 })
