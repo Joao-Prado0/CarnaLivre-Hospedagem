@@ -71,20 +71,15 @@
                 <div class="sidebar-header">
                     <h3>Contatos</h3>
                     <button id="createGroupBtn" class="btn btn-sm btn-light">
-                        <i class="fa-solid fa-plus"></i> Grupo
+                        <i class="fa-solid fa-plus"></i> Adicionar
                     </button>
                 </div>
-                <ul class="contact-list" id="contactList">
-                    <li class="contact active">João</li>
-                    <li class="contact">Pedro</li>
-                    <li class="contact">Luiz</li>
-                    <li class="contact">Henrique</li>
-                </ul>
+                <ul class="contact-list" id="contactList"></ul>
             </div>
 
             <div class="chat-container">
                 <div class="chat-header">
-                    <h3 id="currentChatName">João</h3>
+                    <h3 id="currentChatName">Nenhum contato</h3>
                 </div>
                 <div class="chat-box" id="chatBox">
                     <!-- Mensagens serão carregadas aqui -->
@@ -127,6 +122,38 @@
     </footer>
 
     <!-- Modal para criar grupo -->
+     <div class="modal fade" id="choiceModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">O que você deseja adicionar?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Você deseja adicionar um contato individual ou criar um novo grupo?</p>
+                    <button type="button" class="btn btn-primary" id="btnGoToContact">Adicionar Contato</button>
+                    <button type="button" class="btn btn-success" id="btnGoToGroup">Criar Grupo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addContactModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Adicionar Novo Contato</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Clique no nome do usuário para adicioná-lo à sua lista de contatos.</p>
+                    <ul class="list-group" id="addContactUserList">
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="groupModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -155,7 +182,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-    <script src="../assets/js/chat.js"></script>
+    <script type="module" src="../assets/js/chat.js"></script>
     <script src="../assets/js/clima_logout.js"></script>
 </body>
 </html>

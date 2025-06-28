@@ -1,125 +1,140 @@
-class ChatSystem {
+import { Usuarios } from "../../services/blocos-services.js";
+
+class ChatApp {
     constructor() {
-        this.dbPath = 'db/dbchat.json';
-        this.currentChat = null;
-        this.isGroupChat = false;
-        this.chatData = {
-            contacts: ["João", "Pedro", "Luiz", "Henrique"],
-            groups: [],
-            messages: {
-                "João": [
-                    { sender: "João", text: "Olá! Como você está?", time: "10:00" }
-                ]
-            }
-        };
+        this.usuarioService = new Usuarios();
 
-        this.initElements();
-        this.initEvents();
-        this.loadChatData();
-    }
+        this.currentUser = null;
+        this.currentChatName = null;
+        this.allUsers = [];
 
-    initElements() {
         this.elements = {
             contactList: document.getElementById('contactList'),
             chatBox: document.getElementById('chatBox'),
             currentChatName: document.getElementById('currentChatName'),
             messageInput: document.getElementById('messageInput'),
             sendButton: document.getElementById('sendButton'),
-            createGroupBtn: document.getElementById('createGroupBtn'),
-            groupModal: new bootstrap.Modal('#groupModal'),
+
+            addContactOrGroupBtn: document.getElementById('createGroupBtn'),
+
+            choiceModal: new bootstrap.Modal(document.getElementById('choiceModal')),
+            btnGoToContact: document.getElementById('btnGoToContact'),
+            btnGoToGroup: document.getElementById('btnGoToGroup'),
+
+            addContactModal: new bootstrap.Modal(document.getElementById('addContactModal')),
+            addContactUserList: document.getElementById('addContactUserList'),
+
+            groupModal: new bootstrap.Modal(document.getElementById('groupModal')),
             groupNameInput: document.getElementById('groupName'),
             groupMemberList: document.getElementById('groupMemberList'),
             confirmGroupBtn: document.getElementById('confirmGroupBtn')
         };
 
-        // Desabilita o botão enviar inicialmente
-        this.elements.sendButton.disabled = true;
+        this.init();
     }
 
-    initEvents() {
-        this.elements.sendButton.addEventListener('click', () => this.sendMessage());
+    async init() {
+        this.setupEventListeners();
+        const usuarioCorrente = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
 
+        if (usuarioCorrente && usuarioCorrente.tipo === 'foliao' && usuarioCorrente.id) {
+            try {
+                this.currentUser = await this.usuarioService.getUsuario(usuarioCorrente.id);
+                this.allUsers = await this.usuarioService.getUsuarios();
+
+                if (!this.currentUser.chat) {
+                    this.currentUser.chat = { contacts: [], groups: [], messages: {} };
+                }
+
+                this.renderContactList();
+                this.selectInitialChat();
+
+            } catch (error) {
+                console.error("Erro ao carregar dados do usuário:", error);
+                alert("Não foi possível carregar os dados do chat.");
+            }
+        } else {
+            alert("Usuário não autenticado. Redirecionando para o login.");
+            window.location.href = 'login.html';
+        }
+    }
+
+    setupEventListeners() {
+        this.elements.sendButton.addEventListener('click', () => this.sendMessage());
         this.elements.messageInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') this.sendMessage();
         });
 
-        // Habilita/desabilita botão enviar conforme o input de texto
-        this.elements.messageInput.addEventListener('input', () => {
-            const text = this.elements.messageInput.value.trim();
-            this.elements.sendButton.disabled = text.length === 0;
-        });
+        this.elements.addContactOrGroupBtn.addEventListener('click', () => this.elements.choiceModal.show());
 
-        this.elements.createGroupBtn.addEventListener('click', () => this.showGroupModal());
+        this.elements.btnGoToContact.addEventListener('click', () => this.showAddContactModal());
+        this.elements.btnGoToGroup.addEventListener('click', () => this.showCreateGroupModal());
+
         this.elements.confirmGroupBtn.addEventListener('click', () => this.createGroup());
     }
 
-    async loadChatData() {
-        try {
-            const response = await fetch(this.dbPath);
-            if (!response.ok) throw new Error('Erro ao carregar dados');
-            this.chatData = await response.json();
-            this.updateContactList();
-            if (this.chatData.contacts.length > 0) {
-                this.openChat(this.chatData.contacts[0], false);
-            }
-        } catch (error) {
-            console.error("Erro ao carregar dbchat.json:", error);
-            this.updateContactList();
-        }
-    }
-
-    async saveChatData() {
-        try {
-            localStorage.setItem('chatDataBackup', JSON.stringify(this.chatData));
-        } catch (error) {
-            console.error("Erro ao salvar dados:", error);
-        }
-    }
-
-    updateContactList() {
+    renderContactList() {
         this.elements.contactList.innerHTML = '';
-        
-        this.chatData.contacts.forEach(contact => {
-            const li = document.createElement('li');
-            li.className = 'contact' + (this.currentChat === contact && !this.isGroupChat ? ' active' : '');
-            li.textContent = contact;
-            li.addEventListener('click', () => this.openChat(contact, false));
+
+        this.currentUser.chat.contacts.forEach(contactName => {
+            const li = this.createChatItem(contactName, false);
             this.elements.contactList.appendChild(li);
         });
-        
-        this.chatData.groups.forEach(group => {
-            const li = document.createElement('li');
-            li.className = 'contact' + (this.currentChat === group.name && this.isGroupChat ? ' active' : '');
-            li.innerHTML = `<i class="fa-solid fa-users"></i> ${group.name}`;
-            li.addEventListener('click', () => this.openChat(group.name, true));
+
+        this.currentUser.chat.groups.forEach(group => {
+            const li = this.createChatItem(group.name, true);
             this.elements.contactList.appendChild(li);
         });
     }
 
-    openChat(name, isGroup) {
-        this.currentChat = name;
-        this.isGroupChat = isGroup;
-        this.elements.currentChatName.textContent = name;
-        this.loadMessages();
+    createChatItem(name, isGroup) {
+        const li = document.createElement('li');
+        li.className = 'contact';
+        li.innerHTML = isGroup ? `<i class="fa-solid fa-users me-2"></i>${name}` : name;
+        li.addEventListener('click', () => this.openChat(name));
+        return li;
     }
 
-    loadMessages() {
-        this.elements.chatBox.innerHTML = '';
-        
-        if (!this.chatData.messages[this.currentChat]) {
-            this.chatData.messages[this.currentChat] = [];
+    selectInitialChat() {
+        const firstContact = this.currentUser.chat.contacts[0] || this.currentUser.chat.groups[0]?.name;
+        if (firstContact) {
+            this.openChat(firstContact);
+        } else {
+            this.elements.currentChatName.textContent = "Nenhum contato";
+            this.elements.chatBox.innerHTML = '<p class="text-center text-muted">Adicione contatos ou crie grupos para começar.</p>';
         }
-        
-        this.chatData.messages[this.currentChat].forEach(msg => {
-            const isReceived = msg.sender !== 'Você' && msg.sender !== this.currentChat;
-            this.addMessageToChat(msg.sender, msg.text, msg.time, isReceived);
+    }
+
+    openChat(chatName) {
+        this.currentChatName = chatName;
+        this.elements.currentChatName.textContent = chatName;
+
+        document.querySelectorAll('.contact-list .contact').forEach(el => {
+            el.classList.remove('active');
+            if (el.textContent.trim() === chatName) {
+                el.classList.add('active');
+            }
+        });
+
+        this.renderMessages();
+    }
+
+    renderMessages() {
+        this.elements.chatBox.innerHTML = '';
+        const messages = this.currentUser.chat.messages[this.currentChatName] || [];
+
+        messages.forEach(msg => {
+            this.addMessageToUI(msg.sender, msg.text, msg.time);
         });
     }
 
-    addMessageToChat(sender, text, time, isReceived) {
+    addMessageToUI(sender, text, time) {
         const messageDiv = document.createElement('div');
-        messageDiv.className = `message ${isReceived ? 'received' : 'sent'}`;
+        const messageClass = sender === this.currentUser.nome_completo ? 'sent' : 'received';
+
+        messageDiv.className = `message ${messageClass}`;
         messageDiv.innerHTML = `
+            ${sender !== this.currentUser.nome_completo ? `<strong>${sender}</strong>` : ''}
             <p>${text}</p>
             <span class="time">${time}</span>
         `;
@@ -129,35 +144,86 @@ class ChatSystem {
 
     async sendMessage() {
         const text = this.elements.messageInput.value.trim();
-        if (!text || !this.currentChat) return;
-        
+        if (!text || !this.currentChatName) return;
+
         const now = new Date();
-        const time = `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`;
-        
-        if (!this.chatData.messages[this.currentChat]) {
-            this.chatData.messages[this.currentChat] = [];
-        }
-        
-        this.chatData.messages[this.currentChat].push({
-            sender: 'Você',
+        const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+        const newMessage = {
+            sender: this.currentUser.nome_completo,
             text: text,
             time: time
-        });
-        
-        await this.saveChatData();
-        this.addMessageToChat('Você', text, time, false);
-        this.elements.messageInput.value = '';
-        this.elements.sendButton.disabled = true; // desabilita botão após enviar
+        };
+
+        if (!this.currentUser.chat.messages[this.currentChatName]) {
+            this.currentUser.chat.messages[this.currentChatName] = [];
+        }
+
+        this.currentUser.chat.messages[this.currentChatName].push(newMessage);
+
+        try {
+            await this.usuarioService.atualizarUsuario(this.currentUser.id, this.currentUser);
+            this.addMessageToUI(newMessage.sender, newMessage.text, newMessage.time);
+            this.elements.messageInput.value = '';
+        } catch (error) {
+            console.error("Erro ao enviar mensagem:", error);
+            alert("Falha ao enviar mensagem.");
+            this.currentUser.chat.messages[this.currentChatName].pop();
+        }
     }
 
-    showGroupModal() {
+    showAddContactModal() {
+        this.elements.choiceModal.hide();
+        this.elements.addContactUserList.innerHTML = '';
+
+        this.allUsers.forEach(user => {
+            if (user.id === this.currentUser.id || this.currentUser.chat.contacts.includes(user.nome_completo)) {
+                return;
+            }
+
+            const userItem = document.createElement('li');
+            userItem.className = 'list-group-item list-group-item-action';
+            userItem.textContent = user.nome_completo;
+            userItem.style.cursor = 'pointer';
+            userItem.addEventListener('click', () => this.addContact(user.nome_completo));
+            this.elements.addContactUserList.appendChild(userItem);
+        });
+
+        this.elements.addContactModal.show();
+    }
+
+    async addContact(userName) {
+        if (this.currentUser.chat.contacts.includes(userName)) {
+            alert("Este usuário já está na sua lista de contatos.");
+            return;
+        }
+
+        this.currentUser.chat.contacts.push(userName);
+
+        try {
+            await this.usuarioService.atualizarUsuario(this.currentUser.id, this.currentUser);
+            this.renderContactList();
+            this.elements.addContactModal.hide();
+            alert(`"${userName}" foi adicionado aos seus contatos!`);
+        } catch (error) {
+            console.error("Erro ao adicionar contato:", error);
+            alert("Falha ao adicionar contato.");
+            this.currentUser.chat.contacts = this.currentUser.chat.contacts.filter(c => c !== userName);
+        }
+    }
+
+    showCreateGroupModal() {
+        this.elements.choiceModal.hide();
         this.elements.groupMemberList.innerHTML = '';
-        this.chatData.contacts.forEach(contact => {
+
+        this.allUsers.forEach(user => {
+            if (user.id === this.currentUser.id) return;
+
             const memberItem = document.createElement('div');
-            memberItem.className = 'group-member-item';
+            memberItem.className = 'form-check';
             memberItem.innerHTML = `
-                <input type="checkbox" id="member-${contact}" value="${contact}">
-                <label for="member-${contact}">${contact}</label>
+                <input class="form-check-input" type="checkbox" value="${user.nome_completo}" id="member-${user.id}">
+                <label class="form-check-label" for="member-${user.id}">${user.nome_completo}</label>
             `;
             this.elements.groupMemberList.appendChild(memberItem);
         });
@@ -167,30 +233,48 @@ class ChatSystem {
     async createGroup() {
         const groupName = this.elements.groupNameInput.value.trim();
         if (!groupName) {
-            alert('Por favor, digite um nome para o grupo');
+            alert('Por favor, digite um nome para o grupo.');
             return;
         }
-        
-        const members = Array.from(this.elements.groupMemberList.querySelectorAll('input:checked'))
-                            .map(el => el.value);
-        
-        if (members.length < 2) {
-            alert('Selecione pelo menos 2 membros para o grupo');
-            return;
-        }
-        
-        this.chatData.groups.push({
-            name: groupName,
-            members: members
+
+        const allMemberInputs = this.elements.groupMemberList.querySelectorAll('input[type="checkbox"]');
+        const selectedMembers = [];
+        allMemberInputs.forEach(input => {
+            if (input.checked) {
+                selectedMembers.push(input.value);
+            }
         });
-        
-        this.chatData.messages[groupName] = [];
-        
-        await this.saveChatData();
-        this.updateContactList();
-        this.elements.groupModal.hide();
+
+        if (selectedMembers.length < 2) {
+            alert('Para criar um grupo, você precisa selecionar pelo menos dois usuários.');
+            return;
+        }
+
+        const allMembers = [this.currentUser.nome_completo, ...selectedMembers];
+
+        const newGroup = {
+            name: groupName,
+            members: allMembers
+        };
+
+        this.currentUser.chat.groups.push(newGroup);
+        this.currentUser.chat.messages[groupName] = [];
+
+        try {
+            await this.usuarioService.atualizarUsuario(this.currentUser.id, this.currentUser);
+            this.renderContactList();
+            this.openChat(groupName);
+            this.elements.groupModal.hide();
+            this.elements.groupNameInput.value = '';
+        } catch (error) {
+            console.error("Erro ao criar grupo:", error);
+            alert("Falha ao criar grupo.");
+            this.currentUser.chat.groups.pop();
+            delete this.currentUser.chat.messages[groupName];
+        }
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => new ChatSystem());
-
+document.addEventListener('DOMContentLoaded', () => {
+    new ChatApp();
+});

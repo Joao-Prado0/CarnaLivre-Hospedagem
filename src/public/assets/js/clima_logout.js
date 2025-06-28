@@ -20,7 +20,7 @@ if (!usuarioCorrente) {
 
 function logoutUser() {
     usuarioCorrente = {};
-    sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
+    sessionStorage.removeItem('usuarioCorrente');
     window.location = LOGIN_URL;
 }
 

@@ -693,9 +693,40 @@
       "data_nasc": "2002-02-12",
       "senha": "12345",
       "chat": {
-        "contacts": [],
-        "groups": [],
-        "messages": {}
+        "contacts": [
+          "João Prado Campos"
+        ],
+        "groups": [
+          {
+            "name": "teste",
+            "members": [
+              "João Campos",
+              "João Prado Campos",
+              "Davi Martins da Silva"
+            ]
+          }
+        ],
+        "messages": {
+          "teste": [
+            {
+              "sender": "João Campos",
+              "text": "eai grupo!",
+              "time": "4:06"
+            },
+            {
+              "sender": "João Campos",
+              "text": "vamos em qual bloco hoje?",
+              "time": "4:06"
+            }
+          ],
+          "João Prado Campos": [
+            {
+              "sender": "João Campos",
+              "text": "opa",
+              "time": "4:06"
+            }
+          ]
+        }
       }
     },
     {
