@@ -682,8 +682,15 @@
       "nome_completo": "João Prado Campos",
       "login": "Jprado12",
       "data_nasc": "2002-02-12",
-      "email": "joaoblablabla@gmail.com",
-      "senha": "4124121222"
+      "email": "joaoblabla@gmail.com",
+      "senha": "4124121222",
+      "chat": {
+        "contacts": [
+          "Davi Martins da Silva"
+        ],
+        "groups": [],
+        "messages": {}
+      }
     },
     {
       "id": 2,
@@ -694,7 +701,8 @@
       "senha": "12345",
       "chat": {
         "contacts": [
-          "João Prado Campos"
+          "João Prado Campos",
+          "Davi Martins da Silva"
         ],
         "groups": [
           {
@@ -719,11 +727,26 @@
               "time": "4:06"
             }
           ],
-          "João Prado Campos": [
+          "Davi Martins da Silva": [
             {
               "sender": "João Campos",
-              "text": "opa",
-              "time": "4:06"
+              "text": "oi davi",
+              "time": "4:11"
+            },
+            {
+              "sender": "Davi Martins da Silva",
+              "text": "opa joao!",
+              "time": "4:15"
+            },
+            {
+              "sender": "João Campos",
+              "text": "qual bloco você ta pensando em ir hoje?",
+              "time": "4:19"
+            },
+            {
+              "sender": "Davi Martins da Silva",
+              "text": "vou no funk you, e vc?",
+              "time": "4:29"
             }
           ]
         }
@@ -737,9 +760,35 @@
       "data_nasc": "2002-02-12",
       "senha": "4124121222",
       "chat": {
-        "contacts": [],
+        "contacts": [
+          "João Campos",
+          "João Prado Campos"
+        ],
         "groups": [],
-        "messages": {}
+        "messages": {
+          "João Campos": [
+            {
+              "sender": "João Campos",
+              "text": "oi davi",
+              "time": "4:11"
+            },
+            {
+              "sender": "Davi Martins da Silva",
+              "text": "opa joao!",
+              "time": "4:15"
+            },
+            {
+              "sender": "João Campos",
+              "text": "qual bloco você ta pensando em ir hoje?",
+              "time": "4:19"
+            },
+            {
+              "sender": "Davi Martins da Silva",
+              "text": "vou no funk you, e vc?",
+              "time": "4:29"
+            }
+          ]
+        }
       }
     }
   ],

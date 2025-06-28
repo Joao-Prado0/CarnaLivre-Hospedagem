@@ -397,3 +397,78 @@ nav {
 .group-member-item label {
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .barra-lateral {
+        width: 100%;
+        height: 60px;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .bl-icones ul {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .bl-icones ul li, .bl-icones ul li:not(.active):hover {
+        margin: 0 !important;
+    }
+
+    body {
+        padding-bottom: 70px;
+    }
+
+    main, .main-container {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        max-width: 100%;
+        height: calc(100vh - 80px);
+    }
+    
+    .main-container {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s ease-in-out;
+        z-index: 2;
+    }
+
+    .chat-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .main-container.view-chat .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .main-container.view-chat .chat-container {
+        transform: translateX(0);
+        z-index: 3;
+    }
+}
